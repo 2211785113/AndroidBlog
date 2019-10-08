@@ -6,7 +6,7 @@
 
 * [DataStructure(数据结构)](https://github.com/2211785113/Blog/blob/master/数据结构与算法/DataStructure)
     * [介绍](https://github.com/2211785113/Blog/blob/master/数据结构与算法/DataStructure/介绍)
-    * [数组](https://github.com/2211785113/Blog/blob/master/数据结构与算法/DataStructure/1数组)
+    * [数组](https://github.com/2211785113/Blog/blob/master/数据结构与算法/DataStructure/1数组.md)
     * 链表
     * [堆栈](https://github.com/2211785113/Blog/blob/master/数据结构与算法/DataStructure/3堆栈)
     * [队列](https://github.com/2211785113/Blog/blob/master/数据结构与算法/DataStructure/4队列)
