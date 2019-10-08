@@ -1,0 +1,21 @@
+链表：
+是什么：
+
+为什么：
+
+怎么样：
+
+用途/后果：
+
+
+例子：
+循环单链表遍历算法：
+void printList(Node *first){
+        p = first->next;
+        while(p!=first){
+                printf(p->data);
+                p = p->next;
+        }
+}
+
+

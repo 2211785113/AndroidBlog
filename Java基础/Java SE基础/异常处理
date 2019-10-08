@@ -1,0 +1,5 @@
+异常处理：
+IllegalArgumentException：非法参数异常。
+if (str == null) {
+            throw new IllegalArgumentException("Input string should not be null");
+        }

@@ -1,0 +1,12 @@
+1.1h25m角度是多少？
+答案：107.5度
+
+2.求n的阶乘(递归)
+代码：AFactorial
+
+3.斐波那契数列-求第n项的值(递归)
+代码：AFabonacci
+
+例子：
+[到达终点数字](https://leetcode-cn.com/problems/reach-a-number/description/)：A754
+[自除数](https://leetcode-cn.com/problems/self-dividing-numbers/)：A728

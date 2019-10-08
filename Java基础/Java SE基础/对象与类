@@ -1,0 +1,68 @@
+对象与类
+继承：A a = new B();
+/**
+ * 第一步：创建B的实例，调用A的构造器，执行call方法
+ * 第二步：a.name   答案为A
+ */
+public class A {
+    public String name = "A";
+    public A() {
+        System.out.println("A1");
+        call();
+        System.out.println("A2");
+    }
+    public void call() {
+        System.out.println("A==" + name);
+    }
+    static class B extends A {
+        public String name = "B";
+        public void call() {
+            System.out.println("B ==" + name);//B==null
+        }
+    }
+    public static void main(String[] args) {
+        A a = new B();
+        System.out.println("res==" + a.name);//res==A
+        B b = new B();
+        System.out.println("res==" + b.name);//res==B
+    }
+}
+打印结果：
+A1
+B ==null        注意考点：调用的时候才会赋值。A.name和B.name的时候才会赋值，否则为null。
+A2
+res==A
+A1
+B ==null
+A2
+res==B
+收获：
+子类继承父类方法重写，属性隐藏。
+类A在栈里，类B在堆里；a是引用，只是把对象B的实例赋值给引用a
+A a = new B();    典型的多态。向上转型。狗肯定是动物。
+* 创建一个类A的引用a
+* 创建一个类B的实例
+* 把B的引用赋值给a
+静态内部类与普通内部类的区别：
+普通内部类持有外部类的一个引用。
+内部类特殊语法规则：outerObject.new InnerClass
+A aaa = new A();
+B bbb = aaa.new B();
+普通内部类B持有外部类A的一个引用aaa
+会造成内存泄漏：https://www.jianshu.com/p/65f914e6a2f8
+
+
+****
+
+抽象类与接口的区别：
+抽象：把多个事物共性的内容抽取出来。
+
+抽象类：定义一个通用的类，用abstract修饰，可以定义抽象方法，然后由子来来实现。
+eg：recyclerview通用万能适配器BaseAdapter设为抽象类，抽象出每个adapter子类共性的部分。
+
+接口：解决类只能单继承的痛点，接口可以多实现。
+eg：recyclerview多itemtype，定义一个multiItemBuilder接口，里面定义getLayoutId和getItemType方法。
+思考：换成抽象类，也可以。
+接口可以实例化，抽象类不能实例化。
+
+

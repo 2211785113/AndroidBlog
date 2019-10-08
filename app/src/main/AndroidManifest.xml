@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ruru.sophiesblog">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- 数据结构与算法 -->
+        <activity android:name=".data_algorithm.algorithm.sort.ChooseSort" />
+        <activity android:name=".data_algorithm.algorithm.sort.BubbleSort" />
+        <activity android:name=".data_algorithm.algorithm.sort.InsertSort" />
+        <activity android:name=".data_algorithm.algorithm.sort.ShellSort" />
+        <activity android:name=".data_algorithm.algorithm.sort.HeapSort" />
+        <activity android:name=".data_algorithm.algorithm.sort.MergeSort" />
+        <activity android:name=".data_algorithm.algorithm.sort.QuickSort" />
+        <activity android:name=".data_algorithm.algorithm.sort.CountSort" />
+        <activity android:name=".data_algorithm.algorithm.sort.BucketSort" />
+        <activity android:name=".data_algorithm.algorithm.sort.RadixSort" />
+        <activity android:name=".data_algorithm.algorithm.sort.OneSort" />
+        <activity android:name=".data_algorithm.algorithm.search.SequenceSearch" />
+        <activity android:name=".data_algorithm.algorithm.search.BinarySearch" />
+        <activity android:name=".data_algorithm.algorithm.search.InsertSearch" />
+        <activity android:name=".data_algorithm.algorithm.search.FibonacciSearch" />
+        <activity android:name=".data_algorithm.algorithm.other.A744" />
+        <activity android:name=".data_algorithm.algorithm.other.A788" />
+        <activity android:name=".data_algorithm.algorithm.other.A717" />
+        <activity android:name=".data_algorithm.algorithm.other.string.A824" />
+        <activity android:name=".data_algorithm.algorithm.other.bitoperation.A693" />
+        <activity android:name=".data_algorithm.algorithm.other.bitoperation.ABinaryConvert" />
+        <activity android:name=".data_algorithm.algorithm.other.string.A859" />
+        <activity android:name=".data_algorithm.datastructure.tree.binarytree.BinTreePreOrder" />
+        <activity android:name=".data_algorithm.datastructure.tree.binarytree.BinTreeInOrder" />
+        <activity android:name=".data_algorithm.datastructure.tree.binarytree.BinTreePostOrder" />
+        <activity android:name=".data_algorithm.datastructure.tree.binarytree.BinTreeLevelOrder" />
+        <activity android:name=".data_algorithm.datastructure.tree.binarytree.BinTreeReversal" />
+        <activity android:name=".data_algorithm.datastructure.tree.binarytree.BinTreeFlatten" />
+        <activity android:name=".data_algorithm.datastructure.tree.binarytree.AViewFind" />
+        <activity android:name=".data_algorithm.datastructure.tree.binarytree.ANextSibil" />
+        <activity android:name=".data_algorithm.datastructure.tree.binarytree.A671" />
+        <activity android:name=".data_algorithm.datastructure.tree.binarytree.A653" />
+        <activity android:name=".data_algorithm.datastructure.tree.binarytree.A652" />
+        <activity android:name=".data_algorithm.datastructure.tree.trietree.A720" />
+        <activity android:name=".data_algorithm.datastructure.tree.binarytree.A606" />
+        <activity android:name=".data_algorithm.datastructure.array.A747" />
+        <activity android:name=".data_algorithm.datastructure.array.A628" />
+        <activity android:name=".data_algorithm.datastructure.array.A674" />
+        <activity android:name=".data_algorithm.datastructure.array.AFindMostTimesNum" />
+        <activity android:name=".data_algorithm.datastructure.array.AFindOnlyTwiceNum" />
+        <activity android:name=".data_algorithm.datastructure.array.AFindOnlyNotRepeatedNum" />
+        <activity android:name=".data_algorithm.datastructure.array.AReverseMergeSortArray" />
+        <activity android:name=".data_algorithm.datastructure.array.A665" />
+        <activity android:name=".data_algorithm.datastructure.array.A860" />
+        <activity android:name=".data_algorithm.datastructure.stack.A739" />
+        <activity android:name=".data_algorithm.datastructure.stack.A232" />
+        <activity android:name=".data_algorithm.mathmatics.AFactorial" />
+        <activity android:name=".data_algorithm.mathmatics.AFabonacci" />
+        <activity android:name=".data_algorithm.mathmatics.A754" />
+        <activity android:name=".data_algorithm.mathmatics.A728" />
+
+        <!-- Java -->
+        <activity android:name=".java.AString" />
+        <activity android:name=".java.AClass" />
+
+        <!-- Android -->
+        <activity android:name=".android.adapter.SparseArray" />
+        <activity android:name=".android.adapter.RecyclerViewA" />
+        <activity android:name=".android.architect.MVP" />
+        <activity android:name=".android.architect.MVVM" />
+
+        <!-- 设计模式 -->
+        <activity android:name=".design_model.create.singleton.Singleton" />
+        <activity android:name=".design_model.create.single_factory.example1.SingleFactory1" />
+        <activity android:name=".design_model.create.single_factory.example2.SingleFactory2" />
+        <activity android:name=".design_model.create.single_factory.example3.SingleFactory3" />
+        <activity android:name=".design_model.create.builder.example1.Client1" />
+        <activity android:name=".design_model.create.builder.example3.Client3" />
+        <activity android:name=".design_model.create.builder.example2.Client2" />
+        <activity android:name=".design_model.create.builder.example4.Client4" />
+        <activity android:name=".design_model.structure.proxy.example1.Client" />
+        <activity android:name=".design_model.structure.proxy.example2.Client" />
+        <activity android:name=".design_model.behavior.observer.example1.Client" />
+        <activity android:name=".design_model.behavior.observer.example2.isbe.ClientO">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
