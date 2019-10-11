@@ -62,16 +62,6 @@
         <activity android:name=".data_algorithm.mathmatics.A754" />
         <activity android:name=".data_algorithm.mathmatics.A728" />
 
-        <!-- Java -->
-        <activity android:name=".java.AString" />
-        <activity android:name=".java.AClass" />
-
-        <!-- Android -->
-        <activity android:name=".android.adapter.SparseArray" />
-        <activity android:name=".android.adapter.RecyclerViewA" />
-        <activity android:name=".android.architect.MVP" />
-        <activity android:name=".android.architect.MVVM" />
-
         <!-- 设计模式 -->
         <activity android:name=".design_model.create.singleton.Singleton" />
         <activity android:name=".design_model.create.single_factory.example1.SingleFactory1" />
@@ -84,13 +74,29 @@
         <activity android:name=".design_model.structure.proxy.example1.Client" />
         <activity android:name=".design_model.structure.proxy.example2.Client" />
         <activity android:name=".design_model.behavior.observer.example1.Client" />
-        <activity android:name=".design_model.behavior.observer.example2.isbe.ClientO">
+        <activity android:name=".design_model.behavior.observer.example2.isbe.ClientO" />
+
+        <!-- Android理论 -->
+        <activity android:name=".android.adapter.SparseArray" />
+        <activity android:name=".android.adapter.RecyclerViewA" />
+        <activity android:name=".android.architect.MVP" />
+        <activity android:name=".android.architect.MVVM" />
+
+        <!-- Java基础 -->
+        <activity android:name=".java.sourceCode.AStringClass">
+
+        </activity>
+        <activity android:name=".java.extends_.one.ClientExtends" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".java.dataType.ABoolean"></activity>
+        <activity android:name=".java.String.AStringSame">
+        </activity>
+        <activity android:name=".java.objectAndClass.house.ClientRoom"></activity>
     </application>
 
 </manifest>
