@@ -83,20 +83,21 @@
         <activity android:name=".android.architect.MVVM" />
 
         <!-- Java基础 -->
-        <activity android:name=".java.sourceCode.AStringClass">
-
-        </activity>
-        <activity android:name=".java.extends_.one.ClientExtends" >
+        <activity android:name=".java.sourceCode.AStringClass" />
+        <activity android:name=".java.extends_.one.ClientExtends">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".java.dataType.ABoolean"></activity>
-        <activity android:name=".java.String.AStringSame">
-        </activity>
-        <activity android:name=".java.objectAndClass.house.ClientRoom"></activity>
+        <activity android:name=".java.dataType.ABoolean" />
+        <activity android:name=".java.String.AStringSame" />
+        <activity android:name=".java.objectAndClass.house.ClientRoom" />
+        <activity android:name=".java.extends_.reflect.Deserialization" />
+        <activity android:name=".java.extends_.abstractAndInterface.activity.BaseActivity" />
+        <activity android:name=".java.extends_.abstractAndInterface.activity.AActivity" />
+        <activity android:name=".java.extends_.abstractAndInterface.activity.BActivity"></activity>
     </application>
 
 </manifest>

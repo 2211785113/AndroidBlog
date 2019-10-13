@@ -4,7 +4,7 @@ import android.util.Log;
 
 public class A {
 
-    public String name = "A";//实例域，创建A对象的时候才会调用(错)，调用实例域name的时候才会调用。
+    public String name = "A";//实例域，创建A对象的时候才会调用(错)，调用实例域name的时候才会调用。d
 
     public A() {//构造器，创建A对象的时候才会调用
         call();
@@ -22,5 +22,6 @@ public class A {
         public void call() {//调用父类构造器的时候才会调用该call方法
             Log.d("ClientExtends", "call:B " + name);
         }
+
     }
 }
