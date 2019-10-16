@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ScrollView;
 
 public abstract class BaseFragment extends Fragment {
 
@@ -17,6 +18,7 @@ public abstract class BaseFragment extends Fragment {
         View view = inflater.inflate(getContentViewId(), container);
 
         initMembersView(savedInstanceState);
+
         return view;
     }
 
