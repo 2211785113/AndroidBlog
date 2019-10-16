@@ -58,30 +58,24 @@
 
 * Android基础
 
-    * [基础知识](https://github.com/2211785113/Blog/blob/master/Android理论/Android基础/基础知识)
-    * [四大组件](https://github.com/2211785113/Blog/blob/master/Android理论/Android基础/四大组件)
+    * [Android基础知识](https://github.com/2211785113/Blog/blob/master/Android理论/Android基础/Android基础知识.md)
 
 * Android架构
 
-    * [介绍](https://github.com/2211785113/Blog/blob/master/Android理论/架构/介绍.md)
-    * [MVC模式](https://github.com/2211785113/Blog/blob/master/Android理论/架构/MVC模式.md)
-    * [MVP模式](https://github.com/2211785113/Blog/blob/master/Android理论/架构/MVP模式.md)
-    * [MVVM模式](https://github.com/2211785113/Blog/blob/master/Android理论/架构/MVVM模式.md)
+    * [介绍](https://github.com/2211785113/Blog/blob/master/Android理论/Android架构(架构师方向)/介绍.md)
+    * [MVC模式](https://github.com/2211785113/Blog/blob/master/Android理论/Android架构(架构师方向)/MVC模式.md)
+    * [MVP模式](https://github.com/2211785113/Blog/blob/master/Android理论/Android架构(架构师方向)/MVP模式.md)
+    * [MVVM模式](https://github.com/2211785113/Blog/blob/master/Android理论/Android架构(架构师方向)/MVVM模式.md)
 
 * 网络
 
-    * [Volley/Okhttp/Retrofit](https://github.com/2211785113/Blog/blob/master/Android理论/网络请求/网络传输原理/网络协议TCP/IP和HTTP)
-    * [Volley/Okhttp/Retrofit](https://github.com/2211785113/Blog/blob/master/Android理论/网络请求/Socket)
-    * [Volley/Okhttp/Retrofit](https://github.com/2211785113/Blog/blob/master/Android理论/网络请求/Volley/Okhttp/Retrofit)
+    * [Okhttp](https://github.com/2211785113/Blog/blob/master/Android理论/网络/Okhttp.md)
+    * [Volley](https://github.com/2211785113/Blog/blob/master/Android理论/网络/Volley.md)
+    * [Retrofit](https://github.com/2211785113/Blog/blob/master/Android理论/网络/Retrofit.md)
 
 * 版本控制
 
     * [Git](https://github.com/2211785113/Blog/blob/master/Android理论/版本控制/Git.md)
-
-* 音视频
-
-    * [opengl](https://github.com/2211785113/Blog/blob/master/Android理论/音视频/opengl)
-    * [编码](https://github.com/2211785113/Blog/blob/master/Android理论/音视频/编码)
 
 ## 设计模式(ok)
 
