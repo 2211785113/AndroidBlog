@@ -48,6 +48,7 @@
 * Java并发
 
     * [线程基础](https://github.com/2211785113/Blog/blob/master/Java基础/Java并发/线程基础.md)
+    * [线程间的共享和协作](https://github.com/2211785113/Blog/blob/master/Java基础/Java并发/线程间的共享和协作.md)
     * [线程池原理与AsyncTask](https://github.com/2211785113/Blog/blob/master/Java基础/Java并发/线程池原理与AsyncTask.md)
 
 * Java虚拟机
