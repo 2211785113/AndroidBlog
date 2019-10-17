@@ -6,6 +6,10 @@ import android.util.Log;
 import android.widget.TextView;
 
 import com.example.ruru.sophiesblog.R;
+import com.example.ruru.sophiesblog.java.threaddemo.StopThread.UsersThread1;
+import com.example.ruru.sophiesblog.java.threaddemo.StopThread.UsersThread2;
+import com.example.ruru.sophiesblog.java.threaddemo.sleep.UseSleep;
+import com.example.ruru.sophiesblog.java.threaddemo.startAndRun.ThreadRun;
 
 
 public class ThreadOneActivity extends AppCompatActivity {
@@ -97,7 +101,7 @@ public class ThreadOneActivity extends AppCompatActivity {
 
         // 如果是interrupt，最后会输出i=1，j=1；
         // 但是如果是stop，最后啥都不会输出。
-        /*UsersThread2 usersThread2 = new UsersThread2();
+       /* UsersThread2 usersThread2 = new UsersThread2();
         usersThread2.start();
         try {
             Thread.sleep(1000);
@@ -133,12 +137,12 @@ public class ThreadOneActivity extends AppCompatActivity {
 
 
         //sleep抛出异常但是不中断线程
-        /*UseSleep useSleep = new UseSleep();
+        UseSleep useSleep = new UseSleep();
         useSleep.start();
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
         }
-        useSleep.interrupt();*/
+        useSleep.interrupt();
     }
 }

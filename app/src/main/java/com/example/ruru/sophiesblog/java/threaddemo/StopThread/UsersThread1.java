@@ -11,10 +11,10 @@ public class UsersThread1 extends Thread {
     public void run() {
         super.run();
 
-        Log.d(getClass().getName(), "run: isInterrupted=" + isInterrupted());
+        Log.d(getClass().getName(), "run: isInterrupted=" + isInterrupted());//false
         while (!isInterrupted()) {
             Log.d(getClass().getName(), "Thread is running");
         }
-        Log.d(getClass().getName(), "run: isInterrupted=" + isInterrupted());
+        Log.d(getClass().getName(), "run: isInterrupted=" + isInterrupted());//true
     }
 }

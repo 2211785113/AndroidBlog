@@ -9,15 +9,15 @@ public class UseSleep extends Thread {
     public void run() {
         super.run();
 
-        System.out.println("isInterrupted=" + isInterrupted());
+        System.out.println("isInterrupted=" + isInterrupted());//false
 
-        while (!isInterrupted()) {
+        while (!isInterrupted()) {//true
             try {
                 Thread.sleep(5000);
-            } catch (InterruptedException e) {
-                System.out.println("isInterrupted=" + isInterrupted());
-                interrupt();
-                System.out.println("isInterrupted=" + isInterrupted());
+            } catch (InterruptedException e) {//抛出异常会将isInterrupted由true改为false
+                System.out.println("isInterrupted=" + isInterrupted());//false
+                interrupt();//false改为true
+                System.out.println("isInterrupted=" + isInterrupted());//true
             }
         }
     }

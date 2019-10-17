@@ -47,7 +47,7 @@
 
 * Java并发
 
-    * [多线程与Android性能优化](https://github.com/2211785113/Blog/blob/master/Java基础/Java并发/多线程与Android性能优化.md)
+    * [线程基础](https://github.com/2211785113/Blog/blob/master/Java基础/Java并发/线程基础.md)
     * [线程池原理与AsyncTask](https://github.com/2211785113/Blog/blob/master/Java基础/Java并发/线程池原理与AsyncTask.md)
 
 * Java虚拟机
