@@ -1,4 +1,4 @@
-package com.example.ruru.sophiesblog.java.String;
+package com.example.ruru.sophiesblog.java.string;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

@@ -6,6 +6,7 @@ import android.util.Log;
 import android.widget.TextView;
 
 import com.example.ruru.sophiesblog.R;
+import com.example.ruru.sophiesblog.java.threaddemo.EndThread.UserThread;
 import com.example.ruru.sophiesblog.java.threaddemo.StopThread.UsersThread1;
 import com.example.ruru.sophiesblog.java.threaddemo.StopThread.UsersThread2;
 import com.example.ruru.sophiesblog.java.threaddemo.sleep.UseSleep;
@@ -77,14 +78,15 @@ public class ThreadOneActivity extends AppCompatActivity {
 
 
         //终止线程
-        /*UserThread userThread = new UserThread();
+        UserThread userThread = new UserThread();
         userThread.start();
+
         try {
             Thread.sleep(5000);//主线程休眠5s
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        userThread.interrupt();//终止子线程*/
+        userThread.interrupt();//终止子线程
 
 
         // 停止线程

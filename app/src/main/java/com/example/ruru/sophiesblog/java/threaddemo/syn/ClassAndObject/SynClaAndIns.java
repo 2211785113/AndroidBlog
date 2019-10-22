@@ -5,6 +5,7 @@ import android.util.Log;
 import com.example.ruru.sophiesblog.java.threaddemo.tools.SleepTools;
 
 /**
+ * 类锁
  * Created by SophieRu on 2019/7/23
  */
 public class SynClaAndIns {

@@ -1,9 +1,11 @@
 package com.example.ruru.sophiesblog.java.threaddemo.threadlocal;
 
-import android.util.Log;
-
+/**
+ * 多个线程共同持有一个静态变量
+ */
 public class NoThreadLocal {
 
+    //静态变量
     static Integer count = new Integer(1);
 
     /**
@@ -12,11 +14,9 @@ public class NoThreadLocal {
     public void StartThreadArray() {
         Thread[] runs = new Thread[3];
         for (int i = 0; i < runs.length; i++) {
-            System.out.println("for循环" + i);
             runs[i] = new Thread(new TestTask(i));
         }
         for (int i = 0; i < runs.length; i++) {
-            System.out.println("第" + i + "次");
             runs[i].start();
         }
     }

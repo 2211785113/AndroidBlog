@@ -6,6 +6,9 @@ import android.os.Bundle;
 import com.example.ruru.sophiesblog.R;
 import com.example.ruru.sophiesblog.java.threaddemo.syn.SynchronizedDemo.DataModel1;
 import com.example.ruru.sophiesblog.java.threaddemo.syn.SynchronizedDemo.SynThread2;
+import com.example.ruru.sophiesblog.java.threaddemo.threadlocal.UseThreadLocal;
+import com.example.ruru.sophiesblog.java.threaddemo.waitandnotify.ExpressBean;
+import com.example.ruru.sophiesblog.java.threaddemo.waitandnotify.TestWaitNotify;
 
 public class ThreadSecondActivity extends AppCompatActivity {
 
@@ -19,37 +22,7 @@ public class ThreadSecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_threadsecond);
 
         /**
-         synchronized：
-         定义：内置锁，是一种同步机制，即同一时刻只有一个线程处于方法/同步块内。
-         分类：对象锁与类锁。
-         解决问题：多个线程访问同一个对象中同一个变量，导致数据错乱问题。
-
-         对象锁：锁的是对象。
-         类锁：方法+static关键字 | 变量加static关键字，锁的是类的class对象。
-
-         ThreadLocal：？？？
-         解决问题：多个线程持有同一个变量导致数据不一致。
-         结果：每个线程都有一个独有的静态变量，线程隔离。
-
-         ================
-
-         wait/notify：？？？
-         定义：等待-通知机制。
-         使用：必须包含在synchronized同步块内。
-         解决问题：A线程不满足条件进入阻塞状态，需要其他线程来唤醒。主线程和子线程各做各的，没有干扰。
-
-         ================
-
-         读写锁：ReentrantReadWriteLock
-         解决问题：读和写线程分离，锁也分离，可以同时进行，而且性能非常高。
-
-         Lock锁：对比synchronized同步锁。？？？
-         Condition#await/signal：对比Object#wait/notify
-         结果：lock加锁后的代码不执行
-         */
-
-
-        /**
+         * synchronized：
          同步syn：错误❌
          打印结果：
          Thread-6  run:count 1=  0
@@ -74,7 +47,7 @@ public class ThreadSecondActivity extends AppCompatActivity {
         /**
          同步syn：对象锁。
          */
-        DataModel1 dataModel = DataModel1.getInstance();
+        /*DataModel1 dataModel = DataModel1.getInstance();
         dataModel.setCount(0);//可以不写这句话，因为count默认就为0
         SynThread2 synThreadaa = new SynThread2(dataModel);
         SynThread2 synThreadbb = new SynThread2(dataModel);
@@ -85,7 +58,7 @@ public class ThreadSecondActivity extends AppCompatActivity {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("SynThread2 getCount=" + dataModel.getCount());
+        System.out.println("SynThread2 getCount=" + dataModel.getCount());*/
 
 
         /**
@@ -110,13 +83,10 @@ public class ThreadSecondActivity extends AppCompatActivity {
 
         /**
          * ThreadLocal：
-         * 解决的问题：多个线程访问同一个变量导致数据错乱。
-         * 使用：初始化值，set-get。
          */
         /*NoThreadLocal noThreadLocal = new NoThreadLocal();
         noThreadLocal.StartThreadArray();*/
 
-        //感觉运行结果不太对？
         /*UseThreadLocal useThreadLocal = new UseThreadLocal();
         useThreadLocal.StartThreadArray();*/
 
@@ -124,12 +94,13 @@ public class ThreadSecondActivity extends AppCompatActivity {
 
         /**
          * wait/notify：
+         解决问题：A线程不满足条件进入阻塞状态，需要其他线程来唤醒。
          * 流程：开启子线程等到，主线程修改条件通知。
          * 刚开始：site 线程满足条件阻塞 wait，km 线程也阻塞 wait。
          * 但是：km 数变化，把 site 线程和 km 线程都唤醒。
          * ？？？执行结果不对。wait和notify后的代码没有执行。
          */
-        /*for (int i = 0; i < 3; i++) {//三个线程,等待快递到达地点的变化
+        for (int i = 0; i < 3; i++) {//三个线程,等待快递到达地点的变化
             new TestWaitNotify.CheckSite().start();
         }
         for (int i = 0; i < 3; i++) {//三个线程,等待里程数的变化
@@ -143,12 +114,14 @@ public class ThreadSecondActivity extends AppCompatActivity {
         }
 
         ExpressBean expressBean = new ExpressBean();
-        expressBean.changeKm();//快递里程数变化*/
+        expressBean.changeKm();//快递里程数变化
 
 //==================
 
         /**
-         * 读写锁
+         *  读写锁：
+         解决问题：读和写线程分离，锁也分离，可以同时进行，而且性能非常高。
+         结果：lock加锁后的代码不执行
          */
         /*GoodsInfoBean goodsInfo = new GoodsInfoBean("Cup", 100000, 10000); //GoodInfoBean类
 //        GoodsService goodsService = new UseReadWriteLock(goodsInfo); //三个类：用户读写 getNum 和 setNum 操作

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.ruru.sophiesblog">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <!-- android-httpclient -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
 
         <!-- 数据结构与算法 -->
         <activity android:name=".data_algorithm.algorithm.sort.ChooseSort" />
@@ -76,33 +83,36 @@
         <activity android:name=".design_model.behavior.observer.example1.Client" />
         <activity android:name=".design_model.behavior.observer.example2.isbe.ClientO" />
 
+        <!-- Java基础 -->
+        <activity android:name=".java.sourceCode.AStringClass" />
+        <activity android:name=".java.dataType.ABoolean" />
+        <activity android:name=".java.string.AStringSame" />
+        <activity android:name=".java.objectAndClass.house.ClientRoom" />
+        <activity android:name=".java.extends_.one.ClientExtends" />
+        <activity android:name=".java.extends_.reflect.Deserialization" />
+        <activity android:name=".java.extends_.abstractAndInterface.activity.AActivity" />
+        <activity android:name=".java.extends_.abstractAndInterface.activity.BActivity" />
+        <activity android:name=".java.collection.ClientCollection" />
+        <activity android:name=".java.threaddemo.activity.ThreadOneActivity" />
+        <activity android:name=".java.threaddemo.activity.ThreadSecondActivity" />
+        <activity android:name=".java.threaddemo.activity.ThreadThreeActivity" />
+
         <!-- Android理论 -->
         <activity android:name=".android.adapter.SparseArray" />
         <activity android:name=".android.adapter.RecyclerViewA" />
         <activity android:name=".android.architect.MVP" />
         <activity android:name=".android.architect.MVVM" />
-
-        <!-- Java基础 -->
-        <activity android:name=".java.sourceCode.AStringClass" />
-        <activity android:name=".java.extends_.one.ClientExtends">
-
-        </activity>
-        <activity android:name=".java.dataType.ABoolean" />
-        <activity android:name=".java.String.AStringSame" />
-        <activity android:name=".java.objectAndClass.house.ClientRoom" />
-        <activity android:name=".java.extends_.reflect.Deserialization" />
-        <activity android:name=".java.extends_.abstractAndInterface.activity.AActivity" />
-        <activity android:name=".java.extends_.abstractAndInterface.activity.BActivity" />
-        <activity android:name=".java.collection.ClientCollection">¬</activity>
-        <activity android:name=".java.threaddemo.activity.ThreadOneActivity">
+        <activity android:name=".android.network.http.HttpClientDemo" />
+        <activity android:name=".android.network.http.HttpUrlConnDemo" />
+        <activity android:name=".android.network.http.HttpClientDemo2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".java.threaddemo.activity.ThreadSecondActivity"></activity>
-        <activity android:name=".java.threaddemo.activity.ThreadThreeActivity"></activity>
+        <activity android:name=".android.network.volley.VolleyDemo" />
+        <activity android:name=".android.network.volley.gson.GsonTest"></activity>
     </application>
 
 </manifest>

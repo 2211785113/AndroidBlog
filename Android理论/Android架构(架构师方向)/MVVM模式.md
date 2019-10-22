@@ -7,6 +7,7 @@
 总：ViewModel跟Model和View进行双向绑定。View发生改变时，ViewModel通知Model更新数据；Model数据更新后，ViewModel通知View更新。
 
 结构图
+![结构图](https://github.com/2211785113/Blog/blob/master/images/mvvm.jpg)
 
 - model：
 - view：

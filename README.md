@@ -47,13 +47,14 @@
 
 * Java并发
 
+    * [基础概念](https://github.com/2211785113/Blog/blob/master/Java基础/Java并发/基础概念.md)
     * [线程基础](https://github.com/2211785113/Blog/blob/master/Java基础/Java并发/线程基础.md)
     * [线程间的共享和协作](https://github.com/2211785113/Blog/blob/master/Java基础/Java并发/线程间的共享和协作.md)
     * [线程池原理与AsyncTask](https://github.com/2211785113/Blog/blob/master/Java基础/Java并发/线程池原理与AsyncTask.md)
 
 * Java虚拟机
 
-    * [JVM](https://github.com/2211785113/Blog/blob/master/Java基础/Java虚拟机/JVM)
+    * [JVM](https://github.com/2211785113/Blog/blob/master/Java基础/Java虚拟机/JVM.md)
 
 ## Android理论
 
@@ -70,9 +71,9 @@
 
 * 网络
 
-    * [Okhttp](https://github.com/2211785113/Blog/blob/master/Android理论/网络/Okhttp.md)
-    * [Volley](https://github.com/2211785113/Blog/blob/master/Android理论/网络/Volley.md)
-    * [Retrofit](https://github.com/2211785113/Blog/blob/master/Android理论/网络/Retrofit.md)
+    * [网络编程基础知识](https://github.com/2211785113/Blog/blob/master/Android理论/网络/网络编程基础知识.md)
+    * [网络请求方式](https://github.com/2211785113/Blog/blob/master/Android理论/网络/网络请求方式.md)
+    * [网络请求数据解析](https://github.com/2211785113/Blog/blob/master/Android理论/网络/网络请求数据解析.md)
 
 * 版本控制
 
@@ -95,10 +96,19 @@
 * 结构型
 
     * [代理模式](https://github.com/2211785113/Blog/blob/master/设计模式/结构型/代理模式.md)
+    * 装饰模式
+    * 外观模式/门面模式
+    * 享元模式
+    * 适配器模式
 
 * 行为型
 
     * [观察者模式](https://github.com/2211785113/Blog/blob/master/设计模式/行为型/观察者模式.md)
+    * 策略模式
+    * 模板方法模式
+    * 状态模式
+
+
 
 
 

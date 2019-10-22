@@ -1,5 +1,8 @@
 package com.example.ruru.sophiesblog.java.threaddemo.syn.SynchronizedDemo;
 
+/**
+ * 对象锁
+ */
 public class SynTest {
 
     private long count = 0;

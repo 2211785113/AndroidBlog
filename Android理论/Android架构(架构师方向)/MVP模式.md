@@ -5,6 +5,7 @@
 总：顺序为view-presenter-model-presenter-view，以presenter为中心。
 
 结构图：presenter层与model层互相关联，presenter层与view层互相关联。
+![结构图](https://github.com/2211785113/Blog/blob/master/images/mvp.jpg)
 
 - 模型层model：网络请求，数据存取操作。
 - 视图层view：用户交互与视图部分。Activity/Fragment/某个view控件。

@@ -4,7 +4,8 @@
 
 总：控制层操作model层数据，返回给view层显示。
 
-结构图：控制层指向model层，view层。model层和view层互相指向(mvc.jpg)。
+结构：控制层指向model层，view层。model层和view层互相指向。
+![结构图](https://github.com/2211785113/Blog/blob/master/images/mvc.jpg)
 
 - 模型层model：网络请求，数据结构相关等，针对业务。
 - 视图层view：xml或代码(js/html等)表示界面。

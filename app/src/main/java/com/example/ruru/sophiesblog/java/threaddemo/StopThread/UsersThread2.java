@@ -23,6 +23,8 @@ public class UsersThread2 extends Thread {
 
             ++j;
         }
+
+        yield();
     }
 
     public void print() {
