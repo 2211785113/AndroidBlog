@@ -5,10 +5,15 @@ import android.graphics.Bitmap;
 import android.telecom.Call;
 import android.widget.ImageView;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.NetworkResponse;
+import com.android.volley.ParseError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.ImageRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
@@ -18,9 +23,15 @@ import com.android.volley.toolbox.Volley;
 import com.example.ruru.sophiesblog.R;
 import com.example.ruru.sophiesblog.android.network.volley.gson.GsonUtil;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Volley请求
@@ -66,7 +77,64 @@ public class VolleyRequest {
                         callback.onError(error.getMessage());
                         callback.onComplete();
                     }
-                });
+                }) {
+            /**
+             * 获取cookie
+             */
+            @Override
+            protected Response<String> parseNetworkResponse(NetworkResponse response) {
+//                Map<String, String> headers = response.headers;//获取所有头字段
+//                String cookies = headers.get("Set-Cookie");//获取Cookie头字段
+//                return super.parseNetworkResponse(response);
+
+                String cookieFromResponse = "";
+                try {
+                    String jsonString =
+                            new String(response.data, HttpHeaderParser.parseCharset(response.headers));
+                    String mHeader = response.headers.toString();
+                    Pattern pattern = Pattern.compile("Set-Cookie=SHARED_SESSIONID.*?;");
+                    Matcher m = pattern.matcher(mHeader);
+                    if (m.find()) {
+                        cookieFromResponse = m.group();
+                    }
+                    if (cookieFromResponse != null) {
+                        if (cookieFromResponse.length() >= 65) {
+                            cookieFromResponse = cookieFromResponse.substring(11, cookieFromResponse.length() - 1);
+                        }
+//                        SharedPreferencesUtil.savedCookieInfo(cookieFromResponse);
+                        JSONObject jsonObject = new JSONObject(jsonString);
+                        jsonObject.put("Cookie", cookieFromResponse);
+                    }
+                    return Response.success(jsonString, HttpHeaderParser.parseCacheHeaders(response));
+                } catch (UnsupportedEncodingException e) {
+                    return Response.error(new ParseError(e));
+                } catch (JSONException je) {
+                    return Response.error(new ParseError(je));
+                }
+            }
+
+            /**
+             * 存放cookie
+             */
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String> map = new HashMap<String, String>();
+//                map.put("Cookie", getCookieInfo());
+//                map.put("Authorization", getToken());
+                return map;
+//                return super.getHeaders();
+            }
+
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                return super.getParams();
+            }
+        };
+        //设置请求超时策略
+        stringRequest.setRetryPolicy(new DefaultRetryPolicy(
+                10000,//默认超时时间，应设置一个稍微大点儿的，比如500000即500s
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,//默认最大尝试次数
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         queue.add(stringRequest);
     }
 

@@ -105,14 +105,17 @@
         <activity android:name=".android.network.http.HttpClientDemo" />
         <activity android:name=".android.network.http.HttpUrlConnDemo" />
         <activity android:name=".android.network.http.HttpClientDemo2">
+
+        </activity>
+        <activity android:name=".android.network.volley.VolleyDemo" />
+        <activity android:name=".android.network.volley.gson.GsonTest" />
+        <activity android:name=".android.network.okhttp.OkhttpDemo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".android.network.volley.VolleyDemo" />
-        <activity android:name=".android.network.volley.gson.GsonTest"></activity>
     </application>
 
 </manifest>

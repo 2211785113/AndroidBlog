@@ -19,10 +19,9 @@
 
 ### 怎么样
 
-官网：todo样例
-https://github.com/googlesamples/android-architecture
-分析：
-https://juejin.im/entry/591c1d072f301e006bd1042b
+[官网：todo样例]{https://github.com/googlesamples/android-architecture}
+
+[分析]{https://juejin.im/entry/591c1d072f301e006bd1042b}
 
 ### 用途/后果
 

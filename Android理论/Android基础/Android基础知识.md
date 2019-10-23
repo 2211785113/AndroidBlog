@@ -153,6 +153,9 @@ https://www.jianshu.com/p/87ce6f565d37
 ### 12.环境(gradle)
 
 gradle依赖冲突、依赖检查
+https://www.jianshu.com/p/0c914a9b47bf
+
+close项目删除
 
 ### 13.版本控制(git)
 
