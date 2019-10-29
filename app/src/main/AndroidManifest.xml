@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".android.network.xutils.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -97,19 +98,21 @@
         <activity android:name=".java.threaddemo.activity.ThreadSecondActivity" />
         <activity android:name=".java.threaddemo.activity.ThreadThreeActivity" />
 
-        <!-- Android理论 -->
+        <!-- Android基础与技术 -->
         <activity android:name=".android.adapter.SparseArray" />
         <activity android:name=".android.adapter.RecyclerViewA" />
         <activity android:name=".android.architect.MVP" />
         <activity android:name=".android.architect.MVVM" />
         <activity android:name=".android.network.http.HttpClientDemo" />
         <activity android:name=".android.network.http.HttpUrlConnDemo" />
-        <activity android:name=".android.network.http.HttpClientDemo2">
-
-        </activity>
+        <activity android:name=".android.network.http.HttpClientDemo2" />
         <activity android:name=".android.network.volley.VolleyDemo" />
         <activity android:name=".android.network.volley.gson.GsonTest" />
+        <activity android:name=".android.network.okhttp.old.OkhttpOldDemo" />
         <activity android:name=".android.network.okhttp.OkhttpDemo">
+        </activity>
+        <activity android:name=".android.network.xutils.XutilsDemo" />
+        <activity android:name=".android.network.retrofit.RetrofitDemo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

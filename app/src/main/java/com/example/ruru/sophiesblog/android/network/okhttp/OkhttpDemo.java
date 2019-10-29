@@ -6,10 +6,6 @@ import android.util.Log;
 
 import com.example.ruru.sophiesblog.R;
 
-import java.io.IOException;
-
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
 import okhttp3.Response;
 
 public class OkhttpDemo extends AppCompatActivity {
@@ -17,21 +13,20 @@ public class OkhttpDemo extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_okhttp_demo);
-
-        OkHttpClient client = new OkHttpClient();
+        setContentView(R.layout.activity_okhttp_demo2);
 
         String url = "http://www.baidu.com";
 
-        Request request = new Request.Builder()
-                .url(url)
-                .build();
+        OkhttpRequest.init(this).getAsynHttp(url, new ResultCallback() {
+            @Override
+            public void onResponse(Response response) {
+                Log.d(getClass().getName(), "onResponse:res= " + response.body().toString());
+            }
 
-        try {
-            Response response = client.newCall(request).execute();
-            Log.d(getClass().getName(), "onCreate:res= " + response);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+            @Override
+            public void onError(String msg) {
+                Log.d(getClass().getName(), "onError:res= " + msg);
+            }
+        });
     }
 }

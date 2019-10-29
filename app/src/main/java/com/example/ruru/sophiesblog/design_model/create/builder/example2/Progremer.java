@@ -23,6 +23,15 @@ public class Progremer extends TechManager {
         return this;
     }
 
+    @Override
+    public Product build() {
+        product = new Product();
+        product.setAppName(innerProduct.getAppName());
+        product.setAppFuction(innerProduct.getAppFuction());
+        product.setAppSystem(innerProduct.getAppSystem());
+        return product;
+    }
+
     private class InnerProduct {
         private String appName;
         private String appFuction;
@@ -53,12 +62,5 @@ public class Progremer extends TechManager {
         }
     }
 
-    @Override
-    public Product build() {
-        product = new Product();
-        product.setAppName(innerProduct.getAppName());
-        product.setAppFuction(innerProduct.getAppFuction());
-        product.setAppSystem(innerProduct.getAppSystem());
-        return product;
-    }
+
 }

@@ -69,7 +69,7 @@ public class MyThreadPool {
     }
 
     /**
-     * 内部类，工作线程。有点不太理解？？？
+     * 内部类，工作线程即子线程。有点不太理解？？？
      */
     private class WorkThread extends Thread {
         @Override
