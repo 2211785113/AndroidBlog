@@ -1,0 +1,145 @@
+## UI
+
+### View
+
+[我的github项目之View](https://github.com/2211785113/CustomView/blob/master/README.md)
+
+事件分发机制：
+
+- Activity中会有dispatchTouchEvent()方法：因为事件传递是自上而下的，如果下层没有处理，则会由上层来处理。
+- 原理：先传给ViewGroup再传给View。用onInterceptTouchEvent来拦截事件，如果拦截，则不向子View传递；如果没有拦截，则默认向子View传递。
+- ViewGroup#dispatchTouchEvent伪码：判断TouchEvent事件，
+- 事件传递顺序3个重要的方法：dispatchTouchEvent()是否消耗了本次事件，onInterceptTouchEvent()是否拦截了本次事件，onTouchEvent()是否处理本次事件。
+- 触摸/touch事件分发机制：View的onTouch，onClick，onTouchEvent的执行顺序：onTouch，onTouchEvent，onClick
+
+滑动冲突：
+
+- 同方向滑动冲突。如ScrollView和ListView，可以计算ListView高度而动态设置ListView的高度，ScrollView高度可变。
+- 不同方向滑动冲突。
+
+实现原理：
+
+Activity对象创建完毕，会将DecorView添加到Window中，同时创建ViewRootImpl，来渲染视图，并将DecorView和ViewRootImpl关联起来。
+
+自定义：
+
+- invalidate和requestLayout的区别：
+- 测量：View和ViewGroup的测量过程(LayoutParams和MeasureSpec,wrap_content处理细节)；宽度设置为match_parent和设置为200dp怎么进行测量。
+- 布局：
+- 绘制：
+
+例子：
+
+- 如何实现一个字体的描边与阴影效果：
+- 如何画出一个印章的图案：
+
+移动：
+
+- 三种方式：scrollTo/scrollBy，动画平移，Layoutparams。
+
+弹性滑动：
+
+- 三种方式：Scroller，
+️
+
+
+沿着这条主线问View实现原理。️
+View和主线程的联系。️
+
+
+
+五大注意事项。️
+
+
+
+
+### 布局layout
+
+约束布局ConstraintLayout：
+
+为什么(优势)：
+
+用途/后果：：让两个TextView左右水平居中。
+
+
+
+Notification通知。️
+
+LinearLayout中weight的使用场景。️
+单个布局和多个嵌套布局。️
+margin和padding的区别。️
+例子：给你一个布局，你怎么写，左边是封面，右边是主标题和子标题，下面是正文。️
+例子：中间有一条竖线。️
+
+
+
+
+View实现原理。
+
+有没有用过RecyclerView，说说adapter里有哪些方法？对RecyclerView做过优化没有？有没有自定义过LayoutManager？优点是什么？RecyclerView分页请求怎么做的？ViewPager的分页请求怎么做的？
+recyclerview缓存机制，listview的缓存机制，相同条目复用，会出现数据错乱，区别。
+如何优化RecyclerView。️
+SparseArray：https://juejin.im/entry/57c3e8c48ac24700634bd3cf
+使用int[]数组存放key，避免了HashMap中基本数据类型需要装箱的步骤，其次不使用额外的结构体（Entry)，单个元素的存储成本下降。
+recyclerview复用：抖音无限循环效果实现，心神学堂在线作业题翻页。
+如何实现下拉刷新？Pull2RefreshListView看源码。
+做一个Recyclerview刷新分页获取数据的Demo。
+recyclerView的adapter里有哪些方法。️
+RecyclerView和ListView的区别
+缓存上:前者缓存的是View+ViewHolder+flag，不用每次调用findViewById,后者则只是缓存View
+刷新数据方面，前者提供了局部刷新，后者则全部刷新
+recyclerView嵌套卡顿解决如何解决
+设置预加载的数量LinearLayoutManager.setInitialPrefetchItemCount(4)，默认是预加载2个，
+设置子项缓存，设置自带滑动冲突解决属性rv.setHasFixedSize(true);        rv.setNestedScrollingEnabled(false);
+可以完美解决，不过Google不推荐RecyClerView嵌套使用,需要嵌套尽量找类似于ExpandableListView 第三方控件来解决
+
+View的测量过程：
+先执行measure方法，再执行onMeasure方法，最后的结果为MeasureSpec的specSize。系统会将View本身的LayoutParams根据父容器添加的规则转换成相对应的MeasureSpec，再根据MeasureSpec测量出View的宽高。
+ViewGroup的测量过程：
+onMeasure方法中会对所有的子元素进行measure过程，这个时候measure流程就从父容器传递到子元素中了，这样就完成一次measure过程，接着子元素会重复父容器的过程，如此反复就完成了整个View树的遍历。
+View和SurfaceView的区别
+View基于主线程刷新UI，SurfaceView子线程又可以刷新UI
+View的绘制原理
+View为所有图形控件的基类，View的绘制由3个函数完成
+measure,计算视图的大小
+layout,提供视图要显示的位置
+draw,绘制
+
+https://blog.csdn.net/figo0423/article/details/51464116
+如何实现一个字体的描边与阴影效果。
+* 阴影：xml 或 代码设置。
+* 描边：上下两层TextView通过不同的字体颜色叠加。
+https://blog.csdn.net/loser_li/article/details/48005683
+如何画出一个印章的图案。
+链接代码在电脑seal项目中。
+* 绘制圆环；（canvas.drawCircle）
+* 绘制五角星；(canvas.drawPath)
+* 绘制字体；（圆弧用角度表示）
+https://blog.csdn.net/guolin_blog/article/details/53122387
+Google新生支持库(Constrainlayout)。
+match parent和any size的区别：
+* match parent是用于填充满当前控件的父布局；
+* any size是用于填充满当前控件的约束规则
+
+### 动画anim
+
+动画基础：
+
+View动画和属性动画：
+
+* View动画：四种简单变换，平移旋转缩放透明度。作用对象为View或ViewGroup。
+* 属性动画：可以做出更多的动画效果。作用对象为任何对象包括View，也可以没有对象。
+
+例子：
+
+* View动画：ViewGroup指定动画控制子元素的动画效果；Activity或Fragment实现切换动画效果。
+* 属性动画：实现匀速动画和非匀速动画。例子：给一个Button按钮实现宽度从0到500px的动画效果。
+
+链接：https://www.cnblogs.com/futureli/p/4621867.html
+
+动画和View，主线程联系：
+️
+* 能给View设置动画，动画的更新在主线程吗？
+* Android子线程也可以实现动画。
+
+快问快答：做过的酷炫的动画？️动画和View，主线程联系。️

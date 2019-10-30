@@ -2,9 +2,9 @@
 
 说明：请大家自行查看源码加之我的解释进行独立思考。
 
-### 关联知识点：数据结构-数组，Java基础-并发/队列集合，Android基础与技术-数据缓存，设计模式-单例。
+关联知识点：数据结构-数组，Java基础-并发/队列集合，Android基础与技术-数据缓存，设计模式-单例。
 
-**1.入口-通过建造者模式构建Retrofit对象**
+### 1.入口-通过建造者模式构建Retrofit对象
 
 Retrofit#Builder内部类：
 
@@ -18,7 +18,7 @@ build方法：
 - adapterFactories：主要用于存储对Call进行转化的对象
 - converterFactories：主要用于存储转化数据对象。例如增加返回值为gson的支持，设置返回的数据转化为gson对象。
 
-**2.创建Call**（还需要多看多多理解，学习源码可以画一个类的结构图）
+### 2.创建Call（还需要多看多多理解，学习源码可以画一个类的结构图）
 
 - retrofit实例调用create方法生成接口(真实主题)的动态代理对象Proxy.newProxyInstance()。
 - 调用IpService的getIpMsg方法时，最终会调用InvocationHandler的invoke方法。invoke方法有三个参数：代理对象；调用的方法；方法的参数。loadServiceMethod(method)中的method即为定义的getIpMsg方法。
@@ -30,32 +30,8 @@ build方法：
 - 创建OkHttpCall：构造方法进行赋值，然后调用serviceMethod.callAdapter.adapt(okHttpCall)，callAdapter的adapt方法会创建ExecutorCallbackCall， 并传入OkHttpCall。
 - ExecutorCallbackCall：是对Call的封装，添加了callbackExecutor线程池将请求回调到UI线程。得到Call对象后调用enqueue方法，即ExecutorCallbackCall#enqueue方法，最终调用delegate#enqueue，delegate传入OkHttpCall参数。
 
-**Call#enqueue**
+### 3.Call#enqueue
 
 即调用OkHttpCall#enqueue：调用parseResponse方法，根据返回的不同状态码code值来做不同的操作。调用convert方法来转换为特定的数据格式。因为添加的是返回值为gson的支持，所以看GsonConverterFactory源码，方法responseBodyConverter会创建GsonResponseBodyConverter：convert方法会将回调的数据转换为JSON格式。
 
 总：OkHttp来请求网络，将返回的Response进行数据转换并回调给UI线程。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### 原理

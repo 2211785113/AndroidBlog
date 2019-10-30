@@ -2,11 +2,11 @@
 
 说明：请大家自行查看源码加之我的解释进行独立思考。
 
-### 关联知识点：数据结构-数组/Deque队列(用于缓存)，Java基础-并发/队列集合，Android基础与技术-数据缓存，设计模式-单例。
+关联知识点：数据结构-数组/Deque队列(用于缓存)，Java基础-并发/队列集合，Android基础与技术-数据缓存，设计模式-单例。
 
-**1.入口-通过建造者模式构建Request对象**
+#### 1.入口-通过建造者模式构建Request对象
 
-**2.OkHttpClient#newCall：**
+#### 2.OkHttpClient#newCall：
 
 实际调用RealCall#newRealCall，最后返回RealCall即Call的实现类。
 
@@ -18,7 +18,7 @@ execute：同步操作，请求网络调用getResponseWithInterceptorChain返回
 
 enqueue：异步操作，加同步锁，最终请求由dispatcher来完成，具体操作由内部类AsynCall来完成。
 
-**3.dispatcher#enqueue：**
+#### 3.dispatcher#enqueue：
 
 Dispatcher：任务调度，负责控制并发请求
 
@@ -34,14 +34,14 @@ enqueue方法：
 - call 加入到将要运行的异步请求队列 readyAsyncCalls 中进行缓存等待，随后加载到正在运行的异步请求队列runningAsyncCalls中。
 - enqueue方法有一个构造参数：AsyncCall，是RealCall的内部类，里边有execute方法。无论请求结果如何，都会执行client.dispatcher().finished(this)即将此次请求从runningAsyncCalls移除后再从readyAsyncCalls取出下一个请求， 加入runningAsyncCalls中执行；execute方法中通过getResponseWithInterceptorChain方法请求网络，返回Response。
 
-**4.getResponseWithInterceptorChain请求网络过程中会有拦截器Interceptor**
+#### 4.getResponseWithInterceptorChain请求网络过程中会有拦截器Interceptor
 
 创建拦截器链，然后拦截器链调用proceed方法，从拦截器列表中取出拦截器，存在多个拦截器时阻塞， 并等待下一个拦截器调用返回。代码：Response response = interceptor.intercept(next)。如果没有更多拦截器，就执行网络请求。CallServerInterceptor类intercept里有网络请求的过程，通过HttpMethod来完成。
 
 拦截器：一种能够监控、重写、重试调用的机制。 通常情况下， 拦截器用来添加、 移除、 转换请求和响应的头部信息。 比如将域名替换为IP地址， 在请求头中添加host属性； 也可以添加应用中的一些公共参数， 比如设备id、版本号等。
 ![image](https://github.com/2211785113/Blog/blob/master/images/okhttp_in.jpg)
 
-**5.缓存策略**
+#### 5.缓存策略
 
 发送请求，做缓存操作。CacheInterceptor类中。cacheCandidate：上次与服务器交互时缓存的Response，这里的缓存均基于Map；key是请求中url 的 md5，value 是在文件中查询到的缓存，页面置换基于 LRU 算法。cacheCandidate是一个可以读取缓存Header的Response。根据cacheStrategy的处理得到了networkRequest和cacheResponse这两个值，根据这两个值的数据是否为null来进行进一步的处理。在networkRequest和cacheResponse都为null的情况下， 即不进行网络请求且缓存不存在或过期，返回504错误；当networkRequest为null即不进行网络请求，如果缓存可用则直接返回缓存， 其他情况请求网络。
 
@@ -49,7 +49,7 @@ enqueue方法：
 
 条件GET请求有两种方式：一种是Last-Modified-Date，另一种是 ETag。这里采用了Last-Modified-Date， 通过缓存和网络请求响应中的LastModified计算是否是最新数据。 如果是，则缓存有效。
 
-**6.失败重连**
+#### 6.失败重连
 
 RealCall#getResponse：当发生 IOException 或 RouteException 时都执行HttpEngine#recover：最后一行，重新创建 HttpEngine 并返回，用来完成重连。
 
@@ -61,7 +61,7 @@ RealCall#getResponse：当发生 IOException 或 RouteException 时都执行Http
 
 ![image](https://github.com/2211785113/Blog/blob/master/images/okhttp.jpg)
 
-**复用连接池：**
+#### 复用连接池：
 
 类：ConnectionPool->RealConnectionPool。
 

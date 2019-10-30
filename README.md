@@ -56,11 +56,26 @@
 
     * [JVM](https://github.com/2211785113/Blog/blob/master/Java基础/Java虚拟机/JVM.md)
 
-## Android基础与技术
+## Android基础与技术(ok)
 
 * Android基础与技术
 
-    * [Android知识体系](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础/Android知识体系.md)
+    * [Android知识体系](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/Android知识体系.md)
+    * [最基础](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/1  最基础.md)
+    * [UI](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/2  UI.md)
+    * [进程与线程](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/3  进程与线程.md)
+    * [开源框架](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/4  开源框架.md)
+    * [数据存储与通信](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/5  数据存储与通信.md)
+    * [适配](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/6  适配.md)
+    * [架构](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/7  架构.md)
+    * [性能](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/8  性能.md)
+    * [安全与打包](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/9  安全与打包.md)
+    * [新技术相关](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/10  新技术相关.md)
+    * [Android SDK与NDK](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/11  Android SDK与NDK.md)
+    * [环境](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/12  环境.md)
+    * [版本控制](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/13  版本控制.md)
+    * [Android源码学习](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/14  Android源码学习.md)
+    * [音视频业务](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/15  音视频业务.md)
 
 * Android架构
 
@@ -79,10 +94,6 @@
     * [...Retrofit源码剖析](https://github.com/2211785113/Blog/blob/master/Android基础与技术/网络/Retrofit源码剖析.md)
     * [网络请求传数据之URL转义](https://github.com/2211785113/Blog/blob/master/Android基础与技术/网络/Retrofit源码剖析.md)
     * [网络请求返回数据解析](https://github.com/2211785113/Blog/blob/master/Android基础与技术/网络/网络请求返回数据解析.md)
-
-* 版本控制
-
-    * [Git](https://github.com/2211785113/Blog/blob/master/Android基础与技术/版本控制/Git.md)
 
 ## 设计模式(ok)
 

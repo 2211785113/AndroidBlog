@@ -44,7 +44,7 @@
 
 Asynctask（封装thread+handler）
 
-Asynctask优缺点？？？
+Asynctask优缺点
 
 用途：请求网络/下载文件（因为都需要在子线程中）
 

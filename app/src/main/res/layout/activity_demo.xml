@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_enter_standard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="默认" />
+
+    <Button
+        android:id="@+id/btn_enter_singletop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="栈顶复用" />
+
+    <Button
+        android:id="@+id/btn_enter_singletask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="栈内复用" />
+
+</LinearLayout>
