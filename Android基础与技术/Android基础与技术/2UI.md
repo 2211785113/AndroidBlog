@@ -4,27 +4,34 @@
 
 [我的github项目之View](https://github.com/2211785113/CustomView/blob/master/README.md)
 
-事件分发机制：
+**事件分发机制：**
 
-- Activity中会有dispatchTouchEvent()方法：因为事件传递是自上而下的，如果下层没有处理，则会由上层来处理。
-- 原理：先传给ViewGroup再传给View。用onInterceptTouchEvent来拦截事件，如果拦截，则不向子View传递；如果没有拦截，则默认向子View传递。
-- ViewGroup#dispatchTouchEvent伪码：判断TouchEvent事件，
+事件传递：
+
+- Activity对象创建完毕，会将DecorView添加到Window中，同时创建ViewRootImpl，来渲染视图，并将DecorView和ViewRootImpl关联起来。
+- Activity中会有dispatchTouchEvent()方法：因为事件传递是自上而下的，如果下层没有处理，则会由上层来处理，执行上层的onTouchEvent方法。
+
+原理：
+
 - 事件传递顺序3个重要的方法：dispatchTouchEvent()是否消耗了本次事件，onInterceptTouchEvent()是否拦截了本次事件，onTouchEvent()是否处理本次事件。
+- ViewGroup#dispatchTouchEvent伪码：如果是down事件，首先会清除触摸标志位；再判断如果是down事件，有没有设置标志位，设置了标志位，则向子View传递，没有设置标志位，执行onInterceptTouchEvent方法，值为true父View拦截事件，值为false向子View传递；如果不是down事件，因为同一个事件要么由父控件来执行，要么由子控件来执行，down事件是父控件来执行，那么move事件和up事件也应该由父控件来执行。
 - 触摸/touch事件分发机制：View的onTouch，onClick，onTouchEvent的执行顺序：onTouch，onTouchEvent，onClick
+- 第一次父View#onITE返回true拦截事件，打印依次执行disPTE->onITE->onTE；第二次返回true拦截事件后执行disPTE和onTE。(实践代码见我的另一个github项目：Android_SlidingConflict # OuterTestActivity类；知识点：同一个事件不再执行onITE？运用到哪里了吗？)
+
+用途/后果：
 
 滑动冲突：
 
 - 同方向滑动冲突。如ScrollView和ListView，可以计算ListView高度而动态设置ListView的高度，ScrollView高度可变。
-- 不同方向滑动冲突。
+- 不同方向滑动冲突。如SRL和VP，SRL源码中当滑动距离大于最小滑动距离，会拦截事件，但是当VP左下或右下滑动时，事件就会被父View拦截，造成滑动冲突。所以用外部拦截法和内部拦截法来解决滑动冲突。外部拦截法事件向子View传递，只有当Y轴大于X轴滑动距离时，拦截事件；内部拦截法，用rDTE来拦截事件。
 
 实现原理：
 
-Activity对象创建完毕，会将DecorView添加到Window中，同时创建ViewRootImpl，来渲染视图，并将DecorView和ViewRootImpl关联起来。
 
-自定义：
+自定义View：
 
-- invalidate和requestLayout的区别：
-- 测量：View和ViewGroup的测量过程(LayoutParams和MeasureSpec,wrap_content处理细节)；宽度设置为match_parent和设置为200dp怎么进行测量。
+- invalidate和requestLayout的区别：invalidate是重新绘制，onMeasure和onLayout都不会被调用，会重绘标记PFLAG_INVALIDATED的view。requestLayout是对View重新布局，会执行自身或父View的onMeasure和onLayout方法，如果layout中布局改变可能会执行onDraw方法。
+- 测量：View和ViewGroup的测量过程(View的LayoutParams会根据父容器添加的规则生成MeasureSpec从而完成测量,wrap_content,padding处理细节)；宽度设置为match_parent和设置为200dp怎么进行测量。
 - 布局：
 - 绘制：
 
