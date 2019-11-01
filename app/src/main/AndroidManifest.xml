@@ -93,7 +93,13 @@
         <activity android:name=".java.extends_.reflect.Deserialization" />
         <activity android:name=".java.extends_.abstractAndInterface.activity.AActivity" />
         <activity android:name=".java.extends_.abstractAndInterface.activity.BActivity" />
-        <activity android:name=".java.collection.ClientCollection" />
+        <activity android:name=".java.collection.ClientCollection" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".java.threaddemo.activity.ThreadOneActivity" />
         <activity android:name=".java.threaddemo.activity.ThreadSecondActivity" />
         <activity android:name=".java.threaddemo.activity.ThreadThreeActivity" />
@@ -113,11 +119,7 @@
         </activity>
         <activity android:name=".android.network.xutils.XutilsDemo" />
         <activity android:name=".android.network.retrofit.RetrofitDemo">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

@@ -828,7 +828,14 @@ LinkedList：
 - Set：HashSet：图片没有重复对象
 - Map：HashMap：不要求同步；ConcurrentHashMap：并发访问，线程安全；LinkedHashMap：记住插入元素项的顺序
 
-### 12.并发
+一个例子：String s = "abcabcdefac";对重复元素去重。要求：有序不重复。代码：ClientCollection。（有待优化）
+
+- ArrayList：有序重复。LinkedList：？？。
+- Set：无序不重复。LinkedHashSet：有序不重复(ok)。
+- HashMap：无序重复。LinkedHashMap：有序重复。
+- 提示：看源码，领悟精髓。
+
+### 12.并发9
 
 **线程中sleep方法和wait方法的区别**
 
