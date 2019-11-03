@@ -1,6 +1,14 @@
 ## UI
 
-### View
+### 目录
+
+- 1.View
+- 2.布局layout
+- 3.控件widget
+- 4.动画anim
+- 5.通知Notification
+
+### 1.View
 
 [我的github项目之View](https://github.com/2211785113/CustomView/blob/master/README.md)
 
@@ -25,20 +33,30 @@
 - 同方向滑动冲突。如ScrollView和ListView，可以计算ListView高度而动态设置ListView的高度，ScrollView高度可变。
 - 不同方向滑动冲突。如SRL和VP，SRL源码中当滑动距离大于最小滑动距离，会拦截事件，但是当VP左下或右下滑动时，事件就会被父View拦截，造成滑动冲突。所以用外部拦截法和内部拦截法来解决滑动冲突。外部拦截法事件向子View传递，只有当Y轴大于X轴滑动距离时，拦截事件；内部拦截法，用rDTE来拦截事件。
 
-实现原理：
+**实现原理：**
 
 
-自定义View：
+**自定义View：**
 
-- invalidate和requestLayout的区别：invalidate是重新绘制，onMeasure和onLayout都不会被调用，会重绘标记PFLAG_INVALIDATED的view。requestLayout是对View重新布局，会执行自身或父View的onMeasure和onLayout方法，如果layout中布局改变可能会执行onDraw方法。
-- 测量：View和ViewGroup的测量过程(View的LayoutParams会根据父容器添加的规则生成MeasureSpec从而完成测量,wrap_content,padding处理细节)；宽度设置为match_parent和设置为200dp怎么进行测量。
-- 布局：
-- 绘制：
+测量：计算视图大小。
+
+- View的测量过程：先执行measure方法，再执行onMeasure方法，最后的结果为MeasureSpec的specSize。系统会将View本身的LayoutParams根据父容器添加的规则转换成相对应的MeasureSpec，再根据MeasureSpec测量出View的宽高。注意自定义View时，直接继承自View和ViewGroup的View需要处理wrap_content。因为View在布局中使用wrap_content，那么它的specMode是AT_MOST即parentSize模式，在这种模式下，它的宽高等于specSize，和matchParent效果一致，显示不正确。所以当MeasureSpec的mode为AT_MOST时，给View设置对应的宽高数值。宽度设置为200dp/match_parent/wrap_content怎么进行测量。
+- ViewGroup的测量过程：onMeasure方法中会对所有的子元素进行measure过程，这个时候measure流程就从父容器传递到子元素中了，这样就完成一次measure过程，接着子元素会重复父容器的过程，如此反复就完成了整个View树的遍历。
+
+布局：提供视图要显示的位置。
+
+绘制：绘制。onDraw方法中自定义View直接继承View和ViewGroup需要处理下padding。
+
+View和SurfaceView的区别：View基于主线程刷新UI，SurfaceView子线程可以刷新UI
+
+invalidate和requestLayout的区别：invalidate是重新绘制，onMeasure和onLayout都不会被调用，会重绘标记PFLAG_INVALIDATED的view。requestLayout是对View重新布局，会执行自身或父View的onMeasure和onLayout方法，如果layout中布局改变可能会执行onDraw方法。
+
+定义：View为所有图形控件的基类，View的绘制由3个函数完成
 
 例子：
 
-- 如何实现一个字体的描边与阴影效果：
-- 如何画出一个印章的图案：
+- 如何实现一个字体的描边与阴影效果：阴影用 xml 或代码设置；描边上下两层TextView通过不同的字体颜色叠加。
+- 如何画出一个印章的图案：链接代码在电脑seal项目中。绘制圆环-canvas.drawCircle，绘制五角星-canvas.drawPath，绘制字体-圆弧用角度表示。https://blog.csdn.net/loser_li/article/details/48005683
 
 移动：
 
@@ -48,87 +66,57 @@
 
 - 三种方式：Scroller，
 ️
+### 2.布局layout
 
+线程布局LinearLayout：weight的使用场景
 
-沿着这条主线问View实现原理。️
-View和主线程的联系。️
+相对布局RelativeLayout：
 
+约束布局ConstraintLayout：优势。 Google新生支持库。https://blog.csdn.net/guolin_blog/article/details/53122387
 
+用途/后果：让两个TextView左右水平居中。
 
-五大注意事项。️
+单个布局和多个嵌套布局。
 
+margin和padding的区别。️️
 
-
-
-### 布局layout
-
-约束布局ConstraintLayout：
-
-为什么(优势)：
-
-用途/后果：：让两个TextView左右水平居中。
-
-
-
-Notification通知。️
-
-LinearLayout中weight的使用场景。️
-单个布局和多个嵌套布局。️
-margin和padding的区别。️
-例子：给你一个布局，你怎么写，左边是封面，右边是主标题和子标题，下面是正文。️
-例子：中间有一条竖线。️
-
-
-
-
-View实现原理。
-
-有没有用过RecyclerView，说说adapter里有哪些方法？对RecyclerView做过优化没有？有没有自定义过LayoutManager？优点是什么？RecyclerView分页请求怎么做的？ViewPager的分页请求怎么做的？
-recyclerview缓存机制，listview的缓存机制，相同条目复用，会出现数据错乱，区别。
-如何优化RecyclerView。️
-SparseArray：https://juejin.im/entry/57c3e8c48ac24700634bd3cf
-使用int[]数组存放key，避免了HashMap中基本数据类型需要装箱的步骤，其次不使用额外的结构体（Entry)，单个元素的存储成本下降。
-recyclerview复用：抖音无限循环效果实现，心神学堂在线作业题翻页。
-如何实现下拉刷新？Pull2RefreshListView看源码。
-做一个Recyclerview刷新分页获取数据的Demo。
-recyclerView的adapter里有哪些方法。️
-RecyclerView和ListView的区别
-缓存上:前者缓存的是View+ViewHolder+flag，不用每次调用findViewById,后者则只是缓存View
-刷新数据方面，前者提供了局部刷新，后者则全部刷新
-recyclerView嵌套卡顿解决如何解决
-设置预加载的数量LinearLayoutManager.setInitialPrefetchItemCount(4)，默认是预加载2个，
-设置子项缓存，设置自带滑动冲突解决属性rv.setHasFixedSize(true);        rv.setNestedScrollingEnabled(false);
-可以完美解决，不过Google不推荐RecyClerView嵌套使用,需要嵌套尽量找类似于ExpandableListView 第三方控件来解决
-
-View的测量过程：
-先执行measure方法，再执行onMeasure方法，最后的结果为MeasureSpec的specSize。系统会将View本身的LayoutParams根据父容器添加的规则转换成相对应的MeasureSpec，再根据MeasureSpec测量出View的宽高。
-ViewGroup的测量过程：
-onMeasure方法中会对所有的子元素进行measure过程，这个时候measure流程就从父容器传递到子元素中了，这样就完成一次measure过程，接着子元素会重复父容器的过程，如此反复就完成了整个View树的遍历。
-View和SurfaceView的区别
-View基于主线程刷新UI，SurfaceView子线程又可以刷新UI
-View的绘制原理
-View为所有图形控件的基类，View的绘制由3个函数完成
-measure,计算视图的大小
-layout,提供视图要显示的位置
-draw,绘制
-
-https://blog.csdn.net/figo0423/article/details/51464116
-如何实现一个字体的描边与阴影效果。
-* 阴影：xml 或 代码设置。
-* 描边：上下两层TextView通过不同的字体颜色叠加。
-https://blog.csdn.net/loser_li/article/details/48005683
-如何画出一个印章的图案。
-链接代码在电脑seal项目中。
-* 绘制圆环；（canvas.drawCircle）
-* 绘制五角星；(canvas.drawPath)
-* 绘制字体；（圆弧用角度表示）
-https://blog.csdn.net/guolin_blog/article/details/53122387
-Google新生支持库(Constrainlayout)。
 match parent和any size的区别：
+
 * match parent是用于填充满当前控件的父布局；
 * any size是用于填充满当前控件的约束规则
 
-### 动画anim
+例子：给你一个布局，你怎么写，左边是封面，右边是主标题和子标题，下面是正文。️
+例子：中间有一条竖线。️
+
+### 3.控件widget
+
+RecyclerView：
+
+adapter里的方法：getItemCount，getItemViewType，onCreateViewHolder，onBindViewHolder。
+
+优化：BaseRecvAdapter。自定义LayoutManager。
+
+分页请求：
+
+- RecyclerView分页请求
+- ViewPager分页请求
+
+RecyclerView和ListView的区别(优点)：
+
+- 缓存:前者缓存的是View+ViewHolder+flag，不用每次调用findViewById,后者则只是缓存View
+- 刷新数据：前者提供局部刷新，后者则全部刷新
+
+recyclerview缓存机制，listview的缓存机制，相同条目复用，会出现数据错乱。
+
+recyclerview复用：抖音无限循环效果实现，心神学堂在线作业题翻页。
+
+recyclerView嵌套卡顿解决如何解决：
+
+- 设置预加载的数量LinearLayoutManager.setInitialPrefetchItemCount(4)，默认是预加载2个，
+- 设置子项缓存，设置自带滑动冲突解决属性rv.setHasFixedSize(true);        rv.setNestedScrollingEnabled(false);
+- 可以完美解决，不过Google不推荐RecyClerView嵌套使用,需要嵌套尽量找类似于ExpandableListView 第三方控件来解决
+
+### 4.动画anim
 
 动画基础：
 
@@ -142,11 +130,9 @@ View动画和属性动画：
 * View动画：ViewGroup指定动画控制子元素的动画效果；Activity或Fragment实现切换动画效果。
 * 属性动画：实现匀速动画和非匀速动画。例子：给一个Button按钮实现宽度从0到500px的动画效果。
 
+Android子线程也可以实现动画。可以在子线程给View设置动画，动画的更新在主线程。
+
 链接：https://www.cnblogs.com/futureli/p/4621867.html
 
-动画和View，主线程联系：
-️
-* 能给View设置动画，动画的更新在主线程吗？
-* Android子线程也可以实现动画。
+### 5.通知Notification
 
-快问快答：做过的酷炫的动画？️动画和View，主线程联系。️

@@ -15,7 +15,6 @@ import java.util.RandomAccess;
 public class ArrayList<E> extends AbstractList<E>
         implements List<E>, RandomAccess, Cloneable, java.io.Serializable {
 
-    //序列号
     private static final long serialVersionUID = 8683452581122892189L;
 
     //默认容量
@@ -27,16 +26,14 @@ public class ArrayList<E> extends AbstractList<E>
     //空数组
     private static final Object[] DEFAULTCAPACITY_EMPTY_ELEMENTDATA = {};
 
-    //存储list集合元素的数组
-    transient Object[] elementData;
+    //存储元素的数组
+    transient Object[] elementData;//transient关键字看末尾科普
 
-    //list集合中包含元素的大小
+    //长度
     private int size;
 
     /**
-     * 初始化ArrayList
-     *
-     * @param initialCapacity 数组容量大小
+     * 构造方法：初始化数组容量大小
      */
     public ArrayList(int initialCapacity) {
         if (initialCapacity > 0) {
@@ -53,18 +50,14 @@ public class ArrayList<E> extends AbstractList<E>
     }
 
     /**
-     * 初始化ArrayList
-     * <p>
-     * 无参构造方法，设置为{}空数组。
+     * 构造方法：无参，设置为空数组。
      */
     public ArrayList() {
         this.elementData = DEFAULTCAPACITY_EMPTY_ELEMENTDATA;
     }
 
     /**
-     * 初始化ArrayList
-     *
-     * @param c 参数为一个集合
+     * 构造方法：参数为一个集合
      */
     public ArrayList(Collection<? extends E> c) {
         elementData = c.toArray();//集合转为数组
@@ -76,6 +69,8 @@ public class ArrayList<E> extends AbstractList<E>
             this.elementData = EMPTY_ELEMENTDATA;
         }
     }
+
+    // ============================================================================容量
 
     //将list集合的容量纠正为正确的size大小
     public void trimToSize() {
@@ -139,112 +134,20 @@ public class ArrayList<E> extends AbstractList<E>
                 MAX_ARRAY_SIZE;
     }
 
-    //list元素的大小
-    public int size() {
-        return size;
-    }
-
-    //判断list中是否有元素
-    public boolean isEmpty() {
-        return size == 0;
-    }
-
-    //如果list包含元素返回true
-    public boolean contains(Object o) {
-        return indexOf(o) >= 0;
-    }
-
-    //返回第一个出现要查找元素的索引，否则返回-1
-    public int indexOf(Object o) {
-        if (o == null) {
-            for (int i = 0; i < size; i++)
-                if (elementData[i] == null)
-                    return i;
-        } else {
-            for (int i = 0; i < size; i++)
-                if (o.equals(elementData[i]))
-                    return i;
-        }
-        return -1;
-    }
-
-    //返回最后一个出现要查找元素的索引，否则返回-1
-    public int lastIndexOf(Object o) {
-        if (o == null) {
-            for (int i = size - 1; i >= 0; i--)
-                if (elementData[i] == null)
-                    return i;
-        } else {
-            for (int i = size - 1; i >= 0; i--)
-                if (o.equals(elementData[i]))
-                    return i;
-        }
-        return -1;
-    }
-
-    //浅拷贝arraylist实例
-    public Object clone() {
-        try {
-            ArrayList<?> v = (ArrayList<?>) super.clone();
-            v.elementData = Arrays.copyOf(elementData, size);
-            v.modCount = 0;
-            return v;
-        } catch (CloneNotSupportedException e) {
-            //应该不会出现异常，因为实现了Cloneable接口
-            throw new InternalError(e);
-        }
-    }
+    // ============================================================================增删改查
 
     /**
-     * list集合转为Object类型数组
-     * Arrays.copyOf：为数组分配一个新的内存，调用者可以去修改。
+     * 增：添加元素到list集合的末尾
      */
-    public Object[] toArray() {
-        return Arrays.copyOf(elementData, size);
-    }
-
-    /**
-     * list集合转为T类型数组
-     * 泛型方法
-     * 如果新数组长度<list集合的长度，长度补足为size
-     * 如果新数组长度>list集合的长度，用null补足。
-     */
-    @SuppressWarnings("unchecked")
-    public <T> T[] toArray(T[] a) {
-        if (a.length < size)
-            return (T[]) Arrays.copyOf(elementData, size, a.getClass());
-        System.arraycopy(elementData, 0, a, 0, size);
-        if (a.length > size)
-            a[size] = null;
-        return a;
-    }
-
-    //返回list特定索引的元素
-    public E get(int index) {
-        if (index >= size)
-            throw new IndexOutOfBoundsException(outOfBoundsMsg(index));//index索引大于list集合的长度，抛出越界异常
-
-        return (E) elementData[index];//数组检索
-    }
-
-    //替代list集合特定位置的元素
-    public E set(int index, E element) {
-        if (index >= size)
-            throw new IndexOutOfBoundsException(outOfBoundsMsg(index));
-
-        E oldValue = (E) elementData[index];
-        elementData[index] = element;
-        return oldValue;
-    }
-
-    //添加元素到list集合的末尾
     public boolean add(E e) {
         ensureCapacityInternal(size + 1);
         elementData[size++] = e;
         return true;
     }
 
-    //添加元素到list集合的特定索引，其它元素往后挪
+    /**
+     * 增：添加元素到list集合的特定索引，其它元素往后挪
+     */
     public void add(int index, E element) {
         if (index > size || index < 0)
             throw new IndexOutOfBoundsException(outOfBoundsMsg(index));
@@ -256,62 +159,9 @@ public class ArrayList<E> extends AbstractList<E>
         size++;
     }
 
-    //移除list集合特定位置的元素，其它元素向左移
-    public E remove(int index) {
-        if (index >= size)
-            throw new IndexOutOfBoundsException(outOfBoundsMsg(index));
-
-        modCount++;
-        E oldValue = (E) elementData[index];
-
-        int numMoved = size - index - 1;
-        if (numMoved > 0)
-            System.arraycopy(elementData, index + 1, elementData, index,
-                    numMoved);
-        elementData[--size] = null; // 对象为空，不再存活，GC会回收。
-
-        return oldValue;
-    }
-
-    //移除第一次出现的元素
-    public boolean remove(Object o) {
-        if (o == null) {
-            for (int index = 0; index < size; index++)
-                if (elementData[index] == null) {
-                    fastRemove(index);
-                    return true;
-                }
-        } else {
-            for (int index = 0; index < size; index++)
-                if (o.equals(elementData[index])) {
-                    fastRemove(index);
-                    return true;
-                }
-        }
-        return false;
-    }
-
-    //移除元素：跳过了索引检查和没有返回值。
-    private void fastRemove(int index) {
-        modCount++;
-        int numMoved = size - index - 1;
-        if (numMoved > 0)
-            System.arraycopy(elementData, index + 1, elementData, index,
-                    numMoved);
-        elementData[--size] = null; //让GC回收
-    }
-
-    //清空list集合所有元素，集合变为null
-    public void clear() {
-        modCount++;
-
-        for (int i = 0; i < size; i++)
-            elementData[i] = null;//让GC回收不再存活的对象
-
-        size = 0;
-    }
-
-    //追加集合c到list集合的末尾
+    /**
+     * 增：追加集合c到list集合的末尾
+     */
     public boolean addAll(Collection<? extends E> c) {
         Object[] a = c.toArray();
         int numNew = a.length;
@@ -321,7 +171,9 @@ public class ArrayList<E> extends AbstractList<E>
         return numNew != 0;
     }
 
-    //添加集合c到list集合，新添加的元素开始索引为index
+    /**
+     * 增：添加集合c到list集合，新添加的元素开始索引为index
+     */
     public boolean addAll(int index, Collection<? extends E> c) {
         if (index > size || index < 0)
             throw new IndexOutOfBoundsException(outOfBoundsMsg(index));
@@ -340,7 +192,60 @@ public class ArrayList<E> extends AbstractList<E>
         return numNew != 0;
     }
 
-    //移除list集合从fromIndex索引到toIndex索引的元素
+    /**
+     * 删：移除第一次出现的元素
+     */
+    public boolean remove(Object o) {
+        if (o == null) {
+            for (int index = 0; index < size; index++)
+                if (elementData[index] == null) {
+                    fastRemove(index);
+                    return true;
+                }
+        } else {
+            for (int index = 0; index < size; index++)
+                if (o.equals(elementData[index])) {
+                    fastRemove(index);
+                    return true;
+                }
+        }
+        return false;
+    }
+
+    /**
+     * 删：移除元素：跳过了索引检查和没有返回值。
+     */
+    private void fastRemove(int index) {
+        modCount++;
+        int numMoved = size - index - 1;
+        if (numMoved > 0)
+            System.arraycopy(elementData, index + 1, elementData, index,
+                    numMoved);
+        elementData[--size] = null; //让GC回收
+    }
+
+    /**
+     * 删：移除list集合特定位置的元素，其它元素向左移
+     */
+    public E remove(int index) {
+        if (index >= size)
+            throw new IndexOutOfBoundsException(outOfBoundsMsg(index));
+
+        modCount++;
+        E oldValue = (E) elementData[index];
+
+        int numMoved = size - index - 1;
+        if (numMoved > 0)
+            System.arraycopy(elementData, index + 1, elementData, index,
+                    numMoved);
+        elementData[--size] = null; // 对象为空，不再存活，GC会回收。
+
+        return oldValue;
+    }
+
+    /**
+     * 删：移除list集合从fromIndex索引到toIndex索引的元素
+     */
     protected void removeRange(int fromIndex, int toIndex) {
         if (toIndex < fromIndex) {
             throw new IndexOutOfBoundsException("toIndex < fromIndex");
@@ -358,28 +263,24 @@ public class ArrayList<E> extends AbstractList<E>
         size = newSize;
     }
 
-    //抛出异常打印越界信息：索引index和大小size
-    private String outOfBoundsMsg(int index) {
-        return "Index: " + index + ", Size: " + size;
-    }
-
-    //移除list集合所有包含在c集合中的的元素，结果list中的元素不包含c
+    /**
+     * 删：移除list集合所有包含在c集合中的的元素，结果list中的元素不包含c
+     */
     public boolean removeAll(Collection<?> c) {
         Objects.requireNonNull(c);
         return batchRemove(c, false);
     }
 
-    //仅仅保留list集合中的包含在c中的元素，即移除不在c集合中的元素。结果list中的元素包含c
+    /**
+     * 删：仅仅保留list集合中的包含在c中的元素，即移除不在c集合中的元素。结果list中的元素包含c
+     */
     public boolean retainAll(Collection<?> c) {
         Objects.requireNonNull(c);
         return batchRemove(c, true);
     }
 
     /**
-     * @param c
-     * @param complement 为true，移除不在c集合中的元素，留下在c集合中的元素；
-     *                   为false，移除在c集合中的元素，留下不在c集合中的元素。
-     * @return
+     * 删：complement 为true，移除不在c集合中的元素，留下在c集合中的元素；为false，移除在c集合中的元素，留下不在c集合中的元素。
      */
     private boolean batchRemove(Collection<?> c, boolean complement) {
         final Object[] elementData = this.elementData;
@@ -407,6 +308,144 @@ public class ArrayList<E> extends AbstractList<E>
         }
         return modified;
     }
+
+    /**
+     * 删：清空list集合所有元素，集合变为null
+     */
+    public void clear() {
+        modCount++;
+
+        for (int i = 0; i < size; i++)
+            elementData[i] = null;//让GC回收不再存活的对象
+
+        size = 0;
+    }
+
+    /**
+     * 改：替代list集合特定位置的元素
+     */
+    public E set(int index, E element) {
+        if (index >= size)
+            throw new IndexOutOfBoundsException(outOfBoundsMsg(index));
+
+        E oldValue = (E) elementData[index];
+        elementData[index] = element;
+        return oldValue;
+    }
+
+    /**
+     * 查：返回最后一个出现要查找元素的索引，否则返回-1
+     */
+    public int lastIndexOf(Object o) {
+        if (o == null) {
+            for (int i = size - 1; i >= 0; i--)
+                if (elementData[i] == null)
+                    return i;
+        } else {
+            for (int i = size - 1; i >= 0; i--)
+                if (o.equals(elementData[i]))
+                    return i;
+        }
+        return -1;
+    }
+
+
+    /**
+     * 查：返回list特定索引的元素
+     */
+    public E get(int index) {
+        if (index >= size)
+            throw new IndexOutOfBoundsException(outOfBoundsMsg(index));//index索引大于list集合的长度，抛出越界异常
+
+        return (E) elementData[index];//数组检索
+    }
+
+    /**
+     * 查：返回第一个出现要查找元素的索引，否则返回-1
+     */
+    public int indexOf(Object o) {
+        if (o == null) {
+            for (int i = 0; i < size; i++)
+                if (elementData[i] == null)
+                    return i;
+        } else {
+            for (int i = 0; i < size; i++)
+                if (o.equals(elementData[i]))
+                    return i;
+        }
+        return -1;
+    }
+
+    /**
+     * 查：如果list包含元素返回true
+     */
+    public boolean contains(Object o) {
+        return indexOf(o) >= 0;
+    }
+
+
+    /**
+     * 长度：list元素的大小
+     */
+    public int size() {
+        return size;
+    }
+
+    /**
+     * 判断：list中是否有元素
+     */
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+    /**
+     * 异常：抛出异常打印越界信息：索引index和大小size
+     */
+    private String outOfBoundsMsg(int index) {
+        return "Index: " + index + ", Size: " + size;
+    }
+
+
+    // ============================================================================集合转数组
+
+    /**
+     * 集合转数组：转为Object类型数组。Arrays.copyOf：为数组分配一个新的内存，调用者可以去修改。
+     */
+    public Object[] toArray() {
+        return Arrays.copyOf(elementData, size);
+    }
+
+    /**
+     * 集合转数组：转为T类型数组。泛型方法。如果新数组长度<list集合的长度，长度补足为size；如果新数组长度>list集合的长度，用null补足。
+     */
+    @SuppressWarnings("unchecked")
+    public <T> T[] toArray(T[] a) {
+        if (a.length < size)
+            return (T[]) Arrays.copyOf(elementData, size, a.getClass());
+        System.arraycopy(elementData, 0, a, 0, size);
+        if (a.length > size)
+            a[size] = null;
+        return a;
+    }
+
+    // ============================================================================克隆
+
+    /**
+     * 浅拷贝arraylist实例
+     */
+    public Object clone() {
+        try {
+            ArrayList<?> v = (ArrayList<?>) super.clone();
+            v.elementData = Arrays.copyOf(elementData, size);
+            v.modCount = 0;
+            return v;
+        } catch (CloneNotSupportedException e) {
+            //应该不会出现异常，因为实现了Cloneable接口
+            throw new InternalError(e);
+        }
+    }
+
+    // ============================================================================序列化与反序列化
 
     /**
      * 对象的序列化：Java对象转换成字节序列的过程，对象输出流调用writeObject(object)方法把字节序列存到文件中(写入文件)

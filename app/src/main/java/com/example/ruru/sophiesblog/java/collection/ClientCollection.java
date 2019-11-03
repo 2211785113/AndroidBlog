@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Hashtable;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
@@ -39,6 +40,7 @@ public class ClientCollection extends AppCompatActivity {
 
         /* map */
         HashMap hashMap;
+        Hashtable hashtable;
         LinkedHashMap linkedHashMap;
         ConcurrentHashMap concurrentHashMap;
 

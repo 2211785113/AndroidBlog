@@ -1,6 +1,6 @@
 # Sophie的技术博客
 
-持续完善中...(随后做一个四大模块的大型蜘蛛网络图，把所有知识点横纵全部关联起来，达到全面融会贯通)
+持续完善中...(随后做一个四大模块的大型蜘蛛网络图，把所有知识点横纵全部关联起来，达到全面融会贯通，抓本质抓内核)
 
 ## 数据结构与算法(ok)
 
@@ -69,19 +69,19 @@
     * [7....架构——模式](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/7架构.md)
     * [8....性能——UI-矢量图绘制不同屏幕下分辨率](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/8性能.md)
     * [9....安全与打包——代码混淆,多渠道打包](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/9安全与打包.md)
-    * [10...新技术相关——google io大会看法,kotlin,flutter,RN,Hybird,jetpack,插件化,组件化,模块化,热更新/热修复](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/10新技术相关.md)
+    * [10...新技术相关——google io大会,kotlin,flutter,RN,Hybird,jetpack,插件化,组件化,模块化,热更新/热修复](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/10新技术相关.md)
     * [11...Android SDK与NDK——第三方推送/地图/支付/登录,JNI与NDK编程](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/11AndroidSDK与NDK.md)
     * [12...环境——AS,gradle](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/12环境.md)
     * [13...版本控制——git](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/13版本控制.md)
     * [14...Android源码学习](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/14Android源码学习.md)
     * [15...音视频业务——技术服务于业务,理论服务于实践](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/15音视频业务.md)
 
-* Android架构
+* 架构
 
-    * [介绍](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android架构(架构师方向)/介绍.md)
-    * [MVC模式](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android架构(架构师方向)/MVC模式.md)
-    * [MVP模式](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android架构(架构师方向)/MVP模式.md)
-    * [MVVM模式](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android架构(架构师方向)/MVVM模式.md)
+    * [Android系统架构](https://github.com/2211785113/Blog/blob/master/Android基础与技术/架构(架构师方向)/Android系统架构.md)
+    * [MVC模式](https://github.com/2211785113/Blog/blob/master/Android基础与技术/架构(架构师方向)/MVC模式.md)
+    * [MVP模式](https://github.com/2211785113/Blog/blob/master/Android基础与技术/架构(架构师方向)/MVP模式.md)
+    * [MVVM模式](https://github.com/2211785113/Blog/blob/master/Android基础与技术/架构(架构师方向)/MVVM模式.md)
 
 * 网络
 

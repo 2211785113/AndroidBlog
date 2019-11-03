@@ -835,7 +835,7 @@ LinkedList：
 - HashMap：无序重复。LinkedHashMap：有序重复。
 - 提示：看源码，领悟精髓。
 
-### 12.并发9
+### 12.并发
 
 **线程中sleep方法和wait方法的区别**
 
