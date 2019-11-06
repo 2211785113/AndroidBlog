@@ -11,6 +11,8 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
+import static com.example.ruru.sophiesblog.data_algorithm.datastructure.tree.binarytree.CreateTree.strToTree;
+
 /**
  * 深度优先搜索DFS等价于先序遍历
  */
@@ -25,7 +27,7 @@ public class A652 extends AppCompatActivity {
         setContentView(R.layout.activity_a652);
 
         String[] str = new String[]{"1", "2", "3", "4", null, "2", "4", null, null, "4"};
-        TreeNode node = TreeNode.strToTree(str);
+        TreeNode node = strToTree(str);
 
         List<TreeNode> res = findDuplicateSubtrees(node);
         Log.d(getClass().getName(), "onCreate: res=" + res);//[[4],[2,4]]

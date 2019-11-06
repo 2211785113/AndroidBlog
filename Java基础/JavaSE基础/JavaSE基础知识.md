@@ -25,6 +25,20 @@ float(4byte) double(8byte) char(2byte) boolean(1byte)
 
 boolean例子：代码-ABoolean
 
+注意：在移动开发中由于移动设备内存的局限性，往往需要考虑使用的数据类型所占用的字节数
+
+一个例子：
+
+代码：PrintTwoPower（注意int的位数）待总结。
+
+原码：二进制(十进制转为二进制)
+
+补码：
+
+反码：
+
+《计算机系统结构》字节byte
+
 ---
 
 **基本类型与包装类**
@@ -241,6 +255,12 @@ public boolean equals(Object anObject) {
 - 类型为：byte short int char 的常量表达式，long不可以
 - Java 5：枚举类型
 - Java 7：字符串类型
+
+---
+
+一个例子：依次输出2的1次幂到2的100次幂
+
+代码：PrintTwoPower（注意int的位数，详情看1.基本数据类型）
 
 ---
 

@@ -8,7 +8,7 @@ import com.example.ruru.sophiesblog.R;
 
 import java.util.Stack;
 
-import static com.example.ruru.sophiesblog.data_algorithm.datastructure.tree.binarytree.TreeNode.createTree;
+import static com.example.ruru.sophiesblog.data_algorithm.datastructure.tree.binarytree.CreateTree.createTree;
 
 /**
  * 后序遍历:DEBFGCA

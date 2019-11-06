@@ -6,7 +6,8 @@ import android.util.Log;
 
 import com.example.ruru.sophiesblog.R;
 
-import static com.example.ruru.sophiesblog.data_algorithm.datastructure.tree.binarytree.TreeNode.strToTree;
+import static com.example.ruru.sophiesblog.data_algorithm.datastructure.tree.binarytree.CreateTree.strToTree;
+import static com.example.ruru.sophiesblog.data_algorithm.datastructure.tree.binarytree.CreateTree.strToTree1;
 
 /**
  * 思想：DFS/递归
@@ -23,10 +24,10 @@ public class A671 extends AppCompatActivity {
         setContentView(R.layout.activity_a671);
 
         String[] arr = new String[]{"2", "2", "5", null, null, "5", "7"};//5
-        String[] arr1 = new String[]{"2", "2", "5", "3", "4", "5", "7"};//3
+        String[] arr1 = new String[]{"2", "2", "5", "3", "4", "5", "7","8"};//3
         String[] arr2 = new String[]{"2", "2", "2"};//-1
 
-        TreeNode<String> node = strToTree(arr2);
+        TreeNode<String> node = strToTree(arr1);
         int res = findSecondMinimumValue1(node);
 
         Log.d(getClass().getName(), "onCreate: res=" + res);

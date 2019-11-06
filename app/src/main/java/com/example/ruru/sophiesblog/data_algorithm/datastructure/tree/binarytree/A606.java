@@ -6,7 +6,7 @@ import android.util.Log;
 
 import com.example.ruru.sophiesblog.R;
 
-import static com.example.ruru.sophiesblog.data_algorithm.datastructure.tree.binarytree.TreeNode.strToTree;
+import static com.example.ruru.sophiesblog.data_algorithm.datastructure.tree.binarytree.CreateTree.strToTree;
 
 /**
  * 未完待续

@@ -9,7 +9,7 @@ import com.example.ruru.sophiesblog.R;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import static com.example.ruru.sophiesblog.data_algorithm.datastructure.tree.binarytree.TreeNode.createTree;
+import static com.example.ruru.sophiesblog.data_algorithm.datastructure.tree.binarytree.CreateTree.createTree;
 
 /**
  * 层序遍历：ABCDEFG

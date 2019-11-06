@@ -8,7 +8,7 @@ import com.example.ruru.sophiesblog.R;
 
 import java.util.HashSet;
 
-import static com.example.ruru.sophiesblog.data_algorithm.datastructure.tree.binarytree.TreeNode.strToTree;
+import static com.example.ruru.sophiesblog.data_algorithm.datastructure.tree.binarytree.CreateTree.strToTree;
 
 /**
  * 二叉搜索树：BST

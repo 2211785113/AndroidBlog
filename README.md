@@ -1,8 +1,6 @@
 # Sophie的技术博客
 
-持续完善中...(随后做一个四大模块的大型蜘蛛网络图，把所有知识点横纵全部关联起来，达到全面融会贯通，抓本质抓内核)
-
-## 数据结构与算法(ok)
+## 数据结构与算法
 
 * DataStructure(数据结构)
 
@@ -26,7 +24,7 @@
 
     * [数学](https://github.com/2211785113/Blog/blob/master/数据结构与算法/Mathematics/数学.md)
 
-## Java基础(ok)
+## Java基础
 
 * Java SE基础
 
@@ -56,7 +54,7 @@
 
     * [JVM](https://github.com/2211785113/Blog/blob/master/Java基础/Java虚拟机/JVM.md)
 
-## Android基础与技术(ok)
+## Android基础与技术
 
 * Android基础与技术
 
@@ -65,9 +63,9 @@
     * [3....进程与线程——handler,RxJava,线程池,IPC](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/3进程与线程.md)
     * [4....开源框架——图片/网络/依赖注入](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/4开源框架.md)
     * [5....数据存储与通信——数据库,缓存,传递,文件预览](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/5数据存储与通信.md)
-    * [6....适配——UI/横竖屏幕适配](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/6适配.md)
+    * [6....适配——横竖屏适配/屏幕适配](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/6适配.md)
     * [7....架构——模式](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/7架构.md)
-    * [8....性能——UI-矢量图绘制不同屏幕下分辨率](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/8性能.md)
+    * [8....性能——优化](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/8性能.md)
     * [9....安全与打包——代码混淆,多渠道打包](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/9安全与打包.md)
     * [10...新技术相关——google io大会,kotlin,flutter,RN,Hybird,jetpack,插件化,组件化,模块化,热更新/热修复](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/10新技术相关.md)
     * [11...Android SDK与NDK——第三方推送/地图/支付/登录,JNI与NDK编程](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/11AndroidSDK与NDK.md)
@@ -94,7 +92,7 @@
     * [网络请求传数据之URL转义](https://github.com/2211785113/Blog/blob/master/Android基础与技术/网络/Retrofit源码剖析.md)
     * [网络请求返回数据解析](https://github.com/2211785113/Blog/blob/master/Android基础与技术/网络/网络请求返回数据解析.md)
 
-## 设计模式(ok)
+## 设计模式
 
 * 介绍
 

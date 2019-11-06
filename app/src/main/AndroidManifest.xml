@@ -69,6 +69,8 @@
         <activity android:name=".data_algorithm.mathmatics.AFabonacci" />
         <activity android:name=".data_algorithm.mathmatics.A754" />
         <activity android:name=".data_algorithm.mathmatics.A728" />
+        <activity android:name=".data_algorithm.datastructure.linked.create.CreateLink" />
+        <activity android:name=".data_algorithm.datastructure.tree.binarytree.CreateTree" />
 
         <!-- 设计模式 -->
         <activity android:name=".design_model.create.singleton.Singleton" />
@@ -93,13 +95,7 @@
         <activity android:name=".java.extends_.reflect.Deserialization" />
         <activity android:name=".java.extends_.abstractAndInterface.activity.AActivity" />
         <activity android:name=".java.extends_.abstractAndInterface.activity.BActivity" />
-        <activity android:name=".java.collection.ClientCollection" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".java.collection.ClientCollection" />
         <activity android:name=".java.threaddemo.activity.ThreadOneActivity" />
         <activity android:name=".java.threaddemo.activity.ThreadSecondActivity" />
         <activity android:name=".java.threaddemo.activity.ThreadThreeActivity" />
@@ -115,12 +111,20 @@
         <activity android:name=".android.network.volley.VolleyDemo" />
         <activity android:name=".android.network.volley.gson.GsonTest" />
         <activity android:name=".android.network.okhttp.old.OkhttpOldDemo" />
-        <activity android:name=".android.network.okhttp.OkhttpDemo">
-        </activity>
+        <activity android:name=".android.network.okhttp.OkhttpDemo" />
         <activity android:name=".android.network.xutils.XutilsDemo" />
-        <activity android:name=".android.network.retrofit.RetrofitDemo">
+        <activity android:name=".android.network.retrofit.RetrofitDemo" />
+        <activity android:name=".java.controlFlow.PrintTwoPower" />
+        <activity android:name=".data_algorithm.datastructure.linked.traverse.TraversalLink" />
+        <activity android:name=".data_algorithm.datastructure.linked.traverse.ReversalLink"></activity>
+        <activity android:name=".data_algorithm.datastructure.linked.traverse.CircleTraversal">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity android:name=".data_algorithm.datastructure.linked._add.AddNode"></activity>
     </application>
 
 </manifest>
