@@ -23,11 +23,21 @@ public class TraversalLink extends AppCompatActivity {
         Node node = strToLink(str);
 
         traversal(node);
+        int length = getLength(node);
+        Log.d(getClass().getName(), "onCreate:res= " + length);//7
     }
 
     private void traversal(Node node) {
         for (Node x = node; x != null; x = x.next) {
             Log.d(getClass().getName(), "traversal:res= " + x.e);
         }
+    }
+
+    private int getLength(Node node) {
+        int index = 0;
+        for (Node x = node; x != null; x = x.next) {
+            index++;
+        }
+        return index;
     }
 }

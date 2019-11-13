@@ -71,6 +71,10 @@
         <activity android:name=".data_algorithm.mathmatics.A728" />
         <activity android:name=".data_algorithm.datastructure.linked.create.CreateLink" />
         <activity android:name=".data_algorithm.datastructure.tree.binarytree.CreateTree" />
+        <activity android:name=".data_algorithm.datastructure.linked.traverse.TraversalLink" />
+        <activity android:name=".data_algorithm.datastructure.linked.traverse.ReversalLink" />
+        <activity android:name=".data_algorithm.datastructure.linked.traverse.CircleTraversal" />
+        <activity android:name=".data_algorithm.datastructure.linked.traverse.CircleTraversal2" />
 
         <!-- 设计模式 -->
         <activity android:name=".design_model.create.singleton.Singleton" />
@@ -99,6 +103,7 @@
         <activity android:name=".java.threaddemo.activity.ThreadOneActivity" />
         <activity android:name=".java.threaddemo.activity.ThreadSecondActivity" />
         <activity android:name=".java.threaddemo.activity.ThreadThreeActivity" />
+        <activity android:name=".java.controlFlow.PrintTwoPower" />
 
         <!-- Android基础与技术 -->
         <activity android:name=".android.adapter.SparseArray" />
@@ -114,17 +119,32 @@
         <activity android:name=".android.network.okhttp.OkhttpDemo" />
         <activity android:name=".android.network.xutils.XutilsDemo" />
         <activity android:name=".android.network.retrofit.RetrofitDemo" />
-        <activity android:name=".java.controlFlow.PrintTwoPower" />
-        <activity android:name=".data_algorithm.datastructure.linked.traverse.TraversalLink" />
-        <activity android:name=".data_algorithm.datastructure.linked.traverse.ReversalLink"></activity>
-        <activity android:name=".data_algorithm.datastructure.linked.traverse.CircleTraversal">
+        <activity android:name=".data_algorithm.datastructure.linked.operate.AddNode" />
+        <activity android:name=".data_algorithm.datastructure.linked.operate.UpdateNode" />
+        <activity android:name=".data_algorithm.datastructure.linked.operate.RemoveNode" />
+        <activity android:name=".android.service.local.ClientServiceA"></activity>
+        <activity android:name=".android.service.remote.client.ClientServiceB">
+
+        </activity>
+        <activity android:name=".android.service.remote2.client.ClientServiceC">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".data_algorithm.datastructure.linked._add.AddNode"></activity>
+
+        <service android:name=".android.service.local.ServiceA" />
+        <service android:name=".android.service.remote.server.ServiceB">
+            <intent-filter>
+                <action android:name="com.example.ruru.sophiesblog.android.service.remote.ServiceB" />
+            </intent-filter>
+        </service>
+        <service android:name=".android.service.remote2.server.ServiceC">
+            <intent-filter>
+                <action android:name="com.example.ruru.sophiesblog.android.service.remote2.server.action"></action>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".data_algorithm.datastructure.linked.operate.AddNode">
+    tools:context=".data_algorithm.datastructure.linked.traverse.CircleTraversal2">
 
 </android.support.constraint.ConstraintLayout>

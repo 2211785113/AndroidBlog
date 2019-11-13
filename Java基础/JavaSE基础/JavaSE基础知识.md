@@ -309,9 +309,9 @@ public boolean equals(Object anObject) {
 
 **类序列化的目的**
 
-链接：https://blog.csdn.net/u010002184/article/details/90755625
-
 类实现Serializable就代表类序列化。Java对象转换成字节序列的过程就称为对象的序列化。无论何种类型的数据，都是以二进制的形式在网络上传送，为了由一个进程把Java对象发送给另一个进程，需要将其转换为字节序列才能在网络上传送。所以序列化的作用是为了不同JVM之间共享实例对象的一种解决方案，即实现进程间通信，同时二进制数据保证了数据的持久化。
+
+链接：https://blog.csdn.net/u010002184/article/details/90755625
 
 MessagePack 是一种数据序列化的方式，它支持多种数据类型，这里只考虑这些数据类型的一个子集:Null、Boolean、Integer、Double、String、List 和 Map。 可以认为，每种类型的数据被序列化之后，都转化成了以下形式的二进制数据:
 [类型代码] [数据] 其中[类型代码]部分标识原始数据的类型，[数据]部分保存真实数据序列化之后的值。
@@ -850,7 +850,7 @@ LinkedList：
 
 一个例子：String s = "abcabcdefac";对重复元素去重。要求：有序不重复。代码：ClientCollection。（有待优化）
 
-- ArrayList：有序重复。LinkedList：？？。
+- ArrayList/LinkedList：有序重复。
 - Set：无序不重复。LinkedHashSet：有序不重复(ok)。
 - HashMap：无序重复。LinkedHashMap：有序重复。
 - 提示：看源码，领悟精髓。

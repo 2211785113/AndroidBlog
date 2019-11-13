@@ -11,7 +11,7 @@ import com.example.ruru.sophiesblog.java.collection.list.ArrayList;
 import java.util.List;
 
 /**
- * 循环单链表遍历：循环单链表是一个封闭的长方形
+ * 循环单链表(闭合)遍历
  */
 public class CircleTraversal extends AppCompatActivity {
 
@@ -20,19 +20,35 @@ public class CircleTraversal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_circle_traversal);
 
-        String[] str = {"A", "B", "C", "D", "E", "F", "G", "A"};
+        String[] str = {"A", "B", "C", "D", "E", "F", "G", "C"};
         Node node = strToCircleLink(str);
 
         circleTraversal1(node);//答案：A B C D E F G A
+
+        int length = getLength(node);
+        Log.d(getClass().getName(), "onCreate:res= " + length);//8
     }
 
+    /**
+     * for循环
+     */
     private void circleTraversal(Node first) {
-        Log.d(getClass().getName(), "circleTraversal:res= " + first.e);
         for (Node x = first.next; x != first; x = x.next) {
             Log.d(getClass().getName(), "circleTraversal:res= " + x.e);
         }
     }
 
+    private int getLength(Node first) {
+        int index = 1;
+        for (Node x = first.next; x != first; x = x.next) {
+            index++;
+        }
+        return index;
+    }
+
+    /**
+     * while循环
+     */
     private void circleTraversal1(Node first) {
         Node p = first.next;
         while (p != first) {
@@ -41,6 +57,9 @@ public class CircleTraversal extends AppCompatActivity {
         }
     }
 
+    /**
+     * 创建链表
+     */
     private Node strToCircleLink(String[] str) {
         int len = str.length;
         List<Node> list = new ArrayList<>();

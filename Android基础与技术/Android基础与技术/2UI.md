@@ -5,8 +5,11 @@
 - 1.View
 - 2.布局layout
 - 3.控件widget
-- 4.动画anim
-- 5.通知Notification
+- 4.图片drawable
+- 5.动画anim
+- 6.通知Notification
+- 7.窗口Window
+- 8.对话框Dialog
 
 ### 1.View
 
@@ -116,7 +119,10 @@ recyclerView嵌套卡顿解决如何解决：
 - 设置子项缓存，设置自带滑动冲突解决属性rv.setHasFixedSize(true);        rv.setNestedScrollingEnabled(false);
 - 可以完美解决，不过Google不推荐RecyClerView嵌套使用,需要嵌套尽量找类似于ExpandableListView 第三方控件来解决
 
-### 4.动画anim
+
+### 4.图片drawable
+
+### 5.动画anim
 
 动画基础：
 
@@ -134,5 +140,9 @@ Android子线程也可以实现动画。可以在子线程给View设置动画，
 
 链接：https://www.cnblogs.com/futureli/p/4621867.html
 
-### 5.通知Notification
+### 6.通知Notification
+
+### 7.窗口Window
+
+### 8.对话框Dialog
 
