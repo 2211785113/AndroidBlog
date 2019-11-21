@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.ruru.sophiesblog">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -106,6 +107,22 @@
         <activity android:name=".java.controlFlow.PrintTwoPower" />
 
         <!-- Android基础与技术 -->
+        <service android:name=".android.service.local.ServiceA" />
+        <service android:name=".android.service.remote.server.ServiceB">
+            <intent-filter>
+                <action android:name="com.example.ruru.sophiesblog.android.service.remote.ServiceB" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service android:name=".android.service.remote2.server.ServiceC">
+            <intent-filter>
+                <action android:name="com.aaa.servicec.action" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
         <activity android:name=".android.adapter.SparseArray" />
         <activity android:name=".android.adapter.RecyclerViewA" />
         <activity android:name=".android.architect.MVP" />
@@ -122,29 +139,28 @@
         <activity android:name=".data_algorithm.datastructure.linked.operate.AddNode" />
         <activity android:name=".data_algorithm.datastructure.linked.operate.UpdateNode" />
         <activity android:name=".data_algorithm.datastructure.linked.operate.RemoveNode" />
-        <activity android:name=".android.service.local.ClientServiceA"></activity>
-        <activity android:name=".android.service.remote.client.ClientServiceB">
+        <activity android:name=".android.service.local.ClientServiceA" />
+        <activity android:name=".android.service.remote.client.ClientServiceB" />
+        <activity android:name=".android.service.remote2.client.ClientServiceC" />
+        <activity
+            android:name=".android.adaptive.cross.DialogTest1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android.adaptive.cross.DialogTest2"
+            android:configChanges="screenSize|orientation" />
+        <activity
+            android:name=".android.adaptive.screen.Page"
+            android:screenOrientation="portrait" />
+        <activity android:name=".android.adaptive.screen.NinePatchActivity">
 
         </activity>
-        <activity android:name=".android.service.remote2.client.ClientServiceC">
+        <activity android:name=".android.adaptive.screen.ScreenAdaptive">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <service android:name=".android.service.local.ServiceA" />
-        <service android:name=".android.service.remote.server.ServiceB">
-            <intent-filter>
-                <action android:name="com.example.ruru.sophiesblog.android.service.remote.ServiceB" />
-            </intent-filter>
-        </service>
-        <service android:name=".android.service.remote2.server.ServiceC">
-            <intent-filter>
-                <action android:name="com.example.ruru.sophiesblog.android.service.remote2.server.action"></action>
-            </intent-filter>
-        </service>
     </application>
 
 </manifest>

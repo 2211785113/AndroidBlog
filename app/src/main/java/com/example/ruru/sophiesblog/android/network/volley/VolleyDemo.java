@@ -38,7 +38,9 @@ public class VolleyDemo extends AppCompatActivity {
             @Override
             public void onSuccess(String response) {
                 Log.d(getClass().getName(), "onSuccess:res= " + response.substring(0, 100));
-                textView.setText(response.substring(0, 100));
+                if (!response.substring(0,100).equals("")){
+                    textView.setText(response.substring(0, 100));
+                }
             }
 
             @Override

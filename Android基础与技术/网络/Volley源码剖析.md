@@ -28,11 +28,19 @@ newRequestQueue方法有4个构造函数，下列依次执行：
 - 如果不可以缓存，直接添加请求到网络调度线程；如果可以缓存，判断之前是否有执行相同的请求且还没有返回结果，如果有，将请求加入mWaitingRequests等待队列，不再重复请求；如果没有，将请求加入缓存队列。
 - add方法没有请求网络或对缓存进行操作。当将请求添加到网络请求队列或缓存队列时，在后台的网络调度线程和缓存调度线程轮询各自的请求队列，有请求任务则开始执行。请往下看。
 
+注意：add方法中有一个判断：if (!request.shouldCache())，request.shouldCache()进入Request的源码，会发现setShouldCache方法会设置请求是否需要进行缓存。如果需要缓存设置为true，不过这个值默认为true。
+
 #### 3.缓存调度线程CacheDispatcher#run：
 
 - 先将线程设置为后台线程；
 - while(true)循环处理请求，注意这里如果线程中断会抛出一个异常，isInterrupted由true置为false，再调用Thread.currentThread().interrupt()来中断线程。
 - 处理请求processRequest，从缓存队列mCacheQueue中取出一个请求，如果请求被取消，就结束请求；然后获取缓存的响应，如果缓存为空，或者过期，并且不在等待队列中时，把请求加入到网络调度线程。如果有缓存响应且没有过期，对数据进行解析并回调给主线程。
+
+注意：
+
+缓存的处理，先初始化缓存；是否开启缓存，默认为true；缓存是否为空，为空请求网络；缓存是否过期，过期请求网络；缓存是否需要刷新，刷新请求网络。顺序为设置缓存-缓存为空-缓存过期-缓存刷新。
+
+volley是内存缓存，应用退出后就没有缓存了；微信是sd卡缓存，应用退出后还有缓存。错，应该是磁盘缓存图片。
 
 #### 4.网络调度线程NetworkDispatcher#run：
 
@@ -53,6 +61,8 @@ Volley分为三类线程，分别是主线程、缓存调度线程和4个网络�
 
 ### Volley拷问
 
+链接(非常棒)：https://blog.csdn.net/fenggering/article/details/88563418
+
 Volley：可扩展性强，适合数据量小且频繁的请求。
 
 1.并发实现：网络调度线程和缓存调度线程通过while循环不断从请求队列中获取请求，实现并发请求。
@@ -69,4 +79,18 @@ Volley：可扩展性强，适合数据量小且频繁的请求。
 
 7.为什么volley不适合数据量大的场景：因为http传输的数据，不管是发起请求的数据，还是得到的数据，都会读取到内存中。如果几个线程同时访问数据量大的请求，就容易OOM。
 
-链接：https://blog.csdn.net/fenggering/article/details/88563418
+8.volley缓存：查看代码VolleyRequest中设置缓存和获取缓存数据。图片源码中用了磁盘缓存，但是对字符串等没有进行缓存，需要自己做。还需要看源码和链接进行研究。
+
+设置缓存：request.setShouldCache(true);
+
+获取缓存数据：queue.getCache().get(url).data.toString(); get请求缓存的key为url，所以要缓存结果最好用get请求方式。
+
+缓存链接：https://blog.csdn.net/u010687392/article/details/47665463
+
+缓存链接：https://blog.csdn.net/jxxfzgy/article/details/44088299
+
+9.volley支持https证书：
+
+https://www.cnblogs.com/punkisnotdead/p/4788199.html
+
+https://www.jianshu.com/p/5a1c5c787482

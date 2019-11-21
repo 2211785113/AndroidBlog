@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="layout_aa" type="layout">@layout/layout_fragment_aa</item>
+    <item name="layout_bb" type="layout">@layout/layout_fragment_bb</item>
+</resources>

@@ -14,8 +14,6 @@ import com.example.ruru.sophiesblog.java.collection.list.ArrayList;
 import java.util.List;
 
 public class ServiceC extends Service {
-    private final String TAG = "Server";
-
     private List<Book> bookList;
 
     public ServiceC() {
@@ -24,6 +22,7 @@ public class ServiceC extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
+        Log.d(getClass().getName(), "onCreate: ");
         bookList = new ArrayList<>();
         initData();
     }
@@ -56,14 +55,14 @@ public class ServiceC extends Service {
                 book.setName("服务器改了新书的名字 InOut");
                 bookList.add(book);
             } else {
-                Log.e(TAG, "接收到了一个空对象 InOut");
+                Log.e(getClass().getName(), "接收到了一个空对象 InOut");
             }
         }
-
     };
 
     @Override
     public IBinder onBind(Intent intent) {
+        Log.d(getClass().getName(), "onBind: ===");
         return stub;
     }
 }

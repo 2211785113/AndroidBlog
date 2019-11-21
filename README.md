@@ -59,11 +59,11 @@
 * Android基础与技术
 ·
     * [1....最基础——四大组件,Fragment,Application,Context,SparseArray](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/1最基础.md)
-    * [2....UI——View,布局layout,控件widget,图片drawable,动画anim,通知Notification,窗口Window,对话框Dialog](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/2UI.md)
+    * [2....UI——View,布局layout,控件widget,图片drawable,动画anim,通知Notification,窗口Window,对话框Dialog,openGL](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/2UI.md)
     * [3....进程与线程——线程,线程间通信(handler,AsyncTask,RxJava,线程池),跨进程通信](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/3进程与线程.md)
     * [4....开源框架——网络,图片,依赖注入,事件传递](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/4开源框架.md)
     * [5....数据存储与通信——数据传递,数据存储,数据缓存](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/5数据存储与通信.md)
-    * [6....适配——基础,适配方案(屏幕适配,横竖屏适配)](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/6适配.md)
+    * [6....适配——横竖屏适配,屏幕适配](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/6适配.md)
     * [7....架构——Android系统架构,三种模式](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/7架构.md)
     * [8....性能——优化,内存泄漏,崩溃处理](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/8性能.md)
     * [9....安全与打包——多渠道打包,代码混淆,反编译,dex](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/9安全与打包.md)
@@ -72,7 +72,7 @@
     * [12...环境——环境配置,AS,Gradle,Eclipse](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/12环境.md)
     * [13...版本控制——Git](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/13版本控制.md)
     * [14...Android源码学习](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/14Android源码学习.md)
-    * [15...音视频业务——技术服务于业务,理论服务于实践](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/15音视频业务.md)
+    * [15...音视频与即时通讯业务——技术服务于业务,理论服务于实践](https://github.com/2211785113/Blog/blob/master/Android基础与技术/Android基础与技术/15音视频业务.md)
 
 * 架构
 

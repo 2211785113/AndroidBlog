@@ -49,8 +49,9 @@ public class VolleyRequest {
     private static RequestQueue queue;
 
     public static RequestQueue buildRequestQueue(Context context) {
-        if (queue == null)
-            Volley.newRequestQueue(context);
+        if (queue == null) {
+            queue = Volley.newRequestQueue(context);
+        }
         return queue;
     }
 
@@ -69,6 +70,9 @@ public class VolleyRequest {
                             callback.onFailure("code=" + result.getCode() + " data=" + result.getMsg());
                         }
                         callback.onComplete();
+
+                        //获取缓存数据
+                        String s = (queue.getCache().get(url).data).toString();
                     }
                 },
                 new Response.ErrorListener() {
@@ -135,6 +139,9 @@ public class VolleyRequest {
                 10000,//默认超时时间，应设置一个稍微大点儿的，比如500000即500s
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,//默认最大尝试次数
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
+        //设置缓存
+        stringRequest.setShouldCache(true);
         queue.add(stringRequest);
     }
 

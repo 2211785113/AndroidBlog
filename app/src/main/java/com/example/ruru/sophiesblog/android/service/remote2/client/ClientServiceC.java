@@ -15,6 +15,7 @@ import android.widget.Button;
 import com.example.ruru.sophiesblog.R;
 import com.example.ruru.sophiesblog.android.service.remote2.server.Book;
 import com.example.ruru.sophiesblog.android.service.remote2.server.BookController;
+import com.example.ruru.sophiesblog.android.service.remote2.server.ServiceC;
 
 import java.util.List;
 
@@ -29,6 +30,8 @@ public class ClientServiceC extends AppCompatActivity implements View.OnClickLis
     private ServiceConnection serviceConnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
+            Log.d(getClass().getName(), "onServiceConnected: ");
+
             //获取bookController对象
             bookController = BookController.Stub.asInterface(service);
             connected = true;
@@ -45,14 +48,10 @@ public class ClientServiceC extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_client_service_c);
 
-        initClick();
-
-        bindService();
-    }
-
-    private void initClick() {
         findViewById(R.id.getBookList).setOnClickListener(this);
         findViewById(R.id.addBook).setOnClickListener(this);
+
+        bindService();
     }
 
     @Override
@@ -93,8 +92,8 @@ public class ClientServiceC extends AppCompatActivity implements View.OnClickLis
 
     private void bindService() {
         Intent intent = new Intent();
+        intent.setAction("com.aaa.servicec.action");
         intent.setPackage("com.example.ruru.sophiesblog.android.service.remote2.server");
-        intent.setAction("com.example.ruru.sophiesblog.android.service.remote2.server.action");
         bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE);
     }
 

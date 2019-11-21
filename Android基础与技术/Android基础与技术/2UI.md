@@ -10,6 +10,7 @@
 - 6.通知Notification
 - 7.窗口Window
 - 8.对话框Dialog
+- 9.openGL
 
 ### 1.View
 
@@ -111,6 +112,8 @@ RecyclerView和ListView的区别(优点)：
 
 recyclerview缓存机制，listview的缓存机制，相同条目复用，会出现数据错乱。
 
+RV和LV优势在哪里？完美替换为什么LV没有过时。
+
 recyclerview复用：抖音无限循环效果实现，心神学堂在线作业题翻页。
 
 recyclerView嵌套卡顿解决如何解决：
@@ -119,6 +122,11 @@ recyclerView嵌套卡顿解决如何解决：
 - 设置子项缓存，设置自带滑动冲突解决属性rv.setHasFixedSize(true);        rv.setNestedScrollingEnabled(false);
 - 可以完美解决，不过Google不推荐RecyClerView嵌套使用,需要嵌套尽量找类似于ExpandableListView 第三方控件来解决
 
+上拉加载：recyclerview的adapter中先执行getItemCount方法，当添加了foot布局的时候，count+1；getItemViewType方法，添加了foot布局并且position的位置为总数量-1即滑动到最后一个的时候，返回类型为Type_foot；onCreateViewHolder中初始化底部布局，创建一个新的ViewHolder；onBindViewHolder中负责绑定数据。recyclerview有一个滑动监听，滑动到最后一个且停止滑动时，请求分页加载数据传给adapter。
+
+链接：https://blog.csdn.net/qq_38356174/article/details/90716344
+
+下拉刷新：SwipeRefreshLayout，PullRefreshLayout。
 
 ### 4.图片drawable
 
@@ -145,4 +153,15 @@ Android子线程也可以实现动画。可以在子线程给View设置动画，
 ### 7.窗口Window
 
 ### 8.对话框Dialog
+
+### 9.openGL
+
+是什么：渲染2D，3D图像。
+
+底层：图形渲染机制-可能是多缓冲区。
+
+视频渲染时，假设屏幕上要显示1这个数字，视频要显示1~2这个数字切换，(图1)由于cpu处理性能不够强，有一个缓冲区里面有2，cpu正在往里面放东西，但是由于数据比较慢，2正拷贝了一半，(图2)，这时cpu可以刷新一帧了，于是屏幕成了图3。提示：cpu不单单可以关联到显存上也可以关联到内存上。
+
+解决：cpu可以关联到内存上，所以开辟两个缓冲区，(图4)，当1缓冲区写好数据以后，GPU渲染第一个缓冲区里的图像，缓冲区2写好以后，GPU渲染缓冲区2里的图像。
+
 
