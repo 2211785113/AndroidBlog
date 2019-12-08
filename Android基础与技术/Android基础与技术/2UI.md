@@ -11,6 +11,7 @@
 - 7.窗口Window
 - 8.对话框Dialog
 - 9.openGL
+- 10.常用的界面开发
 
 ### 1.View
 
@@ -72,11 +73,12 @@ invalidate和requestLayout的区别：invalidate是重新绘制，onMeasure和on
 ️
 ### 2.布局layout
 
-线程布局LinearLayout：weight的使用场景
+类别：
 
-相对布局RelativeLayout：
-
-约束布局ConstraintLayout：优势。 Google新生支持库。https://blog.csdn.net/guolin_blog/article/details/53122387
+- 线程布局LinearLayout：weight的使用场景
+- 相对布局RelativeLayout：
+- 约束布局ConstraintLayout：优势。 Google新生支持库。https://blog.csdn.net/guolin_blog/article/details/53122387
+- 帧布局FrameLayout：页面可以重叠。例如底部导航栏和fragment列表滑动页面。最底部是重叠的。
 
 用途/后果：让两个TextView左右水平居中。
 
@@ -164,4 +166,6 @@ Android子线程也可以实现动画。可以在子线程给View设置动画，
 
 解决：cpu可以关联到内存上，所以开辟两个缓冲区，(图4)，当1缓冲区写好数据以后，GPU渲染第一个缓冲区里的图像，缓冲区2写好以后，GPU渲染缓冲区2里的图像。
 
+### 10.常用的界面开发
 
+底部导航栏+fragment界面：BottomNavigationBar

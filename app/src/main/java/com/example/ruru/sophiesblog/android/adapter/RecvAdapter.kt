@@ -1,24 +1,36 @@
 package com.example.ruru.sophiesblog.android.adapter
 
+import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.RecyclerView.ViewHolder
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import com.example.ruru.sophiesblog.R
 import com.example.ruru.sophiesblog.android.adapter.RecvAdapter.MyViewHolder
+import kotlin.contracts.contract
 
-class RecvAdapter : RecyclerView.Adapter<MyViewHolder>() {
-    override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): MyViewHolder {
-        return null
-    }
+class RecvAdapter(private val context: Context): RecyclerView.Adapter<RecvAdapter.MyViewHolder>() {
 
-    override fun onBindViewHolder(myViewHolder: MyViewHolder, i: Int) {}
-    override fun getItemCount(): Int {
-        return 0
-    }
+  override fun getItemCount(): Int {
+    return 0
+  }
 
-    override fun getItemViewType(position: Int): Int {
-        return super.getItemViewType(position)
-    }
+  override fun getItemViewType(position: Int): Int {
+    return super.getItemViewType(position)
+  }
 
-    internal inner class MyViewHolder(itemView: View) : ViewHolder(itemView)
+  override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): MyViewHolder {
+    val view = LayoutInflater.from(context).inflate(R.layout.item, viewGroup, false)
+    return MyViewHolder(view)
+  }
+
+  override fun onBindViewHolder(holder: MyViewHolder, i: Int) {
+    holder.textView.text = "nihao"
+  }
+
+  inner class MyViewHolder(view: View): RecyclerView.ViewHolder(view) {
+    var textView: TextView = view.findViewById(R.id.tv)
+  }
 }

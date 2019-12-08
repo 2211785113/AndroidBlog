@@ -462,6 +462,18 @@ Java没有多继承，所以也没有反射机制。
 - 代码：BaseActivity，AActivity，BActivity。
 - 代码：BaseFragment，AFragment，BFragment。
 
+```
+override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    val view = inflater.inflate(setLayoutId(), container, false)
+    initAllMembersView(view)
+    return view
+  }
+  
+  abstract fun setLayoutId():Int
+  
+  abstract fun initAllMembersView(view:View)
+```
+
 第三种：只定义抽象方法，抽象类和接口都可以。
 
 - recyclerview多itemtype，定义一个multiItemBuilder接口或者抽象类，里面定义getLayoutId和getItemType方法。
