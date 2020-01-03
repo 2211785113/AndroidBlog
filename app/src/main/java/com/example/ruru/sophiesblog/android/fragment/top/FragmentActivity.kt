@@ -1,4 +1,4 @@
-package com.example.ruru.sophiesblog.android.fragment
+package com.example.ruru.sophiesblog.android.fragment.top
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle

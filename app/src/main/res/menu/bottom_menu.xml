@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <item
+    android:id="@+id/bottom_home"
+    android:icon="@mipmap/bottom_home"
+    android:title="@string/bottom_home"></item>
+  <item
+    android:id="@+id/bottom_box"
+    android:icon="@mipmap/bottom_box"
+    android:title="@string/bottom_box"></item>
+  <item
+    android:id="@+id/bottom_bell"
+    android:icon="@mipmap/bottom_bell"
+    android:title="@string/bottom_bell"></item>
+</menu>

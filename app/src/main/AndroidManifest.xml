@@ -3,6 +3,7 @@
   xmlns:tools="http://schemas.android.com/tools"
   package="com.example.ruru.sophiesblog">
 
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <uses-permission android:name="android.permission.INTERNET" />
 
   <application
@@ -14,8 +15,7 @@
     android:supportsRtl="true"
     android:theme="@style/AppTheme"
     tools:ignore="GoogleAppIndexingWarning">
-
-    <!-- 数据结构与算法 -->
+    <activity android:name=".android.fragment.bottom.FragmentActivity2" /> <!-- 数据结构与算法 -->
     <activity android:name=".data_algorithm.algorithm.sort.ChooseSort" />
     <activity android:name=".data_algorithm.algorithm.sort.BubbleSort" />
     <activity android:name=".data_algorithm.algorithm.sort.InsertSort" />
@@ -71,9 +71,7 @@
     <activity android:name=".data_algorithm.datastructure.linked.traverse.TraversalLink" />
     <activity android:name=".data_algorithm.datastructure.linked.traverse.ReversalLink" />
     <activity android:name=".data_algorithm.datastructure.linked.traverse.CircleTraversal" />
-    <activity android:name=".data_algorithm.datastructure.linked.traverse.CircleTraversal2" />
-
-    <!-- 设计模式 -->
+    <activity android:name=".data_algorithm.datastructure.linked.traverse.CircleTraversal2" /> <!-- 设计模式 -->
     <activity android:name=".design_model.create.singleton.Singleton" />
     <activity android:name=".design_model.create.single_factory.example1.SingleFactory1" />
     <activity android:name=".design_model.create.single_factory.example2.SingleFactory2" />
@@ -85,9 +83,7 @@
     <activity android:name=".design_model.structure.proxy.example1.Client" />
     <activity android:name=".design_model.structure.proxy.example2.Client" />
     <activity android:name=".design_model.behavior.observer.example1.Client" />
-    <activity android:name=".design_model.behavior.observer.example2.isbe.ClientO" />
-
-    <!-- Java基础 -->
+    <activity android:name=".design_model.behavior.observer.example2.isbe.ClientO" /> <!-- Java基础 -->
     <activity android:name=".java.sourceCode.AStringClass" />
     <activity android:name=".java.dataType.ABoolean" />
     <activity android:name=".java.string.AStringSame" />
@@ -100,14 +96,10 @@
     <activity android:name=".java.threaddemo.activity.ThreadOneActivity" />
     <activity android:name=".java.threaddemo.activity.ThreadSecondActivity" />
     <activity android:name=".java.threaddemo.activity.ThreadThreeActivity" />
-    <activity android:name=".java.controlFlow.PrintTwoPower" />
-
-    <!-- android-httpclient -->
+    <activity android:name=".java.controlFlow.PrintTwoPower" /> <!-- android-httpclient -->
     <uses-library
       android:name="org.apache.http.legacy"
-      android:required="false" />
-
-    <!-- Android基础与技术 -->
+      android:required="false" /> <!-- Android基础与技术 -->
     <activity android:name=".android.adapter.SparseArray" />
     <activity android:name=".android.adapter.RecyclerViewA" />
     <activity android:name=".android.architect.MVP" />
@@ -133,30 +125,44 @@
     <activity
       android:name=".android.adaptive.cross.DialogTest2"
       android:configChanges="screenSize|orientation" />
+
     <service android:name=".android.service.local.ServiceA" />
     <service android:name=".android.service.remote.server.ServiceB">
       <intent-filter>
         <action android:name="com.example.ruru.sophiesblog.android.service.remote.ServiceB" />
+
         <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>
     </service>
     <service android:name=".android.service.remote2.server.ServiceC">
       <intent-filter>
         <action android:name="com.aaa.servicec.action" />
+
         <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>
     </service>
+
     <activity
       android:name=".android.adaptive.screen.Page"
       android:screenOrientation="portrait" />
     <activity android:name=".android.adaptive.screen.NinePatchActivity" />
     <activity android:name=".android.adaptive.screen.ScreenAdaptive" />
-    <activity android:name=".android.kotlin.base.KotlinActivity"></activity>
-    <activity android:name=".android.fragment.FragmentActivity">
+    <activity android:name=".android.fragment.top.FragmentActivity">
+      <intent-filter>
+        <action android:name="com.aaa.servicec.action" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity android:name=".android.anim.FrameAnimation"></activity>
+    <activity android:name=".android.receiver.NetworkDemo">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
+
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+
   </application>
+
 </manifest>

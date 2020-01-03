@@ -4,4 +4,8 @@
   <string name="hello_blank_fragment">Hello blank fragment</string>
   <string name="fragment_one">ONE</string>
   <string name="fragment_two">TWO</string>
+
+  <string name="bottom_home">主页</string>
+  <string name="bottom_box">闲逛</string>
+  <string name="bottom_bell">通知</string>
 </resources>
