@@ -15,6 +15,8 @@
 
 ### 1.View
 
+不管View是否可见，只要存在，都不为空即都不为null。代码：NullDemo
+
 [我的github项目之View](https://github.com/2211785113/CustomView/blob/master/README.md)
 
 **事件分发机制：**
@@ -145,6 +147,11 @@ Android子线程也可以实现动画。可以在子线程给View设置动画，
 ### 6.通知Notification
 
 ### 7.窗口Window
+
+场景：
+- ToolBar会设置menu菜单，并执行点击事件。
+- 点击按钮弹出窗口window，点击item并进入新的界面。
+
 
 ### 8.对话框Dialog
 

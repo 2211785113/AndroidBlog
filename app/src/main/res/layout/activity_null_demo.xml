@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".android.ui.NullDemo">
+
+  <EditText
+    android:id="@+id/etName1"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_50"
+    android:visibility="gone"
+    app:layout_constraintTop_toTopOf="parent"></EditText>
+
+  <EditText
+    android:id="@+id/etName2"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_50"
+    android:visibility="invisible"
+    app:layout_constraintTop_toBottomOf="@id/etName1"></EditText>
+
+  <EditText
+    android:id="@+id/etName3"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_50"
+    android:visibility="visible"
+    app:layout_constraintTop_toBottomOf="@id/etName2"></EditText>
+
+</android.support.constraint.ConstraintLayout>

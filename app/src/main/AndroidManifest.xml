@@ -15,6 +15,13 @@
     android:supportsRtl="true"
     android:theme="@style/AppTheme"
     tools:ignore="GoogleAppIndexingWarning">
+    <activity android:name=".android.ui.NullDemo">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
     <activity android:name=".android.fragment.bottom.FragmentActivity2" /> <!-- 数据结构与算法 -->
     <activity android:name=".data_algorithm.algorithm.sort.ChooseSort" />
     <activity android:name=".data_algorithm.algorithm.sort.BubbleSort" />
@@ -154,15 +161,10 @@
         <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>
     </activity>
-    <activity android:name=".android.anim.FrameAnimation"></activity>
+    <activity android:name=".android.anim.FrameAnimation" />
     <activity android:name=".android.receiver.NetworkDemo">
-      <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
 
-        <category android:name="android.intent.category.LAUNCHER" />
-      </intent-filter>
     </activity>
-
   </application>
 
 </manifest>
