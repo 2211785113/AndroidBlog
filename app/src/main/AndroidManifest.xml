@@ -162,9 +162,7 @@
       </intent-filter>
     </activity>
     <activity android:name=".android.anim.FrameAnimation" />
-    <activity android:name=".android.receiver.NetworkDemo">
-
-    </activity>
+    <activity android:name=".android.receiver.NetworkDemo"></activity>
   </application>
 
 </manifest>
