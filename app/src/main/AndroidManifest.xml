@@ -15,13 +15,17 @@
     android:supportsRtl="true"
     android:theme="@style/AppTheme"
     tools:ignore="GoogleAppIndexingWarning">
-    <activity android:name=".android.ui.NullDemo">
+    <activity android:name=".android.kotlin.override.OverrideActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
 
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+    <activity android:name=".android.kotlin.constructor.ConstructorActivity"></activity>
+    <activity android:name=".android.adaptive.multi_language.MultiLanguage" />
+    <activity android:name=".android.kotlin.code.ListDemo"></activity>
+    <activity android:name=".android.ui.NullDemo" />
     <activity android:name=".android.fragment.bottom.FragmentActivity2" /> <!-- 数据结构与算法 -->
     <activity android:name=".data_algorithm.algorithm.sort.ChooseSort" />
     <activity android:name=".data_algorithm.algorithm.sort.BubbleSort" />
@@ -162,7 +166,7 @@
       </intent-filter>
     </activity>
     <activity android:name=".android.anim.FrameAnimation" />
-    <activity android:name=".android.receiver.NetworkDemo"></activity>
+    <activity android:name=".android.receiver.NetworkDemo" />
   </application>
 
 </manifest>

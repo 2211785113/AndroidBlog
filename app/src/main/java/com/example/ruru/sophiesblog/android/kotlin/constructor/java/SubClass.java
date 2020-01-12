@@ -1,4 +1,4 @@
-package com.example.ruru.sophiesblog.android.kotlin.java;
+package com.example.ruru.sophiesblog.android.kotlin.constructor.java;
 
 /**
  * Created by lyr on 2019/12/16
@@ -9,8 +9,5 @@ public class SubClass extends SuperClass {
 
   public SubClass(String name, String age) {
     super(name);
-    this.age = age;
   }
-
-
 }
