@@ -1,6 +1,5 @@
 package com.example.ruru.sophiesblog.java.dataType;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
@@ -9,6 +8,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.example.ruru.sophiesblog.R;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * boolean：密码的显示与隐藏

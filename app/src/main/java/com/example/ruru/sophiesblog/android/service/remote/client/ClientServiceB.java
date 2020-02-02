@@ -5,12 +5,13 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.IBinder;
 import android.os.RemoteException;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
 import com.example.ruru.sophiesblog.R;
 import com.example.ruru.sophiesblog.android.service.remote.server.MyAIDLService;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ClientServiceB extends AppCompatActivity {
 

@@ -1,12 +1,11 @@
 package com.example.ruru.sophiesblog.android.adapter
 
 import android.content.Context
-import android.support.v7.widget.RecyclerView
-import android.support.v7.widget.RecyclerView.ViewHolder
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
 import com.example.ruru.sophiesblog.R
 import com.example.ruru.sophiesblog.android.adapter.RecvAdapter.MyViewHolder
 import kotlin.contracts.contract

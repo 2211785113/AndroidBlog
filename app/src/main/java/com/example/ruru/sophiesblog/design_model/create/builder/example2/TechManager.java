@@ -1,6 +1,5 @@
 package com.example.ruru.sophiesblog.design_model.create.builder.example2;
 
-import android.support.annotation.NonNull;
 
 public abstract class TechManager {
     public abstract TechManager setAppName(String appName);

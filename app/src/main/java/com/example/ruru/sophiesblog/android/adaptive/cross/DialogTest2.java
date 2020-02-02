@@ -2,13 +2,14 @@ package com.example.ruru.sophiesblog.android.adaptive.cross;
 
 import android.content.DialogInterface;
 import android.content.res.Configuration;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 
 import com.example.ruru.sophiesblog.R;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * 横竖屏适配：不重新创建activity

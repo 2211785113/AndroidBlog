@@ -1,6 +1,5 @@
 package com.example.ruru.sophiesblog.data_algorithm.datastructure.linked.create;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -9,6 +8,8 @@ import com.example.ruru.sophiesblog.data_algorithm.datastructure.linked.bean.Nod
 import com.example.ruru.sophiesblog.java.collection.list.ArrayList;
 
 import java.util.List;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * 单链表创建：返回单链表的头部

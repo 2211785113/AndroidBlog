@@ -1,8 +1,8 @@
 package com.example.ruru.sophiesblog.android.fragment.top
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.example.ruru.sophiesblog.R
 import com.example.ruru.sophiesblog.android.adapter.VpAdapter
 import kotlinx.android.synthetic.main.activity_fragment.*
@@ -20,6 +20,7 @@ class FragmentActivity: AppCompatActivity() {
     val titles = listOf<String>("nihao1", "nihao2")
 
     viewPager.adapter = VpAdapter(supportFragmentManager, list, titles)
+
     tabLayout.setupWithViewPager(viewPager)
   }
 }

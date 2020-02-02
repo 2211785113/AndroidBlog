@@ -1,9 +1,10 @@
 package com.example.ruru.sophiesblog.android.adapter;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.ruru.sophiesblog.R;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * >>>：表示不带符号向右移动二进制数，移动后前面统统补0；

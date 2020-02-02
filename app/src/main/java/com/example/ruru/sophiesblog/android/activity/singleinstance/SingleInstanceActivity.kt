@@ -1,7 +1,7 @@
 package com.example.ruru.sophiesblog.android.activity.singleinstance
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.example.ruru.sophiesblog.R
 
 class SingleInstanceActivity : AppCompatActivity() {

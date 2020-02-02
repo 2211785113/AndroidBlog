@@ -1,6 +1,5 @@
 package com.example.ruru.sophiesblog.java.extends_.reflect;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.ruru.sophiesblog.R;
@@ -10,6 +9,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * 反射-反序列化运用

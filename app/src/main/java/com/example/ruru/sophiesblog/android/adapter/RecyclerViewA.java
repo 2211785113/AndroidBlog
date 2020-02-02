@@ -1,10 +1,11 @@
 package com.example.ruru.sophiesblog.android.adapter;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
 
 import com.example.ruru.sophiesblog.R;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class RecyclerViewA extends AppCompatActivity {
 

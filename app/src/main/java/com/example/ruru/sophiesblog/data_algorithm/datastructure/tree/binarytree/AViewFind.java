@@ -1,11 +1,12 @@
 package com.example.ruru.sophiesblog.data_algorithm.datastructure.tree.binarytree;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.ruru.sophiesblog.R;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class AViewFind extends AppCompatActivity {
 

@@ -1,9 +1,10 @@
 package com.example.ruru.sophiesblog.data_algorithm.datastructure.tree.binarytree;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.ruru.sophiesblog.R;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * 二叉树平铺

@@ -1,10 +1,11 @@
 package com.example.ruru.sophiesblog.data_algorithm.algorithm.other.bitoperation;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
 import com.example.ruru.sophiesblog.R;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * 判断其二进制数是否是交替位

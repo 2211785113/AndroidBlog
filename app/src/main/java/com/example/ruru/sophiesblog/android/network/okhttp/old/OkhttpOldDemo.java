@@ -1,7 +1,6 @@
 package com.example.ruru.sophiesblog.android.network.okhttp.old;
 
 import android.os.Environment;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -15,6 +14,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+import androidx.appcompat.app.AppCompatActivity;
 import okhttp3.Cache;
 import okhttp3.CacheControl;
 import okhttp3.Call;

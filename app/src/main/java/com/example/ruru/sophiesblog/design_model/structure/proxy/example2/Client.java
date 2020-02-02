@@ -1,6 +1,5 @@
 package com.example.ruru.sophiesblog.design_model.structure.proxy.example2;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.ruru.sophiesblog.R;
@@ -10,6 +9,8 @@ import com.example.ruru.sophiesblog.design_model.structure.proxy.example2.static
 import com.example.ruru.sophiesblog.design_model.structure.proxy.example2.public_.Wo;
 
 import java.lang.reflect.Proxy;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Client extends AppCompatActivity {
 

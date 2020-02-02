@@ -1,7 +1,7 @@
 package com.example.ruru.sophiesblog.android.fragment.bottom
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.ruru.sophiesblog.R
 import kotlinx.android.synthetic.main.activity_fragment2.*
 

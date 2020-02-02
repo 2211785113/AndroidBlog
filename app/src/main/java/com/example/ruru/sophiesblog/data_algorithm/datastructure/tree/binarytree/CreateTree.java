@@ -1,6 +1,5 @@
 package com.example.ruru.sophiesblog.data_algorithm.datastructure.tree.binarytree;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -8,6 +7,8 @@ import com.example.ruru.sophiesblog.R;
 import com.example.ruru.sophiesblog.java.collection.list.ArrayList;
 
 import java.util.List;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class CreateTree extends AppCompatActivity {
 

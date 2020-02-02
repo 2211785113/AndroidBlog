@@ -1,12 +1,13 @@
 package com.example.ruru.sophiesblog.data_algorithm.datastructure.array;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
 import com.example.ruru.sophiesblog.R;
 
 import java.util.Arrays;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * 找出最大元素，并判断最大元素是否>=其它元素的2倍，如果>=返回最大元素索引，否则返回-1。

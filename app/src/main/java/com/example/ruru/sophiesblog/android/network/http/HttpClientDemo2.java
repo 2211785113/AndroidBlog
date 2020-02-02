@@ -1,7 +1,6 @@
 package com.example.ruru.sophiesblog.android.network.http;
 
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -22,6 +21,8 @@ import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
 import java.util.List;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class HttpClientDemo2 extends AppCompatActivity implements View.OnClickListener {
 

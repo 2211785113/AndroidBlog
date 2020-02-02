@@ -1,9 +1,10 @@
 package com.example.ruru.sophiesblog.android.architect;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.ruru.sophiesblog.R;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MVP extends AppCompatActivity {
 

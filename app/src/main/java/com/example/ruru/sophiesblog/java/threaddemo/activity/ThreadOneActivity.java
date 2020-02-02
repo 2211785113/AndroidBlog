@@ -1,6 +1,5 @@
 package com.example.ruru.sophiesblog.java.threaddemo.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
@@ -11,6 +10,8 @@ import com.example.ruru.sophiesblog.java.threaddemo.StopThread.UsersThread1;
 import com.example.ruru.sophiesblog.java.threaddemo.StopThread.UsersThread2;
 import com.example.ruru.sophiesblog.java.threaddemo.sleep.UseSleep;
 import com.example.ruru.sophiesblog.java.threaddemo.startAndRun.ThreadRun;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 
 public class ThreadOneActivity extends AppCompatActivity {

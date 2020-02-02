@@ -1,9 +1,10 @@
 package com.example.ruru.sophiesblog.data_algorithm.mathmatics;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.ruru.sophiesblog.R;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * 1、1、2、3、5、8、13、21、34、55

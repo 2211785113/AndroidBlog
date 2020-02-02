@@ -1,12 +1,13 @@
 package com.example.ruru.sophiesblog.data_algorithm.datastructure.stack;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
 import com.example.ruru.sophiesblog.R;
 
 import java.util.Stack;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * 用栈实现队列:

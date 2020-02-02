@@ -1,6 +1,5 @@
 package com.example.ruru.sophiesblog.java.collection;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -16,6 +15,8 @@ import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.TreeSet;
 import java.util.concurrent.ConcurrentHashMap;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ClientCollection extends AppCompatActivity {
 

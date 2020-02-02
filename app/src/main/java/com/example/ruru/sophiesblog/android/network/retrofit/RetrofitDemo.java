@@ -1,7 +1,6 @@
 package com.example.ruru.sophiesblog.android.network.retrofit;
 
 import android.os.Environment;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -13,6 +12,7 @@ import com.example.ruru.sophiesblog.android.network.retrofit.interfaces.UploadFi
 
 import java.io.File;
 
+import androidx.appcompat.app.AppCompatActivity;
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;

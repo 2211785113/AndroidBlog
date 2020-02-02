@@ -1,11 +1,12 @@
 package com.example.ruru.sophiesblog.java.extends_.one;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
 import com.example.ruru.sophiesblog.R;
 import com.example.ruru.sophiesblog.java.extends_.one.A.B;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * 画图：
