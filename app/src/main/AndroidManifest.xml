@@ -3,11 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.ruru.sophiesblog">
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <!-- 录屏 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- 使用权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_SINTERNETWIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 硬件特性 -->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <application
         android:name=".android.MyApplication"
@@ -18,9 +33,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".android.file.FileListActivity"></activity>
+        <activity android:name=".android.file.FileSystem" />
 
-
-        <!--================================数据结构与算法================================================ -->
+        <!-- ================================数据结构与算法================================================ -->
         <activity android:name=".data_algorithm.algorithm.sort.ChooseSort" />
         <activity android:name=".data_algorithm.algorithm.sort.BubbleSort" />
         <activity android:name=".data_algorithm.algorithm.sort.InsertSort" />
@@ -76,9 +92,7 @@
         <activity android:name=".data_algorithm.datastructure.linked.traverse.TraversalLink" />
         <activity android:name=".data_algorithm.datastructure.linked.traverse.ReversalLink" />
         <activity android:name=".data_algorithm.datastructure.linked.traverse.CircleTraversal" />
-        <activity android:name=".data_algorithm.datastructure.linked.traverse.CircleTraversal2" />
-
-        <!--================================设计模式================================================ -->
+        <activity android:name=".data_algorithm.datastructure.linked.traverse.CircleTraversal2" /> <!-- ================================设计模式================================================ -->
         <activity android:name=".design_model.create.singleton.Singleton" />
         <activity android:name=".design_model.create.single_factory.example1.SingleFactory1" />
         <activity android:name=".design_model.create.single_factory.example2.SingleFactory2" />
@@ -90,9 +104,7 @@
         <activity android:name=".design_model.structure.proxy.example1.Client" />
         <activity android:name=".design_model.structure.proxy.example2.Client" />
         <activity android:name=".design_model.behavior.observer.example1.Client" />
-        <activity android:name=".design_model.behavior.observer.example2.isbe.ClientO" />
-
-        <!--================================Java基础================================================ -->
+        <activity android:name=".design_model.behavior.observer.example2.isbe.ClientO" /> <!-- ================================Java基础================================================ -->
         <activity android:name=".java.sourceCode.AStringClass" />
         <activity android:name=".java.dataType.ABoolean" />
         <activity android:name=".java.string.AStringSame" />
@@ -105,14 +117,10 @@
         <activity android:name=".java.threaddemo.activity.ThreadOneActivity" />
         <activity android:name=".java.threaddemo.activity.ThreadSecondActivity" />
         <activity android:name=".java.threaddemo.activity.ThreadThreeActivity" />
-        <activity android:name=".java.controlFlow.PrintTwoPower" />
-
-        <!--================================android-httpclient ================================================ -->
+        <activity android:name=".java.controlFlow.PrintTwoPower" /> <!-- ================================android-httpclient ================================================ -->
         <uses-library
             android:name="org.apache.http.legacy"
-            android:required="false" />
-
-        <!--================================Android基础与技术 ================================================ -->
+            android:required="false" /> <!-- ================================Android基础与技术 ================================================ -->
         <activity android:name=".android.adapter.SparseArray" />
         <activity android:name=".android.adapter.RecyclerViewA" />
         <activity android:name=".android.architect.MVP" />
@@ -163,24 +171,32 @@
         <activity android:name=".android.fragment.top.FragmentActivity">
             <intent-filter>
                 <action android:name="com.aaa.servicec.action" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".android.anim.FrameAnimation" />
-        <activity android:name=".android.receiver.NetworkDemo"></activity>
+        <activity android:name=".android.receiver.NetworkDemo" />
         <activity android:name=".android.fragment.bottom.FragmentActivity2" />
-        <activity android:name=".android.ui.NullDemo">
+        <activity android:name=".android.ui.NullDemo" />
+        <activity android:name=".android.kotlin.override.OverrideActivity" />
+        <activity android:name=".android.kotlin.constructor.ConstructorActivity" />
+        <activity android:name=".android.adaptive.multi_language.MultiLanguage" />
+        <activity android:name=".android.kotlin.code.ListDemo" />
+        <activity android:name=".android.media.screenrecord.ScreenRecord">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".android.kotlin.override.OverrideActivity">
-        </activity>
-        <activity android:name=".android.kotlin.constructor.ConstructorActivity"></activity>
-        <activity android:name=".android.adaptive.multi_language.MultiLanguage" />
-        <activity android:name=".android.kotlin.code.ListDemo"></activity>
+
+        <service
+            android:name=".android.media.screenrecord.ScreenRecordService"
+            android:exported="false" />
+
+        <activity android:name=".android.media.ijkplayer.IjkPlayerActivity" />
+        <activity android:name=".android.media.ijkplayer.IjkPlayer2Activity" />
     </application>
 
 </manifest>

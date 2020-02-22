@@ -5,5 +5,13 @@ package com.example.ruru.sophiesblog.android.kotlin.code
  */
 fun main() {
   println("hello world")
-}
 
+  // kotlin换行
+  var c = """
+    nihao s
+     ygd
+       klsh
+  """.trimIndent()
+
+  println("main c=$c")
+}
