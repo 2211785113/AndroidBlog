@@ -1,202 +1,197 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.ruru.sophiesblog">
+  xmlns:tools="http://schemas.android.com/tools"
+  package="com.example.ruru.sophiesblog">
 
-    <uses-permission android:name="android.permission.READ_LOGS" />
+  <uses-permission android:name="android.permission.READ_LOGS" /> <!-- 录屏 -->
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 使用权限 -->
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.READ_PHONE_SINTERNETWIFI_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.RECORD_AUDIO" />
+  <uses-permission android:name="android.permission.FLASHLIGHT" />
+  <uses-permission android:name="android.permission.VIBRATE" /> <!-- 硬件特性 -->
+  <uses-feature android:name="android.hardware.camera" />
+  <uses-feature android:name="android.hardware.camera.autofocus" />
 
-    <!-- 录屏 -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+  <application
+    android:name=".android.MyApplication"
+    android:allowBackup="true"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:supportsRtl="true"
+    android:theme="@style/AppTheme"
+    tools:ignore="GoogleAppIndexingWarning">
+    <activity android:name=".java.collection.SortDemo"></activity>
+    <activity android:name=".android.kotlin.genericity.java.PanziTest" />
+    <activity android:name=".android.file.FileListActivity" />
+    <activity android:name=".android.file.FileSystem" /> <!-- ================================数据结构与算法================================================ -->
+    <activity android:name=".data_algorithm.algorithm.sort.ChooseSort" />
+    <activity android:name=".data_algorithm.algorithm.sort.BubbleSort" />
+    <activity android:name=".data_algorithm.algorithm.sort.InsertSort" />
+    <activity android:name=".data_algorithm.algorithm.sort.ShellSort" />
+    <activity android:name=".data_algorithm.algorithm.sort.HeapSort" />
+    <activity android:name=".data_algorithm.algorithm.sort.MergeSort" />
+    <activity android:name=".data_algorithm.algorithm.sort.QuickSort" />
+    <activity android:name=".data_algorithm.algorithm.sort.CountSort" />
+    <activity android:name=".data_algorithm.algorithm.sort.BucketSort" />
+    <activity android:name=".data_algorithm.algorithm.sort.RadixSort" />
+    <activity android:name=".data_algorithm.algorithm.sort.OneSort" />
+    <activity android:name=".data_algorithm.algorithm.search.SequenceSearch" />
+    <activity android:name=".data_algorithm.algorithm.search.BinarySearch" />
+    <activity android:name=".data_algorithm.algorithm.search.InsertSearch" />
+    <activity android:name=".data_algorithm.algorithm.search.FibonacciSearch" />
+    <activity android:name=".data_algorithm.algorithm.other.A744" />
+    <activity android:name=".data_algorithm.algorithm.other.A788" />
+    <activity android:name=".data_algorithm.algorithm.other.A717" />
+    <activity android:name=".data_algorithm.algorithm.other.string.A824" />
+    <activity android:name=".data_algorithm.algorithm.other.bitoperation.A693" />
+    <activity android:name=".data_algorithm.algorithm.other.bitoperation.ABinaryConvert" />
+    <activity android:name=".data_algorithm.algorithm.other.string.A859" />
+    <activity android:name=".data_algorithm.datastructure.tree.binarytree.BinTreePreOrder" />
+    <activity android:name=".data_algorithm.datastructure.tree.binarytree.BinTreeInOrder" />
+    <activity android:name=".data_algorithm.datastructure.tree.binarytree.BinTreePostOrder" />
+    <activity android:name=".data_algorithm.datastructure.tree.binarytree.BinTreeLevelOrder" />
+    <activity android:name=".data_algorithm.datastructure.tree.binarytree.BinTreeReversal" />
+    <activity android:name=".data_algorithm.datastructure.tree.binarytree.BinTreeFlatten" />
+    <activity android:name=".data_algorithm.datastructure.tree.binarytree.AViewFind" />
+    <activity android:name=".data_algorithm.datastructure.tree.binarytree.ANextSibil" />
+    <activity android:name=".data_algorithm.datastructure.tree.binarytree.A671" />
+    <activity android:name=".data_algorithm.datastructure.tree.binarytree.A653" />
+    <activity android:name=".data_algorithm.datastructure.tree.binarytree.A652" />
+    <activity android:name=".data_algorithm.datastructure.tree.trietree.A720" />
+    <activity android:name=".data_algorithm.datastructure.tree.binarytree.A606" />
+    <activity android:name=".data_algorithm.datastructure.array.A747" />
+    <activity android:name=".data_algorithm.datastructure.array.A628" />
+    <activity android:name=".data_algorithm.datastructure.array.A674" />
+    <activity android:name=".data_algorithm.datastructure.array.AFindMostTimesNum" />
+    <activity android:name=".data_algorithm.datastructure.array.AFindOnlyTwiceNum" />
+    <activity android:name=".data_algorithm.datastructure.array.AFindOnlyNotRepeatedNum" />
+    <activity android:name=".data_algorithm.datastructure.array.AReverseMergeSortArray" />
+    <activity android:name=".data_algorithm.datastructure.array.A665" />
+    <activity android:name=".data_algorithm.datastructure.array.A860" />
+    <activity android:name=".data_algorithm.datastructure.stack.A739" />
+    <activity android:name=".data_algorithm.datastructure.stack.A232" />
+    <activity android:name=".data_algorithm.mathmatics.AFactorial" />
+    <activity android:name=".data_algorithm.mathmatics.AFabonacci" />
+    <activity android:name=".data_algorithm.mathmatics.A754" />
+    <activity android:name=".data_algorithm.mathmatics.A728" />
+    <activity android:name=".data_algorithm.datastructure.linked.create.CreateLink" />
+    <activity android:name=".data_algorithm.datastructure.tree.binarytree.CreateTree" />
+    <activity android:name=".data_algorithm.datastructure.linked.traverse.TraversalLink" />
+    <activity android:name=".data_algorithm.datastructure.linked.traverse.ReversalLink" />
+    <activity android:name=".data_algorithm.datastructure.linked.traverse.CircleTraversal" />
+    <activity android:name=".data_algorithm.datastructure.linked.traverse.CircleTraversal2" /> <!-- ================================设计模式================================================ -->
+    <activity android:name=".design_model.create.singleton.Singleton" />
+    <activity android:name=".design_model.create.single_factory.example1.SingleFactory1" />
+    <activity android:name=".design_model.create.single_factory.example2.SingleFactory2" />
+    <activity android:name=".design_model.create.single_factory.example3.SingleFactory3" />
+    <activity android:name=".design_model.create.builder.example1.Client1" />
+    <activity android:name=".design_model.create.builder.example3.Client3" />
+    <activity android:name=".design_model.create.builder.example2.Client2" />
+    <activity android:name=".design_model.create.builder.example4.Client4" />
+    <activity android:name=".design_model.structure.proxy.example1.Client" />
+    <activity android:name=".design_model.structure.proxy.example2.Client" />
+    <activity android:name=".design_model.behavior.observer.example1.Client" />
+    <activity android:name=".design_model.behavior.observer.example2.isbe.ClientO" /> <!-- ================================Java基础================================================ -->
+    <activity android:name=".java.sourceCode.AStringClass" />
+    <activity android:name=".java.dataType.ABoolean" />
+    <activity android:name=".java.string.AStringSame" />
+    <activity android:name=".java.objectAndClass.house.ClientRoom" />
+    <activity android:name=".java.extends_.one.ClientExtends" />
+    <activity android:name=".java.extends_.reflect.Deserialization" />
+    <activity android:name=".java.extends_.abstractAndInterface.activity.AActivity" />
+    <activity android:name=".java.extends_.abstractAndInterface.activity.BActivity" />
+    <activity android:name=".java.collection.ClientCollection" />
+    <activity android:name=".java.threaddemo.activity.ThreadOneActivity" />
+    <activity android:name=".java.threaddemo.activity.ThreadSecondActivity" />
+    <activity android:name=".java.threaddemo.activity.ThreadThreeActivity" />
+    <activity android:name=".java.controlFlow.PrintTwoPower" /> <!-- ================================android-httpclient ================================================ -->
+    <uses-library
+      android:name="org.apache.http.legacy"
+      android:required="false" /> <!-- ================================Android基础与技术 ================================================ -->
+    <activity android:name=".android.adapter.SparseArray" />
+    <activity android:name=".android.adapter.RecyclerViewA" />
+    <activity android:name=".android.architect.MVP" />
+    <activity android:name=".android.architect.MVVM" />
+    <activity android:name=".android.network.http.HttpClientDemo" />
+    <activity android:name=".android.network.http.HttpUrlConnDemo" />
+    <activity android:name=".android.network.http.HttpClientDemo2" />
+    <activity android:name=".android.network.volley.VolleyDemo" />
+    <activity android:name=".android.network.volley.gson.GsonTest" />
+    <activity android:name=".android.network.okhttp.old.OkhttpOldDemo" />
+    <activity android:name=".android.network.okhttp.OkhttpDemo" />
+    <activity android:name=".android.network.xutils.XutilsDemo" />
+    <activity android:name=".android.network.retrofit.RetrofitDemo" />
+    <activity android:name=".data_algorithm.datastructure.linked.operate.AddNode" />
+    <activity android:name=".data_algorithm.datastructure.linked.operate.UpdateNode" />
+    <activity android:name=".data_algorithm.datastructure.linked.operate.RemoveNode" />
+    <activity android:name=".android.service.local.ClientServiceA" />
+    <activity android:name=".android.service.remote.client.ClientServiceB" />
+    <activity android:name=".android.service.remote2.client.ClientServiceC" />
+    <activity
+      android:name=".android.adaptive.cross.DialogTest1"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".android.adaptive.cross.DialogTest2"
+      android:configChanges="screenSize|orientation" />
 
-    <!-- 使用权限 -->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_PHONE_SINTERNETWIFI_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.FLASHLIGHT" />
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <!-- 硬件特性 -->
-    <uses-feature android:name="android.hardware.camera" />
-    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <service android:name=".android.service.local.ServiceA" />
+    <service android:name=".android.service.remote.server.ServiceB">
+      <intent-filter>
+        <action android:name="com.example.ruru.sophiesblog.android.service.remote.ServiceB" />
 
-    <application
-        android:name=".android.MyApplication"
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".android.file.FileListActivity"></activity>
-        <activity android:name=".android.file.FileSystem" />
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </service>
+    <service android:name=".android.service.remote2.server.ServiceC">
+      <intent-filter>
+        <action android:name="com.aaa.servicec.action" />
 
-        <!-- ================================数据结构与算法================================================ -->
-        <activity android:name=".data_algorithm.algorithm.sort.ChooseSort" />
-        <activity android:name=".data_algorithm.algorithm.sort.BubbleSort" />
-        <activity android:name=".data_algorithm.algorithm.sort.InsertSort" />
-        <activity android:name=".data_algorithm.algorithm.sort.ShellSort" />
-        <activity android:name=".data_algorithm.algorithm.sort.HeapSort" />
-        <activity android:name=".data_algorithm.algorithm.sort.MergeSort" />
-        <activity android:name=".data_algorithm.algorithm.sort.QuickSort" />
-        <activity android:name=".data_algorithm.algorithm.sort.CountSort" />
-        <activity android:name=".data_algorithm.algorithm.sort.BucketSort" />
-        <activity android:name=".data_algorithm.algorithm.sort.RadixSort" />
-        <activity android:name=".data_algorithm.algorithm.sort.OneSort" />
-        <activity android:name=".data_algorithm.algorithm.search.SequenceSearch" />
-        <activity android:name=".data_algorithm.algorithm.search.BinarySearch" />
-        <activity android:name=".data_algorithm.algorithm.search.InsertSearch" />
-        <activity android:name=".data_algorithm.algorithm.search.FibonacciSearch" />
-        <activity android:name=".data_algorithm.algorithm.other.A744" />
-        <activity android:name=".data_algorithm.algorithm.other.A788" />
-        <activity android:name=".data_algorithm.algorithm.other.A717" />
-        <activity android:name=".data_algorithm.algorithm.other.string.A824" />
-        <activity android:name=".data_algorithm.algorithm.other.bitoperation.A693" />
-        <activity android:name=".data_algorithm.algorithm.other.bitoperation.ABinaryConvert" />
-        <activity android:name=".data_algorithm.algorithm.other.string.A859" />
-        <activity android:name=".data_algorithm.datastructure.tree.binarytree.BinTreePreOrder" />
-        <activity android:name=".data_algorithm.datastructure.tree.binarytree.BinTreeInOrder" />
-        <activity android:name=".data_algorithm.datastructure.tree.binarytree.BinTreePostOrder" />
-        <activity android:name=".data_algorithm.datastructure.tree.binarytree.BinTreeLevelOrder" />
-        <activity android:name=".data_algorithm.datastructure.tree.binarytree.BinTreeReversal" />
-        <activity android:name=".data_algorithm.datastructure.tree.binarytree.BinTreeFlatten" />
-        <activity android:name=".data_algorithm.datastructure.tree.binarytree.AViewFind" />
-        <activity android:name=".data_algorithm.datastructure.tree.binarytree.ANextSibil" />
-        <activity android:name=".data_algorithm.datastructure.tree.binarytree.A671" />
-        <activity android:name=".data_algorithm.datastructure.tree.binarytree.A653" />
-        <activity android:name=".data_algorithm.datastructure.tree.binarytree.A652" />
-        <activity android:name=".data_algorithm.datastructure.tree.trietree.A720" />
-        <activity android:name=".data_algorithm.datastructure.tree.binarytree.A606" />
-        <activity android:name=".data_algorithm.datastructure.array.A747" />
-        <activity android:name=".data_algorithm.datastructure.array.A628" />
-        <activity android:name=".data_algorithm.datastructure.array.A674" />
-        <activity android:name=".data_algorithm.datastructure.array.AFindMostTimesNum" />
-        <activity android:name=".data_algorithm.datastructure.array.AFindOnlyTwiceNum" />
-        <activity android:name=".data_algorithm.datastructure.array.AFindOnlyNotRepeatedNum" />
-        <activity android:name=".data_algorithm.datastructure.array.AReverseMergeSortArray" />
-        <activity android:name=".data_algorithm.datastructure.array.A665" />
-        <activity android:name=".data_algorithm.datastructure.array.A860" />
-        <activity android:name=".data_algorithm.datastructure.stack.A739" />
-        <activity android:name=".data_algorithm.datastructure.stack.A232" />
-        <activity android:name=".data_algorithm.mathmatics.AFactorial" />
-        <activity android:name=".data_algorithm.mathmatics.AFabonacci" />
-        <activity android:name=".data_algorithm.mathmatics.A754" />
-        <activity android:name=".data_algorithm.mathmatics.A728" />
-        <activity android:name=".data_algorithm.datastructure.linked.create.CreateLink" />
-        <activity android:name=".data_algorithm.datastructure.tree.binarytree.CreateTree" />
-        <activity android:name=".data_algorithm.datastructure.linked.traverse.TraversalLink" />
-        <activity android:name=".data_algorithm.datastructure.linked.traverse.ReversalLink" />
-        <activity android:name=".data_algorithm.datastructure.linked.traverse.CircleTraversal" />
-        <activity android:name=".data_algorithm.datastructure.linked.traverse.CircleTraversal2" /> <!-- ================================设计模式================================================ -->
-        <activity android:name=".design_model.create.singleton.Singleton" />
-        <activity android:name=".design_model.create.single_factory.example1.SingleFactory1" />
-        <activity android:name=".design_model.create.single_factory.example2.SingleFactory2" />
-        <activity android:name=".design_model.create.single_factory.example3.SingleFactory3" />
-        <activity android:name=".design_model.create.builder.example1.Client1" />
-        <activity android:name=".design_model.create.builder.example3.Client3" />
-        <activity android:name=".design_model.create.builder.example2.Client2" />
-        <activity android:name=".design_model.create.builder.example4.Client4" />
-        <activity android:name=".design_model.structure.proxy.example1.Client" />
-        <activity android:name=".design_model.structure.proxy.example2.Client" />
-        <activity android:name=".design_model.behavior.observer.example1.Client" />
-        <activity android:name=".design_model.behavior.observer.example2.isbe.ClientO" /> <!-- ================================Java基础================================================ -->
-        <activity android:name=".java.sourceCode.AStringClass" />
-        <activity android:name=".java.dataType.ABoolean" />
-        <activity android:name=".java.string.AStringSame" />
-        <activity android:name=".java.objectAndClass.house.ClientRoom" />
-        <activity android:name=".java.extends_.one.ClientExtends" />
-        <activity android:name=".java.extends_.reflect.Deserialization" />
-        <activity android:name=".java.extends_.abstractAndInterface.activity.AActivity" />
-        <activity android:name=".java.extends_.abstractAndInterface.activity.BActivity" />
-        <activity android:name=".java.collection.ClientCollection" />
-        <activity android:name=".java.threaddemo.activity.ThreadOneActivity" />
-        <activity android:name=".java.threaddemo.activity.ThreadSecondActivity" />
-        <activity android:name=".java.threaddemo.activity.ThreadThreeActivity" />
-        <activity android:name=".java.controlFlow.PrintTwoPower" /> <!-- ================================android-httpclient ================================================ -->
-        <uses-library
-            android:name="org.apache.http.legacy"
-            android:required="false" /> <!-- ================================Android基础与技术 ================================================ -->
-        <activity android:name=".android.adapter.SparseArray" />
-        <activity android:name=".android.adapter.RecyclerViewA" />
-        <activity android:name=".android.architect.MVP" />
-        <activity android:name=".android.architect.MVVM" />
-        <activity android:name=".android.network.http.HttpClientDemo" />
-        <activity android:name=".android.network.http.HttpUrlConnDemo" />
-        <activity android:name=".android.network.http.HttpClientDemo2" />
-        <activity android:name=".android.network.volley.VolleyDemo" />
-        <activity android:name=".android.network.volley.gson.GsonTest" />
-        <activity android:name=".android.network.okhttp.old.OkhttpOldDemo" />
-        <activity android:name=".android.network.okhttp.OkhttpDemo" />
-        <activity android:name=".android.network.xutils.XutilsDemo" />
-        <activity android:name=".android.network.retrofit.RetrofitDemo" />
-        <activity android:name=".data_algorithm.datastructure.linked.operate.AddNode" />
-        <activity android:name=".data_algorithm.datastructure.linked.operate.UpdateNode" />
-        <activity android:name=".data_algorithm.datastructure.linked.operate.RemoveNode" />
-        <activity android:name=".android.service.local.ClientServiceA" />
-        <activity android:name=".android.service.remote.client.ClientServiceB" />
-        <activity android:name=".android.service.remote2.client.ClientServiceC" />
-        <activity
-            android:name=".android.adaptive.cross.DialogTest1"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".android.adaptive.cross.DialogTest2"
-            android:configChanges="screenSize|orientation" />
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </service>
 
-        <service android:name=".android.service.local.ServiceA" />
-        <service android:name=".android.service.remote.server.ServiceB">
-            <intent-filter>
-                <action android:name="com.example.ruru.sophiesblog.android.service.remote.ServiceB" />
+    <activity
+      android:name=".android.adaptive.screen.Page"
+      android:screenOrientation="portrait" />
+    <activity android:name=".android.adaptive.screen.NinePatchActivity" />
+    <activity android:name=".android.adaptive.screen.ScreenAdaptive" />
+    <activity android:name=".android.fragment.top.FragmentActivity">
+      <intent-filter>
+        <action android:name="com.aaa.servicec.action" />
 
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </service>
-        <service android:name=".android.service.remote2.server.ServiceC">
-            <intent-filter>
-                <action android:name="com.aaa.servicec.action" />
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity android:name=".android.anim.FrameAnimation" />
+    <activity android:name=".android.receiver.NetworkDemo" />
+    <activity android:name=".android.fragment.bottom.FragmentActivity2" />
+    <activity android:name=".android.ui.NullDemo" />
+    <activity android:name=".android.kotlin.override.OverrideActivity" />
+    <activity android:name=".android.kotlin.constructor.ConstructorActivity" />
+    <activity android:name=".android.adaptive.multi_language.MultiLanguage" />
+    <activity android:name=".android.kotlin.code.ListDemo" />
+    <activity android:name=".android.media.screenrecord.ScreenRecord">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </service>
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
 
-        <activity
-            android:name=".android.adaptive.screen.Page"
-            android:screenOrientation="portrait" />
-        <activity android:name=".android.adaptive.screen.NinePatchActivity" />
-        <activity android:name=".android.adaptive.screen.ScreenAdaptive" />
-        <activity android:name=".android.fragment.top.FragmentActivity">
-            <intent-filter>
-                <action android:name="com.aaa.servicec.action" />
+    <service
+      android:name=".android.media.screenrecord.ScreenRecordService"
+      android:exported="false" />
 
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".android.anim.FrameAnimation" />
-        <activity android:name=".android.receiver.NetworkDemo" />
-        <activity android:name=".android.fragment.bottom.FragmentActivity2" />
-        <activity android:name=".android.ui.NullDemo" />
-        <activity android:name=".android.kotlin.override.OverrideActivity" />
-        <activity android:name=".android.kotlin.constructor.ConstructorActivity" />
-        <activity android:name=".android.adaptive.multi_language.MultiLanguage" />
-        <activity android:name=".android.kotlin.code.ListDemo" />
-        <activity android:name=".android.media.screenrecord.ScreenRecord">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <service
-            android:name=".android.media.screenrecord.ScreenRecordService"
-            android:exported="false" />
-
-        <activity android:name=".android.media.ijkplayer.IjkPlayerActivity" />
-        <activity android:name=".android.media.ijkplayer.IjkPlayer2Activity" />
-    </application>
+    <activity android:name=".android.media.ijkplayer.IjkPlayerActivity" />
+    <activity android:name=".android.media.ijkplayer.IjkPlayer2Activity" />
+  </application>
 
 </manifest>
