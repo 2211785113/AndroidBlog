@@ -28,7 +28,16 @@
     android:supportsRtl="true"
     android:theme="@style/AppTheme"
     tools:ignore="GoogleAppIndexingWarning">
-    <activity android:name=".java.collection.SortDemo"></activity>
+    <activity android:name=".android.intent.two.Activity4"></activity>
+    <activity android:name=".android.intent.two.Activity3">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:name=".android.intent.one.Activity2" />
+    <activity android:name=".android.intent.one.Activity1"></activity>
     <activity android:name=".android.kotlin.genericity.java.PanziTest" />
     <activity android:name=".android.file.FileListActivity" />
     <activity android:name=".android.file.FileSystem" /> <!-- ================================数据结构与算法================================================ -->
@@ -188,9 +197,7 @@
 
     <service
       android:name=".android.media.screenrecord.ScreenRecordService"
-      android:exported="false" />
-
-    <activity android:name=".android.media.ijkplayer.IjkPlayerActivity" />
+      android:exported="false" /> <!-- <activity android:name=".android.media.ijkplayer.IjkPlayerActivity" /> -->
     <activity android:name=".android.media.ijkplayer.IjkPlayer2Activity" />
   </application>
 

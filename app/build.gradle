@@ -33,6 +33,11 @@ android {
       jniLibs.srcDir 'libs'
     }
   }
+
+  /* 实验室功能 用于 @Parcelize注解*/
+  androidExtensions {
+    experimental = true
+  }
 }
 
 dependencies {
