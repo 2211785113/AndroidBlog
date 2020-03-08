@@ -30,11 +30,7 @@
     tools:ignore="GoogleAppIndexingWarning">
     <activity android:name=".android.intent.two.Activity4"></activity>
     <activity android:name=".android.intent.two.Activity3">
-      <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
 
-        <category android:name="android.intent.category.LAUNCHER" />
-      </intent-filter>
     </activity>
     <activity android:name=".android.intent.one.Activity2" />
     <activity android:name=".android.intent.one.Activity1"></activity>
@@ -186,13 +182,14 @@
     <activity android:name=".android.kotlin.override.OverrideActivity" />
     <activity android:name=".android.kotlin.constructor.ConstructorActivity" />
     <activity android:name=".android.adaptive.multi_language.MultiLanguage" />
-    <activity android:name=".android.kotlin.code.ListDemo" />
-    <activity android:name=".android.media.screenrecord.ScreenRecord">
+    <activity android:name=".android.kotlin.code.ListDemo">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
 
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
+    </activity>
+    <activity android:name=".android.media.screenrecord.ScreenRecord">
     </activity>
 
     <service

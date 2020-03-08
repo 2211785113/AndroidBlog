@@ -11,7 +11,7 @@ class ListDemo: AppCompatActivity() {
     setContentView(R.layout.activity_list_demo)
 
     val list = listOf("aa", "bb", "cc")
-    println("list.lastIndex=${list.lastIndex}") // 2
+    /*println("list.lastIndex=${list.lastIndex}") // 2
     println("list.indices=${list.indices}") // 0..2
 
     val mapOf = mapOf("aa" to 1, "bb" to 2, "cc" to 3)
@@ -22,8 +22,12 @@ class ListDemo: AppCompatActivity() {
       println("list.withIndex=${item}") // IndexedValue(index=0, value=aa)  IndexedValue(index=1, value=bb) IndexedValue(index=2, value=cc)
     }
 
-    for ((index,value) in list.withIndex()){
+    for ((index, value) in list.withIndex()) {
       println("index=$index value=$value")
+    }*/
+
+    for (index in 0 .. 2) {//aa bb cc
+      println("item=${list[index]}")
     }
   }
 }
