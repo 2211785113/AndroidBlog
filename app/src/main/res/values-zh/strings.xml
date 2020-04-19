@@ -1,0 +1,30 @@
+<!--中文资源-->
+<resources>
+  <string name="app_name">索菲的博客</string>
+
+  <string name="hello_blank_fragment">你好空界面</string>
+  <string name="fragment_one">第一个界面</string>
+  <string name="fragment_two">第二个界面</string>
+
+  <string name="bottom_home">主页</string>
+  <string name="bottom_box">闲逛</string>
+  <string name="bottom_bell">通知</string>
+
+  <string name="standard_definition">标清SD</string>
+  <string name="high_definition">高清SD</string>
+
+  <string name="voice">声音</string>
+
+  <string name="startRecord">开始录屏</string>
+  <string name="stopRecord">停止录屏</string>
+  <string name="playRecord">播放录屏</string>
+  <string name="unableScreenRecord">不能录屏</string>
+
+  <string name="cutScreen">截屏</string>
+  <string name="showScreen">展示截屏</string>
+
+  <string name="file">文件</string>
+  <string name="fileType">文件分类标题</string>
+  <string name="cloudFile">云盘文件</string>
+  <string name="phoneStore">手机存储</string>
+</resources>

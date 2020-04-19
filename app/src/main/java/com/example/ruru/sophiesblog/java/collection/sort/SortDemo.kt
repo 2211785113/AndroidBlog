@@ -19,7 +19,7 @@ fun main() {
   list1.add(Student1(3, "小明", 333))
 
   //Comparator排序
-  //  Collections.sort(list1, StuComparator(1))
+    Collections.sort(list1, StuComparator(1))
 
   //kotlin排序
   //  list1.sortedBy {it.type} //不起作用

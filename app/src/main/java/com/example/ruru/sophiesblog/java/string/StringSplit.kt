@@ -1,4 +1,4 @@
-package com.example.ruru.sophiesblog.android
+package com.example.ruru.sophiesblog.java.string
 
 fun main() {
   var a = "你好#123"

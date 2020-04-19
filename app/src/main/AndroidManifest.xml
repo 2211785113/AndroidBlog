@@ -3,7 +3,8 @@
   xmlns:tools="http://schemas.android.com/tools"
   package="com.example.ruru.sophiesblog">
 
-  <uses-permission android:name="android.permission.READ_LOGS" /> <!-- 录屏 -->
+  <uses-permission android:name="android.permission.READ_LOGS"
+    tools:ignore="ProtectedPermissions" /> <!-- 录屏 -->
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 使用权限 -->
   <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -13,7 +14,6 @@
   <uses-permission android:name="android.permission.READ_PHONE_SINTERNETWIFI_STATE" />
   <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
   <uses-permission android:name="android.permission.CAMERA" />
-  <uses-permission android:name="android.permission.RECORD_AUDIO" />
   <uses-permission android:name="android.permission.FLASHLIGHT" />
   <uses-permission android:name="android.permission.VIBRATE" /> <!-- 硬件特性 -->
   <uses-feature android:name="android.hardware.camera" />
@@ -28,12 +28,11 @@
     android:supportsRtl="true"
     android:theme="@style/AppTheme"
     tools:ignore="GoogleAppIndexingWarning">
-    <activity android:name=".android.intent.two.Activity4"></activity>
-    <activity android:name=".android.intent.two.Activity3">
-
-    </activity>
+    <activity android:name=".android.ui.RecvDiveder"></activity>
+    <activity android:name=".android.intent.two.Activity4" />
+    <activity android:name=".android.intent.two.Activity3"></activity>
     <activity android:name=".android.intent.one.Activity2" />
-    <activity android:name=".android.intent.one.Activity1"></activity>
+    <activity android:name=".android.intent.one.Activity1" />
     <activity android:name=".android.kotlin.genericity.java.PanziTest" />
     <activity android:name=".android.file.FileListActivity" />
     <activity android:name=".android.file.FileSystem" /> <!-- ================================数据结构与算法================================================ -->
@@ -168,29 +167,22 @@
       android:screenOrientation="portrait" />
     <activity android:name=".android.adaptive.screen.NinePatchActivity" />
     <activity android:name=".android.adaptive.screen.ScreenAdaptive" />
-    <activity android:name=".android.fragment.top.FragmentActivity">
-      <intent-filter>
-        <action android:name="com.aaa.servicec.action" />
-
-        <category android:name="android.intent.category.DEFAULT" />
-      </intent-filter>
-    </activity>
+    <activity android:name=".android.fragment.top.FragmentActivity"></activity>
     <activity android:name=".android.anim.FrameAnimation" />
     <activity android:name=".android.receiver.NetworkDemo" />
     <activity android:name=".android.fragment.bottom.FragmentActivity2" />
     <activity android:name=".android.ui.NullDemo" />
     <activity android:name=".android.kotlin.override.OverrideActivity" />
     <activity android:name=".android.kotlin.constructor.ConstructorActivity" />
-    <activity android:name=".android.adaptive.multi_language.MultiLanguage" />
-    <activity android:name=".android.kotlin.code.ListDemo">
+    <activity android:name=".android.adaptive.multi_language.MultiLanguage">
       <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
+      <action android:name="android.intent.action.MAIN" />
 
-        <category android:name="android.intent.category.LAUNCHER" />
-      </intent-filter>
+      <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
     </activity>
-    <activity android:name=".android.media.screenrecord.ScreenRecord">
-    </activity>
+    <activity android:name=".android.kotlin.code.ListDemo"></activity>
+    <activity android:name=".android.media.screenrecord.ScreenRecord"></activity>
 
     <service
       android:name=".android.media.screenrecord.ScreenRecordService"

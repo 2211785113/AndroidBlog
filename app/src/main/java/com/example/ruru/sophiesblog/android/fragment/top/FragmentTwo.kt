@@ -18,7 +18,7 @@ class FragmentTwo: Fragment() {
 
   private val TAG = "FragmentTwo"
 
-  override fun onAttach(context: Context?) {
+  override fun onAttach(context: Context) {
     super.onAttach(context)
     Log.d(TAG, "onAttach")
   }

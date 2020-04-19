@@ -4,6 +4,11 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  tools:context=".data_algorithm.algorithm.other.A717">
+  tools:context=".android.ui.RecvDiveder">
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
