@@ -8,4 +8,8 @@
   <string name="bottom_home">主页</string>
   <string name="bottom_box">闲逛</string>
   <string name="bottom_bell">通知</string>
+
+  <string name="cancel">取消</string>
+  <string name="ensure">确定</string>
+  <string name="title">题目</string>
 </resources>
