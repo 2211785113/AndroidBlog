@@ -2,8 +2,8 @@
   <string name="app_name">Sophie\'s blog</string>
 
   <string name="hello_blank_fragment">Hello blank fragment</string>
-  <string name="fragment_one">ONE</string>
-  <string name="fragment_two">TWO</string>
+  <string name="fragment_one">第一个界面</string>
+  <string name="fragment_two">第二个界面</string>
 
   <string name="bottom_home">主页</string>
   <string name="bottom_box">闲逛</string>
@@ -12,4 +12,10 @@
   <string name="cancel">取消</string>
   <string name="ensure">确定</string>
   <string name="title">题目</string>
+
+  <string name="hello">你好</string>
+  <string name="sun">阳光</string>
+
+  <string name="Chinese">中文</string>
+  <string name="English">英文</string>
 </resources>

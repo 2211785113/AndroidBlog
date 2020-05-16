@@ -1,0 +1,21 @@
+<resources>
+  <string name="app_name">Sophie\'s blog</string>
+
+  <string name="hello_blank_fragment">Hello blank fragment</string>
+  <string name="fragment_one">one</string>
+  <string name="fragment_two">two</string>
+
+  <string name="bottom_home">main</string>
+  <string name="bottom_box">idle</string>
+  <string name="bottom_bell">notify</string>
+
+  <string name="cancel">cancel</string>
+  <string name="ensure">ok</string>
+  <string name="title">title</string>
+
+  <string name="hello">hello</string>
+  <string name="sun">sun</string>
+
+  <string name="Chinese">Chinese</string>
+  <string name="English">English</string>
+</resources>
