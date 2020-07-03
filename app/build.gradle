@@ -46,8 +46,11 @@ android {
  * 升级到Androidx，没列出的类到官网中找
  */
 dependencies {
+
+  def lifecycle_version = "2.2.0"
+
   implementation fileTree(include: ['*.jar'], dir: 'libs')
-  /*测试*/
+  /*test*/
   implementation 'androidx.appcompat:appcompat:1.0.2'
   testImplementation 'junit:junit:4.12'
   /*androidTestImplementation 'androidx.test:runner:1.0.2'*/
@@ -66,6 +69,8 @@ dependencies {
   implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0-rc01'
   /*baseRecvAdapter*/
   implementation 'com.github.2211785113:BaseRecvAdapter:v1.0'
+  /*BaseRecyclerViewAdapterHelper*/
+  implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
   /* volley+gson */
   implementation 'com.android.volley:volley:1.1.1'
   implementation 'com.google.code.gson:gson:2.8.2'
@@ -97,6 +102,13 @@ dependencies {
   implementation 'tv.danmaku.ijk.media:ijkplayer-x86:0.8.8'
   implementation 'tv.danmaku.ijk.media:ijkplayer-x86_64:0.8.8'
   implementation 'tv.danmaku.ijk.media:ijkplayer-exo:0.8.8'
+  /*LifeCycle*/
+  // ViewModel
+  implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+  // LiveData
+  implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+  // Lifecycles only (without ViewModel or LiveData)
+  implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
 }
 repositories {
   mavenCentral()
