@@ -15,22 +15,23 @@
     android:supportsRtl="true"
     android:theme="@style/AppTheme"
     tools:ignore="GoogleAppIndexingWarning">
-    <activity android:name=".android.ui.keyboard.EditTestActivity">
+    <activity android:name=".android.ui.ConstraintSet">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
 
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+    <activity android:name=".android.ui.keyboard.EditTestActivity"></activity>
     <activity
       android:name=".android.ui.keyboard.TestActivity"
-      android:windowSoftInputMode="adjustResize"></activity>
+      android:windowSoftInputMode="adjustResize" />
     <activity android:name=".android.activity.MainActivity" />
     <activity android:name=".android.thread.handler.HandlerKotlinDemo" />
     <activity android:name=".android.thread.handler.HandlerJavaDemo" />
     <activity android:name=".android.kotlin.attribute.AttributeDemo" />
     <activity android:name=".android.kotlin.collection.MapDemo" />
-    <activity android:name=".android.kotlin.override.OverrideActivity"></activity>
+    <activity android:name=".android.kotlin.override.OverrideActivity" />
     <activity android:name=".android.kotlin.constructor.ConstructorActivity" />
     <activity android:name=".android.adaptive.multi_language.MultiLanguage" />
     <activity android:name=".android.kotlin.collection.ListDemo" />
