@@ -1,12 +1,13 @@
 package com.example.ruru.sophiesblog.data_algorithm.datastructure.array;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
 import com.example.ruru.sophiesblog.R;
 
 import java.util.Arrays;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * https://www.cnblogs.com/eniac12/p/5296139.html

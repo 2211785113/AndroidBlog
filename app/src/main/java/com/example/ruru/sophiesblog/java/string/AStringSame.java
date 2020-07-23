@@ -1,10 +1,11 @@
 package com.example.ruru.sophiesblog.java.string;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
 import com.example.ruru.sophiesblog.R;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * 判断String对阵的字符串是否相同。

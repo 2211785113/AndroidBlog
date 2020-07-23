@@ -1,8 +1,9 @@
 package com.example.ruru.sophiesblog.android.kotlin.collection
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.ruru.sophiesblog.R
+import java.sql.DriverManager.println
 
 class ListDemo: AppCompatActivity() {
 
@@ -11,8 +12,8 @@ class ListDemo: AppCompatActivity() {
     setContentView(R.layout.activity_list_demo)
 
     // 获取list集合最后一个元素的index索引，获取所有元素的索引
-    val list = listOf("aa", "bb", "cc")
-    println("list.lastIndex=${list.lastIndex}") // 2
+    val list = arrayListOf("aa", "bb", "cc")
+    /*println("list.lastIndex=${list.lastIndex}") // 2
     println("list.indices=${list.indices}") // 0..2
 
     // 遍历list集合的元素带索引
@@ -24,6 +25,10 @@ class ListDemo: AppCompatActivity() {
     // 遍历list集合的索引和元素
     for ((index, value) in list.withIndex()) {
       println("index=$index value=$value")
+    }*/
+
+    for (index in 0 .. 2) { //aa bb cc
+      println("item=${list[index]}")
     }
   }
 }

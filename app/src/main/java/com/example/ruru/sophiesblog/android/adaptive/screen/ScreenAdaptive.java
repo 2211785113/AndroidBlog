@@ -4,12 +4,13 @@ import android.app.Activity;
 import android.app.Application;
 import android.content.ComponentCallbacks;
 import android.content.res.Configuration;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
 
 import com.example.ruru.sophiesblog.R;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ScreenAdaptive extends AppCompatActivity {
 

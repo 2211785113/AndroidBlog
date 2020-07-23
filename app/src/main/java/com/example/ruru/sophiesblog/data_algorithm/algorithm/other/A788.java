@@ -1,6 +1,5 @@
 package com.example.ruru.sophiesblog.data_algorithm.algorithm.other;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -8,6 +7,8 @@ import com.example.ruru.sophiesblog.R;
 
 import java.util.HashSet;
 import java.util.Set;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * 类型：String/动态规划

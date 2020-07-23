@@ -1,7 +1,6 @@
 package com.example.ruru.sophiesblog.android.network.volley;
 
 import android.graphics.Bitmap;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
@@ -16,6 +15,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.List;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import static android.graphics.Bitmap.Config.RGB_565;
 

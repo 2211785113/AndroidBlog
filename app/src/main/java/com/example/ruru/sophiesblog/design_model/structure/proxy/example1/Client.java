@@ -1,7 +1,6 @@
 package com.example.ruru.sophiesblog.design_model.structure.proxy.example1;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
 import com.example.ruru.sophiesblog.R;
 import com.example.ruru.sophiesblog.design_model.structure.proxy.example1.dynamic.MarkCompany;
@@ -10,6 +9,8 @@ import com.example.ruru.sophiesblog.design_model.structure.proxy.example1.public
 import com.example.ruru.sophiesblog.design_model.structure.proxy.example1.static_.Leo;
 import com.example.ruru.sophiesblog.design_model.structure.proxy.example1.public_.MakeFactory;
 import com.example.ruru.sophiesblog.design_model.structure.proxy.example1.static_.Mark;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Client extends AppCompatActivity {
 

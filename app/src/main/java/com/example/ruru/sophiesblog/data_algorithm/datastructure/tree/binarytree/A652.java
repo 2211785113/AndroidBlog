@@ -1,6 +1,5 @@
 package com.example.ruru.sophiesblog.data_algorithm.datastructure.tree.binarytree;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -10,6 +9,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import static com.example.ruru.sophiesblog.data_algorithm.datastructure.tree.binarytree.CreateTree.strToTree;
 

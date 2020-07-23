@@ -1,8 +1,8 @@
 package com.example.ruru.sophiesblog.android.ui
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import com.example.ruru.sophiesblog.R
 import kotlinx.android.synthetic.main.activity_null_demo.*
 

@@ -1,6 +1,5 @@
 package com.example.ruru.sophiesblog.android.network.http;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -21,6 +20,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.List;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import static com.example.ruru.sophiesblog.android.network.http.HttpManager.convertStreamToString;
 

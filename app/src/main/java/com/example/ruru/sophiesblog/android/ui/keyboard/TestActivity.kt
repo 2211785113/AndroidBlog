@@ -1,9 +1,9 @@
 package com.example.ruru.sophiesblog.android.ui.keyboard
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.text.Editable
 import android.text.TextWatcher
+import androidx.appcompat.app.AppCompatActivity
 import com.example.ruru.sophiesblog.R
 import kotlinx.android.synthetic.main.activity_test.*
 

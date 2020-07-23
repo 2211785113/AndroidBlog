@@ -1,7 +1,9 @@
 <resources>
-  <string name="app_name">Sophie\'s blog</string>
+<!--英文资源-->
+  <string name="app_name">sophie\'s blog</string>
 
-  <string name="hello_blank_fragment">Hello blank fragment</string>
+  <string name="hello_blank_fragment">hello blank fragment</string>
+
   <string name="fragment_one">one</string>
   <string name="fragment_two">two</string>
 
@@ -18,4 +20,22 @@
 
   <string name="Chinese">Chinese</string>
   <string name="English">English</string>
+
+  <string name="standard_definition">standard</string>
+  <string name="high_definition">high</string>
+
+  <string name="voice">voice</string>
+
+  <string name="startRecord">start record</string>
+  <string name="stopRecord">stop record</string>
+  <string name="playRecord">play record</string>
+  <string name="unableScreenRecord">can\'t record</string>
+
+  <string name="cutScreen">cut screen</string>
+  <string name="showScreen">show screen</string>
+
+  <string name="file">file</string>
+  <string name="fileType">file classify title</string>
+  <string name="cloudFile">cloud file</string>
+  <string name="phoneStore">phone storage</string>
 </resources>

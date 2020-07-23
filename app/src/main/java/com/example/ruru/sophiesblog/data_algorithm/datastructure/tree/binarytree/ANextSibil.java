@@ -1,12 +1,13 @@
 package com.example.ruru.sophiesblog.data_algorithm.datastructure.tree.binarytree;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.ruru.sophiesblog.R;
 
 import java.util.LinkedList;
 import java.util.Queue;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ANextSibil extends AppCompatActivity {
 

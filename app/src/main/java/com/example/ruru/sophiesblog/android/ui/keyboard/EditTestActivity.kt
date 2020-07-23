@@ -1,10 +1,8 @@
 package com.example.ruru.sophiesblog.android.ui.keyboard
 
-import android.content.Context
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
-import android.view.inputmethod.InputMethodManager
+import androidx.appcompat.app.AppCompatActivity
 import com.example.ruru.sophiesblog.R
 import kotlinx.android.synthetic.main.activity_edit_test.*
 

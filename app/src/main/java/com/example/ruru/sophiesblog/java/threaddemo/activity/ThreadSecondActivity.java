@@ -1,6 +1,5 @@
 package com.example.ruru.sophiesblog.java.threaddemo.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.ruru.sophiesblog.R;
@@ -9,6 +8,8 @@ import com.example.ruru.sophiesblog.java.threaddemo.syn.SynchronizedDemo.SynThre
 import com.example.ruru.sophiesblog.java.threaddemo.threadlocal.UseThreadLocal;
 import com.example.ruru.sophiesblog.java.threaddemo.waitandnotify.ExpressBean;
 import com.example.ruru.sophiesblog.java.threaddemo.waitandnotify.TestWaitNotify;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ThreadSecondActivity extends AppCompatActivity {
 

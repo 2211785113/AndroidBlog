@@ -1,9 +1,6 @@
 package com.example.ruru.sophiesblog.design_model.behavior.observer.example2.isbe;
 
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 
 import com.example.ruru.sophiesblog.R;
 import com.example.ruru.sophiesblog.design_model.behavior.observer.example2.be.AFragment;
@@ -12,6 +9,9 @@ import com.example.ruru.sophiesblog.design_model.behavior.observer.example2.be.O
 
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 //具体被观察者
 public class ClientO extends AppCompatActivity {

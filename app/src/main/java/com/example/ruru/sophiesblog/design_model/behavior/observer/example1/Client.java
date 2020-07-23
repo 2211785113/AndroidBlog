@@ -1,11 +1,12 @@
 package com.example.ruru.sophiesblog.design_model.behavior.observer.example1;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.ruru.sophiesblog.R;
 import com.example.ruru.sophiesblog.design_model.behavior.observer.example1.be.WxUser;
 import com.example.ruru.sophiesblog.design_model.behavior.observer.example1.isbe.WxPublic;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Client extends AppCompatActivity {
 

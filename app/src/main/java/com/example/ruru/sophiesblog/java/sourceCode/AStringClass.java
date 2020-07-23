@@ -1,10 +1,11 @@
 package com.example.ruru.sophiesblog.java.sourceCode;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
 import com.example.ruru.sophiesblog.R;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class AStringClass extends AppCompatActivity {
 

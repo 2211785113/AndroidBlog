@@ -1,10 +1,11 @@
 package com.example.ruru.sophiesblog.data_algorithm.datastructure.array;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
 import com.example.ruru.sophiesblog.R;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * 顾客付5美元/10美元/20美元

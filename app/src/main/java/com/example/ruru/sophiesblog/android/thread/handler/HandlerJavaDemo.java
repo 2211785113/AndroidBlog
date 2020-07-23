@@ -2,8 +2,9 @@ package com.example.ruru.sophiesblog.android.thread.handler;
 
 import android.os.Handler;
 import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.ruru.sophiesblog.R;
 

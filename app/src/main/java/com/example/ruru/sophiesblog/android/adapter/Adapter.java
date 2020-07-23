@@ -1,9 +1,10 @@
 package com.example.ruru.sophiesblog.android.adapter;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by lyr on 2019/12/8

@@ -2,18 +2,18 @@ package com.example.ruru.sophiesblog.android.fragment.top
 
 import android.content.Context
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.example.ruru.sophiesblog.R
 
 class FragmentOne: Fragment() {
 
   private val TAG = "FragmentOne"
 
-  override fun onAttach(context: Context?) {
+  override fun onAttach(context: Context) {
     super.onAttach(context)
     Log.d(TAG, "onAttach")
   }

@@ -1,10 +1,11 @@
 package com.example.ruru.sophiesblog.design_model.create.builder.example1;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
 import com.example.ruru.sophiesblog.R;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Client1 extends AppCompatActivity {
 

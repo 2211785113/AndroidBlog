@@ -1,6 +1,5 @@
 package com.example.ruru.sophiesblog.android.network.volley.gson;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.ruru.sophiesblog.R;
@@ -9,6 +8,8 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import java.util.List;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class GsonTest extends AppCompatActivity {
 

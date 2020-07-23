@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.IBinder;
 import android.os.RemoteException;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -18,6 +17,8 @@ import com.example.ruru.sophiesblog.android.service.remote2.server.BookControlle
 import com.example.ruru.sophiesblog.android.service.remote2.server.ServiceC;
 
 import java.util.List;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ClientServiceC extends AppCompatActivity implements View.OnClickListener {
 

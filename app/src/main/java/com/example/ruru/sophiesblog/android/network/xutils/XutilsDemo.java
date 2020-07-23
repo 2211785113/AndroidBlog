@@ -1,7 +1,6 @@
 package com.example.ruru.sophiesblog.android.network.xutils;
 
 import android.graphics.drawable.Drawable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,6 +16,8 @@ import org.xutils.image.ImageOptions;
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 @ContentView(value = R.layout.activity_xutils_demo)
 public class XutilsDemo extends AppCompatActivity {

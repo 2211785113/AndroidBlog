@@ -1,6 +1,5 @@
 package com.example.ruru.sophiesblog.data_algorithm.datastructure.array;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -8,6 +7,8 @@ import com.example.ruru.sophiesblog.R;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * 链接：

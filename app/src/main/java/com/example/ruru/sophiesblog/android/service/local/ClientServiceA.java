@@ -4,10 +4,11 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.IBinder;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.ruru.sophiesblog.R;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ClientServiceA extends AppCompatActivity {
 

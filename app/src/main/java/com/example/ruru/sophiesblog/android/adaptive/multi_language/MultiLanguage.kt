@@ -1,16 +1,19 @@
 package com.example.ruru.sophiesblog.android.adaptive.multi_language
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import com.example.ruru.sophiesblog.R
 import com.example.ruru.sophiesblog.android.adaptive.multi_language.LocaleUtils.Companion.needUpdate
 import com.example.ruru.sophiesblog.android.adaptive.multi_language.LocaleUtils.Companion.updateLang
 import kotlinx.android.synthetic.main.activity_multi_language.*
+import java.util.*
 
 /**
  * Android 应用外系统设置多语言切换（应用随系统语言改变）
  * Android 应用内实现多语言切换（应用不随系统语言改变）https://blog.csdn.net/cekiasoo/article/details/54933135
+ * 资源文件(自动建与手动建)：https://www.jb51.net/article/136192.htm
  */
 class MultiLanguage: AppCompatActivity() {
 
@@ -48,6 +51,10 @@ class MultiLanguage: AppCompatActivity() {
     var intent = Intent(this, MultiLanguage::class.java)
     startActivity(intent)
     overridePendingTransition(0, 0)
+    //获取首选语言
+    var locale = Locale.getDefault()
+
+    Log.d(localClassName, locale.toString())
   }
 }
 

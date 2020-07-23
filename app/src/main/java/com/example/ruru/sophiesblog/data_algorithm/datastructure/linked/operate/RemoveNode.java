@@ -1,11 +1,12 @@
 package com.example.ruru.sophiesblog.data_algorithm.datastructure.linked.operate;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
 import com.example.ruru.sophiesblog.R;
 import com.example.ruru.sophiesblog.data_algorithm.datastructure.linked.bean.Node;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import static com.example.ruru.sophiesblog.data_algorithm.datastructure.linked.create.CreateLink.strToLink;
 

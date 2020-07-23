@@ -1,7 +1,7 @@
 package com.example.ruru.sophiesblog.android.kotlin.override
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.ruru.sophiesblog.R
 import com.example.ruru.sophiesblog.android.kotlin.override.kotlin.SubClass
 

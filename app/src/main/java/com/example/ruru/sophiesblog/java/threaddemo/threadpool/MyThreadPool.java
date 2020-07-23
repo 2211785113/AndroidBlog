@@ -1,6 +1,5 @@
 package com.example.ruru.sophiesblog.java.threaddemo.threadpool;
 
-import android.support.annotation.WorkerThread;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;

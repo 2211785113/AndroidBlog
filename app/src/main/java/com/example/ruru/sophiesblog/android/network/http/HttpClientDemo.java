@@ -1,6 +1,5 @@
 package com.example.ruru.sophiesblog.android.network.http;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -27,6 +26,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.List;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import static com.example.ruru.sophiesblog.android.network.http.HttpManager.convertStreamToString;
 
