@@ -6,10 +6,30 @@
   android:layout_height="wrap_content"
   tools:context=".android.adaptive.multi_language.MultiLanguage">
 
-  <TextView
+  <androidx.appcompat.widget.Toolbar
+    android:id="@+id/toolBar"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"></TextView>
+    app:layout_constraintTop_toTopOf="parent" />
 
+  <TextView
+    android:id="@+id/tvName1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="50dp"
+    android:gravity="center"
+    android:text="@string/hello"
+    android:textSize="25sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/toolBar" />
+
+  <TextView
+    android:id="@+id/tvName2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:text="@string/sun"
+    android:textSize="25sp"
+    app:layout_constraintTop_toBottomOf="@id/tvName1" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,7 +3,8 @@
   xmlns:tools="http://schemas.android.com/tools"
   package="com.example.ruru.sophiesblog">
 
-  <uses-permission android:name="android.permission.READ_LOGS"
+  <uses-permission
+    android:name="android.permission.READ_LOGS"
     tools:ignore="ProtectedPermissions" /> <!-- 录屏 -->
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 使用权限 -->
@@ -28,6 +29,28 @@
     android:supportsRtl="true"
     android:theme="@style/AppTheme"
     tools:ignore="GoogleAppIndexingWarning">
+    <activity android:name=".android.ui.ConstraintSetDemo">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:name=".android.ui.keyboard.EditTestActivity"></activity>
+    <activity
+      android:name=".android.ui.keyboard.TestActivity"
+      android:windowSoftInputMode="adjustResize" />
+    <activity android:name=".android.activity.MainActivity" />
+    <activity android:name=".android.thread.handler.HandlerKotlinDemo" />
+    <activity android:name=".android.thread.handler.HandlerJavaDemo" />
+    <activity android:name=".android.kotlin.attribute.AttributeDemo" />
+    <activity android:name=".android.kotlin.collection.MapDemo" />
+    <activity android:name=".android.kotlin.override.OverrideActivity" />
+    <activity android:name=".android.kotlin.constructor.ConstructorActivity" />
+    <activity android:name=".android.adaptive.multi_language.MultiLanguage" />
+    <activity android:name=".android.kotlin.collection.ListDemo" />
+    <activity android:name=".android.ui.VisibleNullDemo" />
+    <!-- 数据结构与算法 -->
     <activity android:name=".android.ui.RecvDiveder"></activity>
     <activity android:name=".android.intent.two.Activity4" />
     <activity android:name=".android.intent.two.Activity3"></activity>
@@ -139,9 +162,7 @@
     <activity android:name=".android.service.local.ClientServiceA" />
     <activity android:name=".android.service.remote.client.ClientServiceB" />
     <activity android:name=".android.service.remote2.client.ClientServiceC" />
-    <activity
-      android:name=".android.adaptive.cross.DialogTest1"
-      android:screenOrientation="portrait" />
+    <activity android:name=".android.adaptive.cross.DialogTest1" />
     <activity
       android:name=".android.adaptive.cross.DialogTest2"
       android:configChanges="screenSize|orientation" />
@@ -162,26 +183,12 @@
       </intent-filter>
     </service>
 
-    <activity
-      android:name=".android.adaptive.screen.Page"
-      android:screenOrientation="portrait" />
+    <activity android:name=".android.adaptive.screen.Page" />
     <activity android:name=".android.adaptive.screen.NinePatchActivity" />
     <activity android:name=".android.adaptive.screen.ScreenAdaptive" />
     <activity android:name=".android.fragment.top.FragmentActivity"></activity>
     <activity android:name=".android.anim.FrameAnimation" />
     <activity android:name=".android.receiver.NetworkDemo" />
-    <activity android:name=".android.fragment.bottom.FragmentActivity2" />
-    <activity android:name=".android.ui.NullDemo" />
-    <activity android:name=".android.kotlin.override.OverrideActivity" />
-    <activity android:name=".android.kotlin.constructor.ConstructorActivity" />
-    <activity android:name=".android.adaptive.multi_language.MultiLanguage">
-      <intent-filter>
-      <action android:name="android.intent.action.MAIN" />
-
-      <category android:name="android.intent.category.LAUNCHER" />
-    </intent-filter>
-    </activity>
-    <activity android:name=".android.kotlin.code.ListDemo"></activity>
     <activity android:name=".android.media.screenrecord.ScreenRecord"></activity>
 
     <service
@@ -189,5 +196,4 @@
       android:exported="false" /> <!-- <activity android:name=".android.media.ijkplayer.IjkPlayerActivity" /> -->
     <activity android:name=".android.media.ijkplayer.IjkPlayer2Activity" />
   </application>
-
 </manifest>

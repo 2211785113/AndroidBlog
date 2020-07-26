@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.ruru.sophiesblog.R
 import kotlinx.android.synthetic.main.activity_null_demo.*
 
-class NullDemo: AppCompatActivity() {
+class VisibleNullDemo: AppCompatActivity() {
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -18,3 +18,6 @@ class NullDemo: AppCompatActivity() {
     Log.d(localClassName, "etName3=${etName3 == null}")
   }
 }
+
+
+

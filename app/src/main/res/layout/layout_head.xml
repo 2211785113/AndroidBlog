@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="@dimen/dp_50">
+
+  <TextView
+    android:id="@+id/tv_cancel"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:paddingLeft="@dimen/dp_16"
+    android:paddingRight="@dimen/dp_16"
+    android:text="@string/cancel"
+    app:layout_constraintStart_toStartOf="parent"></TextView>
+
+  <TextView
+    android:id="@+id/tv_ensure"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:paddingLeft="@dimen/dp_16"
+    android:paddingRight="@dimen/dp_16"
+    android:text="@string/ensure"
+    app:layout_constraintEnd_toEndOf="parent"></TextView>
+
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:text="@string/title"
+    app:layout_constraintEnd_toStartOf="@id/tv_ensure"
+    app:layout_constraintStart_toEndOf="@id/tv_cancel" />
+
+</android.support.constraint.ConstraintLayout>
