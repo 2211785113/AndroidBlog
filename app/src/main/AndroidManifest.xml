@@ -2,24 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
   package="com.example.ruru.sophiesblog">
-
-  <uses-permission
-    android:name="android.permission.READ_LOGS"
-    tools:ignore="ProtectedPermissions" /> <!-- 录屏 -->
-  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-  <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 使用权限 -->
-  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-  <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-  <uses-permission android:name="android.permission.INTERNET" />
-  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-  <uses-permission android:name="android.permission.READ_PHONE_SINTERNETWIFI_STATE" />
-  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-  <uses-permission android:name="android.permission.CAMERA" />
-  <uses-permission android:name="android.permission.FLASHLIGHT" />
-  <uses-permission android:name="android.permission.VIBRATE" /> <!-- 硬件特性 -->
-  <uses-feature android:name="android.hardware.camera" />
-  <uses-feature android:name="android.hardware.camera.autofocus" />
-
+  <!-- 录屏 -->
   <application
     android:name=".android.MyApplication"
     android:allowBackup="true"
@@ -29,14 +12,16 @@
     android:supportsRtl="true"
     android:theme="@style/AppTheme"
     tools:ignore="GoogleAppIndexingWarning">
-    <activity android:name=".android.ui.ConstraintSetDemo">
+    <activity android:name=".android.activity.base.viewModelTwo.BActivity"></activity>
+    <activity android:name=".android.activity.base.viewModelOne.AActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
 
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:name=".android.ui.keyboard.EditTestActivity"></activity>
+    <activity android:name=".android.ui.ConstraintSetDemo"></activity>
+    <activity android:name=".android.ui.keyboard.EditTestActivity" />
     <activity
       android:name=".android.ui.keyboard.TestActivity"
       android:windowSoftInputMode="adjustResize" />
@@ -49,11 +34,10 @@
     <activity android:name=".android.kotlin.constructor.ConstructorActivity" />
     <activity android:name=".android.adaptive.multi_language.MultiLanguage" />
     <activity android:name=".android.kotlin.collection.ListDemo" />
-    <activity android:name=".android.ui.VisibleNullDemo" />
-    <!-- 数据结构与算法 -->
-    <activity android:name=".android.ui.RecvDiveder"></activity>
+    <activity android:name=".android.ui.VisibleNullDemo" /> <!-- 数据结构与算法 -->
+    <activity android:name=".android.ui.RecvDiveder" />
     <activity android:name=".android.intent.two.Activity4" />
-    <activity android:name=".android.intent.two.Activity3"></activity>
+    <activity android:name=".android.intent.two.Activity3" />
     <activity android:name=".android.intent.one.Activity2" />
     <activity android:name=".android.intent.one.Activity1" />
     <activity android:name=".android.kotlin.genericity.java.PanziTest" />
@@ -140,10 +124,7 @@
     <activity android:name=".java.threaddemo.activity.ThreadSecondActivity" />
     <activity android:name=".java.threaddemo.activity.ThreadThreeActivity" />
     <activity android:name=".java.controlFlow.PrintTwoPower" /> <!-- ================================android-httpclient ================================================ -->
-    <uses-library
-      android:name="org.apache.http.legacy"
-      android:required="false" /> <!-- ================================Android基础与技术 ================================================ -->
-    <activity android:name=".android.adapter.SparseArray" />
+    <activity android:name=".android.adapter.SparseArray" /> <!-- ================================Android基础与技术 ================================================ -->
     <activity android:name=".android.adapter.RecyclerViewA" />
     <activity android:name=".android.architect.MVP" />
     <activity android:name=".android.architect.MVVM" />
@@ -166,6 +147,14 @@
     <activity
       android:name=".android.adaptive.cross.DialogTest2"
       android:configChanges="screenSize|orientation" />
+    <activity android:name=".android.adaptive.screen.Page" />
+    <activity android:name=".android.adaptive.screen.NinePatchActivity" />
+    <activity android:name=".android.adaptive.screen.ScreenAdaptive" />
+    <activity android:name=".android.fragment.top.FragmentActivity" />
+    <activity android:name=".android.anim.FrameAnimation" />
+    <activity android:name=".android.receiver.NetworkDemo" />
+    <activity android:name=".android.media.screenrecord.ScreenRecord" />
+    <activity android:name=".android.media.ijkplayer.IjkPlayer2Activity" />
 
     <service android:name=".android.service.local.ServiceA" />
     <service android:name=".android.service.remote.server.ServiceB">
@@ -182,18 +171,29 @@
         <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>
     </service>
-
-    <activity android:name=".android.adaptive.screen.Page" />
-    <activity android:name=".android.adaptive.screen.NinePatchActivity" />
-    <activity android:name=".android.adaptive.screen.ScreenAdaptive" />
-    <activity android:name=".android.fragment.top.FragmentActivity"></activity>
-    <activity android:name=".android.anim.FrameAnimation" />
-    <activity android:name=".android.receiver.NetworkDemo" />
-    <activity android:name=".android.media.screenrecord.ScreenRecord"></activity>
-
     <service
       android:name=".android.media.screenrecord.ScreenRecordService"
       android:exported="false" /> <!-- <activity android:name=".android.media.ijkplayer.IjkPlayerActivity" /> -->
-    <activity android:name=".android.media.ijkplayer.IjkPlayer2Activity" />
+    <uses-library
+      android:name="org.apache.http.legacy"
+      android:required="false" />
   </application>
+  <uses-feature android:name="android.hardware.camera" /> <!-- 使用权限 -->
+  <uses-feature android:name="android.hardware.camera.autofocus" />
+  <uses-permission
+    android:name="android.permission.READ_LOGS"
+    tools:ignore="ProtectedPermissions" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.RECORD_AUDIO" />
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.READ_PHONE_SINTERNETWIFI_STATE" /> <!-- 硬件特性 -->
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+  <uses-permission android:name="android.permission.VIBRATE" />
+
 </manifest>
