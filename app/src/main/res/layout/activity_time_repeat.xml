@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
+
+  <Button
+    android:id="@+id/show_time"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:text="请选择一种启动方式"
+    android:textSize="30dp" />
+
+  <Button
+    android:id="@+id/timer_1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="定时方式1(Thread(new Runnable))"
+    android:textAllCaps="false" />
+
+  <Button
+    android:id="@+id/timer_2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="定时方式2(Thread())                         "
+    android:textAllCaps="false" />
+
+  <Button
+    android:id="@+id/timer_3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="定时方式3(Timer)                             "
+    android:textAllCaps="false" />
+
+  <Button
+    android:id="@+id/timer_4"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="定时方式4(Handler)                         "
+    android:textAllCaps="false" />
+
+  <Button
+    android:id="@+id/clear"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="计时器清零" />
+
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:text="方式3停止方式不同（因为Timer一旦被cancel之后就废了，只有重新构造一个）\n停止：1、开启3  2、点击停止  3、再点击方式3"
+    android:textAllCaps="false" />
+
+</LinearLayout>
