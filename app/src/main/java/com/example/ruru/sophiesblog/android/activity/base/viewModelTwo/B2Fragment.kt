@@ -19,5 +19,6 @@ class B2Fragment: Fragment() {
   }
 
   companion object {
+    fun newInstance() = B2Fragment()
   }
 }
