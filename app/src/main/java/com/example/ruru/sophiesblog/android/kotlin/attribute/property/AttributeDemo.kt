@@ -1,4 +1,4 @@
-package com.example.ruru.sophiesblog.android.kotlin.attribute
+package com.example.ruru.sophiesblog.android.kotlin.attribute.property
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

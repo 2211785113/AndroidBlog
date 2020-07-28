@@ -49,7 +49,7 @@
     <activity android:name=".android.activity.MainActivity" />
     <activity android:name=".android.thread.handler.HandlerKotlinDemo" />
     <activity android:name=".android.thread.handler.HandlerJavaDemo" />
-    <activity android:name=".android.kotlin.attribute.AttributeDemo" />
+    <activity android:name=".android.kotlin.attribute.property.AttributeDemo" />
     <activity android:name=".android.kotlin.collection.MapDemo" />
     <activity android:name=".android.kotlin.override.OverrideActivity" />
     <activity android:name=".android.kotlin.constructor.ConstructorActivity" />
