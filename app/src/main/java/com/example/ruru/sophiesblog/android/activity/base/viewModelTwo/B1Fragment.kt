@@ -32,7 +32,7 @@ class B1Fragment: BaseFragment() {
 
   override fun onActivityCreated(savedInstanceState: Bundle?) {
     super.onActivityCreated(savedInstanceState)
-    viewModel = bindViewModel(BViewModel::class.java)
+    viewModel = bindActivityViewModel(BViewModel::class.java)
 
     initData()
   }
@@ -52,10 +52,9 @@ class B1Fragment: BaseFragment() {
     activity?.let {activity ->
       var transaction = activity.supportFragmentManager.beginTransaction()
       transaction.replace(viewModel.containerViewId, B2Fragment.newInstance())
-      transaction.commit()
+      transaction.addToBackStack(null).commit()
     }
   }
-
 
   companion object {
     fun newInstance(): Fragment = B1Fragment()

@@ -6,9 +6,19 @@
   android:layout_height="match_parent"
   tools:context=".android.activity.base.viewModelTwo.BActivity">
 
+  <androidx.appcompat.widget.Toolbar
+    android:id="@+id/toolBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toTopOf="parent"
+    app:navigationIcon="@mipmap/common_btn_arrow_left"
+    app:title="@string/app_name" />
+
   <FrameLayout
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"></FrameLayout>
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/toolBar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
