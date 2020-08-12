@@ -1,10 +1,8 @@
-package com.example.ruru.sophiesblog.android.activity.base.viewModelTwo
+package com.example.ruru.sophiesblog.android.activity.viewmodel.viewModelTwo
 
 import android.app.Application
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import com.example.ruru.sophiesblog.android.activity.base.viewModelTwo.base.BaseViewModel
+import com.example.ruru.sophiesblog.android.activity.viewmodel.viewModelTwo.base.BaseViewModel
 
 class BViewModel(application: Application): BaseViewModel(application) {
 

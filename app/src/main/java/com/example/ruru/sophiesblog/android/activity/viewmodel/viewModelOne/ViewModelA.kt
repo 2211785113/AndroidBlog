@@ -1,4 +1,4 @@
-package com.example.ruru.sophiesblog.android.activity.base.viewModelOne
+package com.example.ruru.sophiesblog.android.activity.viewmodel.viewModelOne
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

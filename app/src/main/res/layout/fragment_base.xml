@@ -3,7 +3,7 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  tools:context=".android.activity.base.viewModelTwo.base.BaseFragment">
+  tools:context=".android.activity.viewmodel.viewModelTwo.base.BaseFragment">
 
   <!-- TODO: Update blank fragment layout -->
   <TextView

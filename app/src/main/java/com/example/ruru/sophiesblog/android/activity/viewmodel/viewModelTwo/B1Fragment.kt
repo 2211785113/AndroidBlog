@@ -1,4 +1,4 @@
-package com.example.ruru.sophiesblog.android.activity.base.viewModelTwo
+package com.example.ruru.sophiesblog.android.activity.viewmodel.viewModelTwo
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,9 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import com.example.ruru.sophiesblog.R
-import com.example.ruru.sophiesblog.android.activity.base.viewModelTwo.base.BaseFragment
+import com.example.ruru.sophiesblog.android.activity.viewmodel.viewModelTwo.base.BaseFragment
 
 /**
  * fragment 获取 父布局的  activity：

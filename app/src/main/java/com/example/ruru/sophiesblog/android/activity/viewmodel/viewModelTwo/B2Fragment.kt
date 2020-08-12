@@ -1,4 +1,4 @@
-package com.example.ruru.sophiesblog.android.activity.base.viewModelTwo
+package com.example.ruru.sophiesblog.android.activity.viewmodel.viewModelTwo
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

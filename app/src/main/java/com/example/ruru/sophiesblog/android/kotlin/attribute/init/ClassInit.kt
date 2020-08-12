@@ -3,8 +3,7 @@ package com.example.ruru.sophiesblog.android.kotlin.attribute.init
 import android.os.Bundle
 import android.os.PersistableBundle
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModel
-import com.example.ruru.sophiesblog.android.activity.base.viewModelTwo.base.BaseActivity
+import com.example.ruru.sophiesblog.android.activity.viewmodel.viewModelTwo.base.BaseActivity
 
 /**
  * Created by lyr on 2020/7/28 & content is 延迟初始化 1 --- lateinit

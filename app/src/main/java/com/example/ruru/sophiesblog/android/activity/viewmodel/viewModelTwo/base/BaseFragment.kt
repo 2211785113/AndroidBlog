@@ -1,11 +1,9 @@
-package com.example.ruru.sophiesblog.android.activity.base.viewModelTwo.base
+package com.example.ruru.sophiesblog.android.activity.viewmodel.viewModelTwo.base
 
-import android.app.Activity
 import android.content.Context
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 
 open class BaseFragment: Fragment() {

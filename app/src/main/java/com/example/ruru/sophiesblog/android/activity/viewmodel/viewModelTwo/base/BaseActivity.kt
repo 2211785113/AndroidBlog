@@ -1,9 +1,7 @@
-package com.example.ruru.sophiesblog.android.activity.base.viewModelTwo.base
+package com.example.ruru.sophiesblog.android.activity.viewmodel.viewModelTwo.base
 
 import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import androidx.lifecycle.*
-import com.example.ruru.sophiesblog.android.activity.base.viewModelTwo.BViewModel
 
 open class BaseActivity: AppCompatActivity(), LifecycleOwner {
 

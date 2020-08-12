@@ -1,8 +1,8 @@
-package com.example.ruru.sophiesblog.android.activity.base.viewModelTwo
+package com.example.ruru.sophiesblog.android.activity.viewmodel.viewModelTwo
 
 import android.os.Bundle
 import com.example.ruru.sophiesblog.R
-import com.example.ruru.sophiesblog.android.activity.base.viewModelTwo.base.BaseActivity
+import com.example.ruru.sophiesblog.android.activity.viewmodel.viewModelTwo.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_bb.*
 
 class BActivity: BaseActivity() {
