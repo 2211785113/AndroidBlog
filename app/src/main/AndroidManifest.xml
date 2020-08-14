@@ -30,6 +30,8 @@
     android:supportsRtl="true"
     android:theme="@style/AppTheme"
     tools:ignore="GoogleAppIndexingWarning">
+    <activity android:name=".android.util.test.Base64Dmo"></activity>
+    <activity android:name=".android.ui.LL.LLDemo" />
     <activity android:name=".android.activity.databinding.DataBindActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
@@ -37,11 +39,11 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:name=".android.activity.viewmodel.viewModelTwo.base.BaseActivity"></activity>
+    <activity android:name=".android.activity.viewmodel.viewModelTwo.base.BaseActivity" />
     <activity android:name=".java.threaddemo.execute.DelayNoRepeat" />
     <activity android:name=".java.threaddemo.execute.TimeRepeat" />
     <activity android:name=".android.activity.viewmodel.viewModelTwo.BActivity" />
-    <activity android:name=".android.activity.viewmodel.viewModelOne.AActivity" />
+    <activity android:name=".android.activity.base.viewModelOne.AActivity" />
     <activity android:name=".android.ui.ConstraintSetDemo" />
     <activity android:name=".android.ui.keyboard.EditTestActivity" />
     <activity
