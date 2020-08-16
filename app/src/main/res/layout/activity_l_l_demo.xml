@@ -6,6 +6,13 @@
   android:orientation="vertical"
   tools:context=".android.ui.LL.LLDemo">
 
+  <!--
+  -2L
+  L
+  3L
+  L
+  -->
+
   <!--weight=0-->
   <EditText
     android:layout_width="fill_parent"

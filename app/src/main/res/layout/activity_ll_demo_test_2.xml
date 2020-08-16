@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:layout_marginLeft="50dp"
+  android:layout_marginRight="50dp"
+  android:orientation="horizontal">
+
+  <!--
+  0 = LL的wrap-左tv的wrap-右tv的wrap
+  0
+  0
+  -->
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:ellipsize="end"
+    android:lines="1"
+    android:text="1111111111111"></TextView>
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="(56)"></TextView>
+</LinearLayout>
