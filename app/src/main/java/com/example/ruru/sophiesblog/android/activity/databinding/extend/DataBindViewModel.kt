@@ -1,4 +1,4 @@
-package com.example.ruru.sophiesblog.android.activity.databinding
+package com.example.ruru.sophiesblog.android.activity.databinding.extend
 
 import android.app.Application
 import androidx.lifecycle.MutableLiveData
@@ -8,6 +8,5 @@ import com.example.ruru.sophiesblog.android.activity.viewmodel.viewModelTwo.base
  * Created by lyr on 2020/7/29 & content is
  */
 class DataBindViewModel(application: Application): BaseViewModel(application) {
-  val data = MutableLiveData<String>()
-  var name = "你好阳光"
+  var name = "22222"
 }

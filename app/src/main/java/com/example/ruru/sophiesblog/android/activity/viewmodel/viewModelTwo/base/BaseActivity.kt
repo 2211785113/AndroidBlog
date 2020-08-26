@@ -6,7 +6,10 @@ import androidx.lifecycle.*
 open class BaseActivity: AppCompatActivity(), LifecycleOwner {
 
   fun <T: BaseViewModel> bindViewModel(cls: Class<T>): T {
-    var viewModel = ViewModelProvider(this).get(cls)
+    println("data bind viewModel $this $cls")
+    println("data bind viewModel cla.canonicalName ${cls.canonicalName}")
+
+    var viewModel = ViewModelProvider(this,ViewModelProvider.AndroidViewModelFactory.getInstance(application)).get(cls)
     bindProgress(viewModel.progress)
     return viewModel
   }
