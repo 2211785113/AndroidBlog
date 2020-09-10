@@ -30,18 +30,18 @@
     android:supportsRtl="true"
     android:theme="@style/AppTheme"
     tools:ignore="GoogleAppIndexingWarning">
-    <activity android:name=".android.activity.databinding.basic.DataBindOne">
+    <activity android:name=".android.system.SystemBActivity" />
+    <activity android:name=".android.system.SystemAActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
 
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+    <activity android:name=".android.activity.databinding.basic.DataBindOne" />
     <activity android:name=".android.util.test.Base64Dmo" />
     <activity android:name=".android.ui.LL.LLDemo" />
-    <activity android:name=".android.activity.databinding.extend.DataBindTwo">
-
-    </activity>
+    <activity android:name=".android.activity.databinding.extend.DataBindTwo" />
     <activity android:name=".android.activity.viewmodel.viewModelTwo.base.BaseActivity" />
     <activity android:name=".java.threaddemo.execute.DelayNoRepeat" />
     <activity android:name=".java.threaddemo.execute.TimeRepeat" />
