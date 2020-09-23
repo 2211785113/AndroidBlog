@@ -9,6 +9,7 @@
   <uses-permission
     android:name="android.permission.READ_LOGS"
     tools:ignore="ProtectedPermissions" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.RECORD_AUDIO" />
   <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -30,13 +31,16 @@
     android:supportsRtl="true"
     android:theme="@style/AppTheme"
     tools:ignore="GoogleAppIndexingWarning">
-    <activity android:name=".android.system.SystemBActivity" />
-    <activity android:name=".android.system.SystemAActivity">
+    <activity android:name=".android.performance.anr.AnrActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
 
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
+    </activity>
+    <activity android:name=".android.system.SystemBActivity" />
+    <activity android:name=".android.system.SystemAActivity">
+
     </activity>
     <activity android:name=".android.activity.databinding.basic.DataBindOne" />
     <activity android:name=".android.util.test.Base64Dmo" />
