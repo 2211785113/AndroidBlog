@@ -12,6 +12,10 @@ android {
     versionCode 1
     versionName "1.0"
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    ndk{
+      //设置支持的SO库架构
+      abiFilters "armeabi-v7a", "x86","arm64-v8a","x86_64"
+    }
   }
   buildTypes {
     release {
@@ -53,7 +57,9 @@ android {
 dependencies {
 
   implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+  androidTestImplementation 'junit:junit:4.12'
   def lifecycle_version = "2.2.0"
+  def cloud_version = "7.9.0"
 
   implementation fileTree(include: ['*.jar'], dir: 'libs')
   /*test*/
@@ -121,6 +127,21 @@ dependencies {
   }
   implementation 'io.reactivex.rxjava3:rxjava:3.0.6'
   implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+  /*网易云信*/
+  // 基础功能 (必需)
+  implementation "com.netease.nimlib:basesdk:$cloud_version"
+
+  // 聊天室需要
+  implementation "com.netease.nimlib:chatroom:$cloud_version"
+
+  // 通过云信来集成小米等厂商推送需要
+  implementation "com.netease.nimlib:push:$cloud_version"
+
+  // 超大群需要
+  implementation "com.netease.nimlib:superteam:$cloud_version"
+
+  // 全文检索插件
+  implementation "com.netease.nimlib:lucene:$cloud_version"
 }
 repositories {
   mavenCentral()
