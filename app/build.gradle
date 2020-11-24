@@ -12,9 +12,9 @@ android {
     versionCode 1
     versionName "1.0"
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-    ndk{
+    ndk {
       //设置支持的SO库架构
-      abiFilters "armeabi-v7a", "x86","arm64-v8a","x86_64"
+      abiFilters "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
     }
   }
   buildTypes {
@@ -142,6 +142,11 @@ dependencies {
 
   // 全文检索插件
   implementation "com.netease.nimlib:lucene:$cloud_version"
+
+  //Xlog wrapper不可以 core 和 xlog 取其一即可
+//  implementation 'com.tencent.mars:mars-wrapper:1.2.5'
+//  implementation 'com.tencent.mars:mars-core:1.2.5'
+  implementation 'com.tencent.mars:mars-xlog:1.2.5'
 }
 repositories {
   mavenCentral()

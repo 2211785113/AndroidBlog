@@ -1,13 +1,16 @@
 package com.example.ruru.sophiesblog.android;
 
 import android.app.Application;
+import android.os.Environment;
 import android.os.StrictMode;
-import android.util.Log;
 
+import com.example.ruru.sophiesblog.BuildConfig;
 import com.netease.nimlib.sdk.NIMClient;
 import com.netease.nimlib.sdk.SDKOptions;
 import com.netease.nimlib.sdk.auth.LoginInfo;
 import com.netease.nimlib.sdk.util.NIMUtil;
+import com.tencent.mars.xlog.Log;
+import com.tencent.mars.xlog.Xlog;
 
 //import com.tencent.bugly.crashreport.CrashReport;
 
@@ -27,7 +30,7 @@ public class MyApplication extends Application {
   public void onCreate() {
     super.onCreate();
 
-    Log.d(getClass().getName(), "onCreate: ");
+    android.util.Log.d(getClass().getName(), "onCreate: ");
 
     //xutils
 //        x.Ext.init(this);
@@ -40,6 +43,41 @@ public class MyApplication extends Application {
     if (NIMUtil.isMainProcess(this)) {
       //UI相关初始化操作
       //相关service调用
+    }
+
+    //Xlog
+    initXlog();
+  }
+
+  private void initXlog() {
+    android.util.Log.d(getClass().getName(), "onCreate: initXlog");
+
+    System.loadLibrary("c++_shared");
+    System.loadLibrary("marsxlog");
+
+    //外部存储sdcard
+    final String SDCARD = Environment.getExternalStorageDirectory().getAbsolutePath();
+    final String logPath = SDCARD + "/marssample/log";
+
+    ///storage/emulated/0/marssample/log
+    android.util.Log.d(getClass().getName(), "initXlog:logPath = "+logPath);
+
+    //内部存储
+//    final String filePath = this.getFilesDir() + "/xlog";
+//    final String cachePath = this.getCacheDir() + "/xlog";
+
+    final String logFileName = "";
+
+    //init xlog
+    Xlog xlog = new Xlog();
+    Log.setLogImp(xlog);
+
+    if (BuildConfig.DEBUG) {
+      Log.setConsoleLogOpen(true);
+      Log.appenderOpen(Xlog.LEVEL_DEBUG, Xlog.AppednerModeAsync, "", logPath, logFileName, 0);
+    } else {
+      Log.setConsoleLogOpen(false);
+      Log.appenderOpen(Xlog.LEVEL_INFO, Xlog.AppednerModeAsync, "", logPath, logFileName, 0);
     }
   }
 
