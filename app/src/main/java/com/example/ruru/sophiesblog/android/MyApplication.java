@@ -73,7 +73,7 @@ public class MyApplication extends Application {
     Log.setLogImp(xlog);
 
     if (BuildConfig.DEBUG) {
-      Log.setConsoleLogOpen(true);
+      Log.setConsoleLogOpen(true);//是否把日志打印到控制台 debug下开启 release下关闭
       Log.appenderOpen(Xlog.LEVEL_DEBUG, Xlog.AppednerModeAsync, "", logPath, logFileName, 0);
     } else {
       Log.setConsoleLogOpen(false);
