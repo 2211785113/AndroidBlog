@@ -1,10 +1,12 @@
 package com.example.ruru.sophiesblog.android;
 
+import android.accounts.AccountManager;
 import android.app.Application;
 import android.os.Environment;
 import android.os.StrictMode;
 
 import com.example.ruru.sophiesblog.BuildConfig;
+import com.example.ruru.sophiesblog.android.objectbox.ObjectBox;
 import com.netease.nimlib.sdk.NIMClient;
 import com.netease.nimlib.sdk.SDKOptions;
 import com.netease.nimlib.sdk.auth.LoginInfo;
@@ -12,9 +14,13 @@ import com.netease.nimlib.sdk.util.NIMUtil;
 import com.tencent.mars.xlog.Log;
 import com.tencent.mars.xlog.Xlog;
 
+import io.objectbox.BoxStore;
+
 //import com.tencent.bugly.crashreport.CrashReport;
 
 public class MyApplication extends Application {
+
+  private BoxStore boxStore;
 
   private StrictMode.ThreadPolicy threadPolicy = new StrictMode.ThreadPolicy.Builder()
       .detectCustomSlowCalls()
@@ -47,6 +53,9 @@ public class MyApplication extends Application {
 
     //Xlog
     initXlog();
+
+    //ObjectBox
+    ObjectBox.INSTANCE.init(getApplicationContext());
   }
 
   private void initXlog() {
@@ -60,7 +69,7 @@ public class MyApplication extends Application {
     final String logPath = SDCARD + "/marssample/log";
 
     ///storage/emulated/0/marssample/log
-    android.util.Log.d(getClass().getName(), "initXlog:logPath = "+logPath);
+    android.util.Log.d(getClass().getName(), "initXlog:logPath = " + logPath);
 
     //内部存储
 //    final String filePath = this.getFilesDir() + "/xlog";
