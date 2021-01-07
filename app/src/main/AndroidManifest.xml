@@ -41,14 +41,16 @@
     android:supportsRtl="true"
     android:theme="@style/AppTheme"
     tools:ignore="GoogleAppIndexingWarning">
-    <activity android:name=".java.StaticAct">
+    <activity android:name=".android.ui.ImgTileAct">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
 
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <!--<activity android:name=".android.image.ImageBoxActivity" />-->
+    <activity android:name=".java.StaticAct">
+
+    </activity> <!-- <activity android:name=".android.image.ImageBoxActivity" /> -->
     <!--
          APP key, 可以在这里设置，也可以在 SDKOptions 中提供。
             如果 SDKOptions 中提供了，则取 SDKOptions 中的值。
@@ -84,9 +86,7 @@
       android:exported="false"
       android:process=":core" />
 
-    <activity android:name=".android.im.IMMainActivity">
-
-    </activity>
+    <activity android:name=".android.im.IMMainActivity"></activity>
     <activity android:name=".android.performance.anr.AnrActivity" />
     <activity android:name=".android.system.SystemBActivity" />
     <activity android:name=".android.system.SystemAActivity" />
