@@ -41,15 +41,19 @@
     android:supportsRtl="true"
     android:theme="@style/AppTheme"
     tools:ignore="GoogleAppIndexingWarning">
-    <activity android:name=".android.ui.MapActivity">
+    <activity
+      android:name=".android.camera.CameraSplit"
+      android:screenOrientation="landscape">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
-
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:name=".android.ui.FlActivity"/>
-    <activity android:name=".java.StaticAct"></activity> <!-- <activity android:name=".android.image.ImageBoxActivity" /> -->
+    <activity android:name=".android.ui.MapActivity">
+
+    </activity>
+    <activity android:name=".android.ui.FlActivity" />
+    <activity android:name=".java.StaticAct" /> <!-- <activity android:name=".android.image.ImageBoxActivity" /> -->
     <!--
          APP key, 可以在这里设置，也可以在 SDKOptions 中提供。
             如果 SDKOptions 中提供了，则取 SDKOptions 中的值。
